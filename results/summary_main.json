@@ -1,0 +1,1427 @@
+{
+ "n_test": 120,
+ "noprompt_tokens": {
+  "t0": {
+   "dice": 0.012184110026812137,
+   "area": 0.01582039844330231,
+   "border_frac": 0.11191987530030184,
+   "pred_iou": 0.16466620638966561,
+   "empty_rate": 0.7083333333333334
+  },
+  "t1": {
+   "dice": 0.1282135531010054,
+   "area": 0.5309358020275442,
+   "border_frac": 0.19410399551289054,
+   "pred_iou": 0.7358578423659007,
+   "empty_rate": 0.016666666666666666
+  },
+  "t2": {
+   "dice": 0.06859692963399974,
+   "area": 0.2609452349414883,
+   "border_frac": 0.23692219450164761,
+   "pred_iou": 0.5928791227440039,
+   "empty_rate": 0.016666666666666666
+  },
+  "t3": {
+   "dice": 0.03575767133031496,
+   "area": 0.01628749065378919,
+   "border_frac": 0.23289643724126824,
+   "pred_iou": 0.3649867410461108,
+   "empty_rate": 0.15833333333333333
+  }
+ },
+ "gt_area_median": 0.11683193212643789,
+ "clicks": {
+  "noc80": 2.7583333333333333,
+  "noc85": 3.4833333333333334,
+  "noc90": 5.316666666666666,
+  "fail80": 0.0,
+  "fail85": 0.008333333333333333,
+  "fail90": 0.025,
+  "mean_iou_by_click": [
+   0.4891021151582701,
+   0.693852711263464,
+   0.8013473755270203,
+   0.8571971135226203,
+   0.8898072896054703,
+   0.904456988702324,
+   0.914555142568145,
+   0.9231677997845958,
+   0.9276463945026445,
+   0.9315286965580348,
+   0.9361751029054853,
+   0.9384268920513918,
+   0.9401177875174579,
+   0.9419542403070617,
+   0.9436097937564479,
+   0.9447215992093878,
+   0.9456955410812381,
+   0.946525296809813,
+   0.9473560370816964,
+   0.94788877987609
+  ],
+  "box_iou_mean": 0.8246211641998199
+ },
+ "amg": {
+  "n_raw": 768.0,
+  "n_iou_filter": 458.65,
+  "n_stab_filter": 156.01666666666668,
+  "n_final": 15.383333333333333,
+  "best_raw_pred_iou": 0.8289904880026976,
+  "best_raw_stab": 0.6866086556352456,
+  "best_raw_area": 0.1583883558671611,
+  "frac_images_no_mask": 0.0,
+  "frac_best_raw_ge_0.8": 0.85,
+  "frac_lost_in_filters(>0.1)": 0.65,
+  "frac_lost_in_selection(>0.1)": 0.6416666666666667,
+  "best_raw_pred_iou_lt_0.88": 0.6,
+  "best_raw_stab_lt_0.95": 0.8166666666666667
+ },
+ "learned": {
+  "k1_meanpoint": {
+   "seeds": [
+    0,
+    1,
+    2
+   ],
+   "test_dice_per_seed": [
+    0.27797174765525345,
+    0.27670061060192397,
+    0.28088644376332184
+   ],
+   "mean": 0.27851960067349973,
+   "std": 0.0021460212046868735,
+   "best_epoch": [
+    6,
+    5,
+    3
+   ],
+   "dev_dice": [
+    0.3068410659775368,
+    0.3087440478017907,
+    0.31954963191200436
+   ],
+   "minutes": [
+    6.876748645305634,
+    6.726554457346598,
+    6.926146141688029
+   ],
+   "n_params": 256,
+   "history": [
+    [
+     {
+      "epoch": 1,
+      "train_loss": 1.3306480932235718,
+      "dev_dice": 0.29701720277519617,
+      "min": 1.1224227945009868
+     },
+     {
+      "epoch": 2,
+      "train_loss": 1.0463064861297608,
+      "dev_dice": 0.30072414494413,
+      "min": 2.260120987892151
+     },
+     {
+      "epoch": 3,
+      "train_loss": 1.0323645317554473,
+      "dev_dice": 0.2918149269114767,
+      "min": 3.3964329242706297
+     },
+     {
+      "epoch": 4,
+      "train_loss": 1.024421385526657,
+      "dev_dice": 0.3016222063420455,
+      "min": 4.509989023208618
+     },
+     {
+      "epoch": 5,
+      "train_loss": 1.01493381857872,
+      "dev_dice": 0.3059040175809636,
+      "min": 5.649048415819804
+     },
+     {
+      "epoch": 6,
+      "train_loss": 1.011590712070465,
+      "dev_dice": 0.3068410659775368,
+      "min": 6.732232479254405
+     }
+    ],
+    [
+     {
+      "epoch": 1,
+      "train_loss": 1.352222671508789,
+      "dev_dice": 0.28882244895221804,
+      "min": 1.0811156034469604
+     },
+     {
+      "epoch": 2,
+      "train_loss": 1.043577228784561,
+      "dev_dice": 0.3050390074198805,
+      "min": 2.1624792575836183
+     },
+     {
+      "epoch": 3,
+      "train_loss": 1.024669098854065,
+      "dev_dice": 0.3044678142466282,
+      "min": 3.263080068429311
+     },
+     {
+      "epoch": 4,
+      "train_loss": 1.0166607475280762,
+      "dev_dice": 0.3062271581795498,
+      "min": 4.365936883290609
+     },
+     {
+      "epoch": 5,
+      "train_loss": 1.0119192671775818,
+      "dev_dice": 0.3087440478017907,
+      "min": 5.4898682276407875
+     },
+     {
+      "epoch": 6,
+      "train_loss": 1.0099089670181274,
+      "dev_dice": 0.30779075804949835,
+      "min": 6.579401449362437
+     }
+    ],
+    [
+     {
+      "epoch": 1,
+      "train_loss": 1.3817368650436401,
+      "dev_dice": 0.29986062988386314,
+      "min": 1.1008480628331503
+     },
+     {
+      "epoch": 2,
+      "train_loss": 1.0461906611919403,
+      "dev_dice": 0.30040175075586506,
+      "min": 2.187657821178436
+     },
+     {
+      "epoch": 3,
+      "train_loss": 1.0263906288146973,
+      "dev_dice": 0.31954963191200436,
+      "min": 3.293339963754018
+     },
+     {
+      "epoch": 4,
+      "train_loss": 1.0178948032855988,
+      "dev_dice": 0.3065175014126759,
+      "min": 4.435774660110473
+     },
+     {
+      "epoch": 5,
+      "train_loss": 1.0139601409435273,
+      "dev_dice": 0.30365243113333495,
+      "min": 5.566167362531027
+     },
+     {
+      "epoch": 6,
+      "train_loss": 1.0111057889461517,
+      "dev_dice": 0.3032811456922901,
+      "min": 6.774322656790416
+     }
+    ]
+   ]
+  },
+  "k4_meanpoint": {
+   "seeds": [
+    0,
+    1,
+    2
+   ],
+   "test_dice_per_seed": [
+    0.3254782622056218,
+    0.30198820080022987,
+    0.3259504557062952
+   ],
+   "mean": 0.31780563957071567,
+   "std": 0.013700338266592883,
+   "best_epoch": [
+    6,
+    2,
+    3
+   ],
+   "dev_dice": [
+    0.35345552393120633,
+    0.3640078526243552,
+    0.3733830945261839
+   ],
+   "minutes": [
+    7.181885047753652,
+    7.239992670218149,
+    7.319905300935109
+   ],
+   "n_params": 1024,
+   "history": [
+    [
+     {
+      "epoch": 1,
+      "train_loss": 1.242087837457657,
+      "dev_dice": 0.33153774380091716,
+      "min": 1.1598577459653219
+     },
+     {
+      "epoch": 2,
+      "train_loss": 1.0359511697292327,
+      "dev_dice": 0.32802643998694486,
+      "min": 2.3625808397928876
+     },
+     {
+      "epoch": 3,
+      "train_loss": 0.9985676956176758,
+      "dev_dice": 0.33075103266658235,
+      "min": 3.524805311361949
+     },
+     {
+      "epoch": 4,
+      "train_loss": 0.9806092536449432,
+      "dev_dice": 0.3421040559489667,
+      "min": 4.679097922643026
+     },
+     {
+      "epoch": 5,
+      "train_loss": 0.9682179379463196,
+      "dev_dice": 0.3524635562405167,
+      "min": 5.827408011754354
+     },
+     {
+      "epoch": 6,
+      "train_loss": 0.9618114137649536,
+      "dev_dice": 0.35345552393120633,
+      "min": 7.031871831417083
+     }
+    ],
+    [
+     {
+      "epoch": 1,
+      "train_loss": 1.264785841703415,
+      "dev_dice": 0.3173329569010546,
+      "min": 1.2359628796577453
+     },
+     {
+      "epoch": 2,
+      "train_loss": 1.040920306444168,
+      "dev_dice": 0.3640078526243552,
+      "min": 2.4036577065785725
+     },
+     {
+      "epoch": 3,
+      "train_loss": 1.0078967130184173,
+      "dev_dice": 0.3492268950163349,
+      "min": 3.5806968490282696
+     },
+     {
+      "epoch": 4,
+      "train_loss": 0.9878180503845215,
+      "dev_dice": 0.34367787957895574,
+      "min": 4.757592542966207
+     },
+     {
+      "epoch": 5,
+      "train_loss": 0.9759771358966828,
+      "dev_dice": 0.34522258449065873,
+      "min": 5.9293482859929405
+     },
+     {
+      "epoch": 6,
+      "train_loss": 0.9718528056144714,
+      "dev_dice": 0.34293030216997605,
+      "min": 7.0840638478597
+     }
+    ],
+    [
+     {
+      "epoch": 1,
+      "train_loss": 1.2946704232692718,
+      "dev_dice": 0.32656080305592383,
+      "min": 1.2178077936172484
+     },
+     {
+      "epoch": 2,
+      "train_loss": 1.0401193141937255,
+      "dev_dice": 0.3617496141518515,
+      "min": 2.414519147078196
+     },
+     {
+      "epoch": 3,
+      "train_loss": 1.004427911043167,
+      "dev_dice": 0.3733830945261839,
+      "min": 3.588460139433543
+     },
+     {
+      "epoch": 4,
+      "train_loss": 0.9874106693267822,
+      "dev_dice": 0.35434628185154937,
+      "min": 4.750137794017792
+     },
+     {
+      "epoch": 5,
+      "train_loss": 0.9735008990764618,
+      "dev_dice": 0.3549067326034086,
+      "min": 5.942678904533386
+     },
+     {
+      "epoch": 6,
+      "train_loss": 0.9675697684288025,
+      "dev_dice": 0.35565165868067683,
+      "min": 7.161130944887797
+     }
+    ]
+   ]
+  },
+  "k4_random": {
+   "seeds": [
+    0
+   ],
+   "test_dice_per_seed": [
+    0.008153673369729685
+   ],
+   "mean": 0.008153673369729685,
+   "std": 0.0,
+   "best_epoch": [
+    1
+   ],
+   "dev_dice": [
+    0.0031338546394688205
+   ],
+   "minutes": [
+    9.651294612884522
+   ],
+   "n_params": 1024,
+   "history": [
+    [
+     {
+      "epoch": 1,
+      "train_loss": 1.6740848326683044,
+      "dev_dice": 0.0031338546394688205,
+      "min": 1.1132591883341472
+     },
+     {
+      "epoch": 2,
+      "train_loss": 1.3628126883506775,
+      "dev_dice": 0.00038007821846151586,
+      "min": 2.1861385424931843
+     },
+     {
+      "epoch": 3,
+      "train_loss": 1.3409839177131653,
+      "dev_dice": 0.00018386201124131771,
+      "min": 3.2518108050028482
+     },
+     {
+      "epoch": 4,
+      "train_loss": 1.3340832853317262,
+      "dev_dice": 0.00014567130458915446,
+      "min": 5.721386893590291
+     },
+     {
+      "epoch": 5,
+      "train_loss": 1.32961674451828,
+      "dev_dice": 0.0001488471735129554,
+      "min": 8.47505114475886
+     },
+     {
+      "epoch": 6,
+      "train_loss": 1.328265564441681,
+      "dev_dice": 0.00016349126601565147,
+      "min": 9.503801298141479
+     }
+    ]
+   ]
+  }
+ },
+ "twostage_per_seed": [
+  0.32942173775165634,
+  0.31483051612162477,
+  0.33512257690585884
+ ],
+ "subgroups": {
+  "multi_polipo": {
+   "n": 7,
+   "Sin prompt \u00b7 salida \u00fanica (token 0)": 0.0,
+   "Sin prompt \u00b7 multim\u00e1scara, elige cabeza IoU": 0.06119684985831318,
+   "Sin prompt \u00b7 mejor de 4 salidas (or\u00e1culo)": 0.0738115892189475,
+   "1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": 0.3156282582951254,
+   "1 clic por p\u00f3lipo \u00b7 salida \u00fanica (token 0)": 0.5304446991465114,
+   "1 clic por p\u00f3lipo \u00b7 mejor de 3 (or\u00e1culo)": 0.8377205799915936,
+   "Caja por p\u00f3lipo": 0.9391335875531132,
+   "AMG \u00b7 mejor propuesta cruda (or\u00e1culo)": 0.7744590640068054,
+   "AMG \u00b7 mejor tras filtros de calidad (or\u00e1culo)": 0.35461049736477435,
+   "AMG \u00b7 mejor tras NMS (or\u00e1culo)": 0.3543590780547155,
+   "AMG \u00b7 elige mayor IoU predicho": 0.06635047443653873,
+   "AMG \u00b7 elige la mayor": 0.120345658489636,
+   "AMG \u00b7 elige la m\u00e1s central": 0.12067795102484524,
+   "Probe lineal sobre el embedding": 0.6161167255484784,
+   "Auto-prompt: caja desde el probe \u2192 SAM": 0.5495384457481371,
+   "Auto-prompt: punto desde el probe \u2192 SAM": 0.35095013931867325,
+   "Auto-prompt: caja + punto desde el probe \u2192 SAM": 0.5871081202132549,
+   "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)": 0.08896745482722483,
+   "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)": 0.10500002611226711,
+   "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)": 0.00010146739762984097,
+   "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)": 0.10178366571991028
+  },
+  "area_lt_2pct": {
+   "n": 5,
+   "Sin prompt \u00b7 salida \u00fanica (token 0)": 0.0,
+   "Sin prompt \u00b7 multim\u00e1scara, elige cabeza IoU": 0.021845636002820752,
+   "Sin prompt \u00b7 mejor de 4 salidas (or\u00e1culo)": 0.021845636002820752,
+   "1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": 0.7790346248672833,
+   "1 clic por p\u00f3lipo \u00b7 salida \u00fanica (token 0)": 0.78155974995329,
+   "1 clic por p\u00f3lipo \u00b7 mejor de 3 (or\u00e1culo)": 0.9299266161090578,
+   "Caja por p\u00f3lipo": 0.9324732651417597,
+   "AMG \u00b7 mejor propuesta cruda (or\u00e1culo)": 0.8814168930053711,
+   "AMG \u00b7 mejor tras filtros de calidad (or\u00e1culo)": 0.8790049076080322,
+   "AMG \u00b7 mejor tras NMS (or\u00e1culo)": 0.8756097555160522,
+   "AMG \u00b7 elige mayor IoU predicho": 0.017285976186394693,
+   "AMG \u00b7 elige la mayor": 0.032789313420653346,
+   "AMG \u00b7 elige la m\u00e1s central": 0.032789313420653346,
+   "Probe lineal sobre el embedding": 0.2829551214820025,
+   "Auto-prompt: caja desde el probe \u2192 SAM": 0.30435872948986065,
+   "Auto-prompt: punto desde el probe \u2192 SAM": 0.18857128521650363,
+   "Auto-prompt: caja + punto desde el probe \u2192 SAM": 0.3309195421687175,
+   "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)": 0.015085966422592408,
+   "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)": 0.023479971190333758,
+   "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)": 0.006101436379814414,
+   "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)": 0.012999329686708219
+  },
+  "area_gt_15pct": {
+   "n": 39,
+   "Sin prompt \u00b7 salida \u00fanica (token 0)": 0.017902837554759934,
+   "Sin prompt \u00b7 multim\u00e1scara, elige cabeza IoU": 0.2372588748685661,
+   "Sin prompt \u00b7 mejor de 4 salidas (or\u00e1culo)": 0.2862659123150957,
+   "1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": 0.6592924836252251,
+   "1 clic por p\u00f3lipo \u00b7 salida \u00fanica (token 0)": 0.7277668581674334,
+   "1 clic por p\u00f3lipo \u00b7 mejor de 3 (or\u00e1culo)": 0.8411309922465722,
+   "Caja por p\u00f3lipo": 0.8071043588070126,
+   "AMG \u00b7 mejor propuesta cruda (or\u00e1culo)": 0.9030359035883194,
+   "AMG \u00b7 mejor tras filtros de calidad (or\u00e1culo)": 0.5498079960950866,
+   "AMG \u00b7 mejor tras NMS (or\u00e1culo)": 0.5452989754147637,
+   "AMG \u00b7 elige mayor IoU predicho": 0.10474709475916964,
+   "AMG \u00b7 elige la mayor": 0.43021909268155956,
+   "AMG \u00b7 elige la m\u00e1s central": 0.37212140911730945,
+   "Probe lineal sobre el embedding": 0.5920564771628479,
+   "Auto-prompt: caja desde el probe \u2192 SAM": 0.6083068731508268,
+   "Auto-prompt: punto desde el probe \u2192 SAM": 0.5488705854709055,
+   "Auto-prompt: caja + punto desde el probe \u2192 SAM": 0.5942780588084565,
+   "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)": 0.4078333219169843,
+   "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)": 0.47239496087495636,
+   "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)": 0.009798319207212799,
+   "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)": 0.476912829312992
+  },
+  "marcador_verde": {
+   "n": 13,
+   "Sin prompt \u00b7 salida \u00fanica (token 0)": 0.0,
+   "Sin prompt \u00b7 multim\u00e1scara, elige cabeza IoU": 5.364709487249184e-05,
+   "Sin prompt \u00b7 mejor de 4 salidas (or\u00e1culo)": 0.008231269546072657,
+   "1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": 0.5176369031175092,
+   "1 clic por p\u00f3lipo \u00b7 salida \u00fanica (token 0)": 0.7503182155395661,
+   "1 clic por p\u00f3lipo \u00b7 mejor de 3 (or\u00e1culo)": 0.7926269002617197,
+   "Caja por p\u00f3lipo": 0.9212121752300167,
+   "AMG \u00b7 mejor propuesta cruda (or\u00e1culo)": 0.8861620288628799,
+   "AMG \u00b7 mejor tras filtros de calidad (or\u00e1culo)": 0.4313548281072424,
+   "AMG \u00b7 mejor tras NMS (or\u00e1culo)": 0.4280992618475396,
+   "AMG \u00b7 elige mayor IoU predicho": 0.06578672580564252,
+   "AMG \u00b7 elige la mayor": 0.23345803601953846,
+   "AMG \u00b7 elige la m\u00e1s central": 0.23401611729954871,
+   "Probe lineal sobre el embedding": 0.639242716748132,
+   "Auto-prompt: caja desde el probe \u2192 SAM": 0.6237043781304982,
+   "Auto-prompt: punto desde el probe \u2192 SAM": 0.3928639092779654,
+   "Auto-prompt: caja + punto desde el probe \u2192 SAM": 0.6208327248932999,
+   "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)": 0.347567707048005,
+   "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)": 0.3877884641699593,
+   "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)": 0.014379056111514878,
+   "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)": 0.38454384922760376
+  },
+  "recuadro_negro": {
+   "n": 55,
+   "Sin prompt \u00b7 salida \u00fanica (token 0)": 0.00724069314534807,
+   "Sin prompt \u00b7 multim\u00e1scara, elige cabeza IoU": 0.13348321494940987,
+   "Sin prompt \u00b7 mejor de 4 salidas (or\u00e1culo)": 0.17564046139328812,
+   "1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": 0.6092310484225718,
+   "1 clic por p\u00f3lipo \u00b7 salida \u00fanica (token 0)": 0.6979427307178959,
+   "1 clic por p\u00f3lipo \u00b7 mejor de 3 (or\u00e1culo)": 0.8532333131765482,
+   "Caja por p\u00f3lipo": 0.8926009949763111,
+   "AMG \u00b7 mejor propuesta cruda (or\u00e1culo)": 0.9125272133133628,
+   "AMG \u00b7 mejor tras filtros de calidad (or\u00e1culo)": 0.5404385496565903,
+   "AMG \u00b7 mejor tras NMS (or\u00e1culo)": 0.5331001538148319,
+   "AMG \u00b7 elige mayor IoU predicho": 0.004281802122287362,
+   "AMG \u00b7 elige la mayor": 0.22235289794890295,
+   "AMG \u00b7 elige la m\u00e1s central": 0.2053056093555576,
+   "Probe lineal sobre el embedding": 0.6220281277118875,
+   "Auto-prompt: caja desde el probe \u2192 SAM": 0.640269961421462,
+   "Auto-prompt: punto desde el probe \u2192 SAM": 0.49288332323296896,
+   "Auto-prompt: caja + punto desde el probe \u2192 SAM": 0.6734559184022206,
+   "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)": 0.19932087647468433,
+   "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)": 0.23825049022683395,
+   "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)": 0.006383932095007706,
+   "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)": 0.2330029045673049
+  }
+ },
+ "methods": {
+  "Sin prompt \u00b7 salida \u00fanica (token 0)": {
+   "mean": 0.012184110026812137,
+   "ci": [
+    0.0006716141975891277,
+    0.027678419559941405
+   ],
+   "human": "0",
+   "trained": "0"
+  },
+  "Sin prompt \u00b7 multim\u00e1scara, elige cabeza IoU": {
+   "mean": 0.1259285717969796,
+   "ci": [
+    0.09206434918100678,
+    0.16337976068408952
+   ],
+   "human": "0",
+   "trained": "0"
+  },
+  "Sin prompt \u00b7 mejor de 4 salidas (or\u00e1culo)": {
+   "mean": 0.15733062948777238,
+   "ci": [
+    0.12062568600180029,
+    0.19745245123812663
+   ],
+   "human": "0 (or\u00e1culo)",
+   "trained": "0"
+  },
+  "1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": {
+   "mean": 0.5708008727088133,
+   "ci": [
+    0.5052767617617256,
+    0.6363717507912212
+   ],
+   "human": "1 clic/p\u00f3lipo",
+   "trained": "0"
+  },
+  "1 clic por p\u00f3lipo \u00b7 salida \u00fanica (token 0)": {
+   "mean": 0.6960595258921696,
+   "ci": [
+    0.6377401261248831,
+    0.7527954593393686
+   ],
+   "human": "1 clic/p\u00f3lipo",
+   "trained": "0"
+  },
+  "1 clic por p\u00f3lipo \u00b7 mejor de 3 (or\u00e1culo)": {
+   "mean": 0.8402660902712704,
+   "ci": [
+    0.8082273197844525,
+    0.8693553908002517
+   ],
+   "human": "1 clic/p\u00f3lipo",
+   "trained": "0"
+  },
+  "Caja por p\u00f3lipo": {
+   "mean": 0.8858944808301578,
+   "ci": [
+    0.8518186840344014,
+    0.9141565214136269
+   ],
+   "human": "1 caja/p\u00f3lipo",
+   "trained": "0"
+  },
+  "AMG \u00b7 mejor propuesta cruda (or\u00e1culo)": {
+   "mean": 0.894619134068489,
+   "ci": [
+    0.8740335972855489,
+    0.9138156143700084
+   ],
+   "human": "0 (or\u00e1culo)",
+   "trained": "0"
+  },
+  "AMG \u00b7 mejor tras filtros de calidad (or\u00e1culo)": {
+   "mean": 0.4994696613187746,
+   "ci": [
+    0.4354176149504686,
+    0.567253189937813
+   ],
+   "human": "0 (or\u00e1culo)",
+   "trained": "0"
+  },
+  "AMG \u00b7 mejor tras NMS (or\u00e1culo)": {
+   "mean": 0.49309605490610314,
+   "ci": [
+    0.42848416004451184,
+    0.5613718113328893
+   ],
+   "human": "0 (or\u00e1culo)",
+   "trained": "0"
+  },
+  "AMG \u00b7 elige mayor IoU predicho": {
+   "mean": 0.057814382997510926,
+   "ci": [
+    0.036197272373761774,
+    0.08238660599310982
+   ],
+   "human": "0",
+   "trained": "0"
+  },
+  "AMG \u00b7 elige la mayor": {
+   "mean": 0.24137390981093934,
+   "ci": [
+    0.1973662796581205,
+    0.287820811628056
+   ],
+   "human": "0",
+   "trained": "0"
+  },
+  "AMG \u00b7 elige la m\u00e1s central": {
+   "mean": 0.21845596711444462,
+   "ci": [
+    0.17841861302317322,
+    0.2620892391771353
+   ],
+   "human": "0",
+   "trained": "0"
+  },
+  "Probe lineal sobre el embedding": {
+   "mean": 0.6141782340303427,
+   "ci": [
+    0.5669237721500612,
+    0.6605099711728938
+   ],
+   "human": "0",
+   "trained": "257"
+  },
+  "Auto-prompt: caja desde el probe \u2192 SAM": {
+   "mean": 0.6224162458594513,
+   "ci": [
+    0.5700560937195623,
+    0.6739225293735962
+   ],
+   "human": "0",
+   "trained": "257"
+  },
+  "Auto-prompt: punto desde el probe \u2192 SAM": {
+   "mean": 0.4785462746853593,
+   "ci": [
+    0.4133200268739224,
+    0.5453916227724495
+   ],
+   "human": "0",
+   "trained": "257"
+  },
+  "Auto-prompt: caja + punto desde el probe \u2192 SAM": {
+   "mean": 0.654512928455933,
+   "ci": [
+    0.5957379638371585,
+    0.7122755013278567
+   ],
+   "human": "0",
+   "trained": "257"
+  },
+  "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)": {
+   "mean": 0.27851960067349973,
+   "ci": [
+    0.21002447034518693,
+    0.3475301271361878
+   ],
+   "human": "0",
+   "trained": "256"
+  },
+  "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)": {
+   "mean": 0.3178056395707156,
+   "ci": [
+    0.2533718613685687,
+    0.38334581299041526
+   ],
+   "human": "0",
+   "trained": "1024"
+  },
+  "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)": {
+   "mean": 0.008153673369729685,
+   "ci": [
+    0.0023592989123867912,
+    0.01611088551470795
+   ],
+   "human": "0",
+   "trained": "1024"
+  },
+  "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)": {
+   "mean": 0.32645827692638,
+   "ci": [
+    0.2586863218527547,
+    0.3943690369751697
+   ],
+   "human": "0",
+   "trained": "1024"
+  }
+ },
+ "gap_noprompt_to_box": 0.8737103708033456,
+ "gap_recovered": {
+  "Sin prompt \u00b7 salida \u00fanica (token 0)": 0.0,
+  "Sin prompt \u00b7 multim\u00e1scara, elige cabeza IoU": 0.13018554611590966,
+  "Sin prompt \u00b7 mejor de 4 salidas (or\u00e1culo)": 0.1661265841762908,
+  "1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": 0.6393614879131776,
+  "1 clic por p\u00f3lipo \u00b7 salida \u00fanica (token 0)": 0.7827255332182429,
+  "1 clic por p\u00f3lipo \u00b7 mejor de 3 (or\u00e1culo)": 0.9477762974051301,
+  "Caja por p\u00f3lipo": 1.0,
+  "AMG \u00b7 mejor propuesta cruda (or\u00e1culo)": 1.0099857498890727,
+  "AMG \u00b7 mejor tras filtros de calidad (or\u00e1culo)": 0.5577197748539036,
+  "AMG \u00b7 mejor tras NMS (or\u00e1culo)": 0.5504249016033879,
+  "AMG \u00b7 elige mayor IoU predicho": 0.052225857098094616,
+  "AMG \u00b7 elige la mayor": 0.26231782000412257,
+  "AMG \u00b7 elige la m\u00e1s central": 0.23608722521855025,
+  "Probe lineal sobre el embedding": 0.6890087884043522,
+  "Auto-prompt: caja desde el probe \u2192 SAM": 0.6984375557675393,
+  "Auto-prompt: punto desde el probe \u2192 SAM": 0.5337720373282783,
+  "Auto-prompt: caja + punto desde el probe \u2192 SAM": 0.735173622625679,
+  "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)": 0.30483269919504513,
+  "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)": 0.34979730097846423,
+  "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)": -0.004613012265582484,
+  "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)": 0.35970062551804666
+ },
+ "paired_tests": {
+  "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)  vs  Probe lineal sobre el embedding": {
+   "mean_diff": -0.335658633356843,
+   "ci95": [
+    -0.4056834876177975,
+    -0.26562523093758034
+   ],
+   "wilcoxon_p": 1.373875734282791e-12
+  },
+  "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)  vs  Auto-prompt: caja desde el probe \u2192 SAM": {
+   "mean_diff": -0.3438966451859516,
+   "ci95": [
+    -0.4163157989482256,
+    -0.2707604837386928
+   ],
+   "wilcoxon_p": 3.561345458610128e-13
+  },
+  "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)  vs  Caja por p\u00f3lipo": {
+   "mean_diff": -0.6073748801566582,
+   "ci95": [
+    -0.6780560038190145,
+    -0.534877661506401
+   ],
+   "wilcoxon_p": 1.8935315665832372e-20
+  },
+  "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)  vs  Sin prompt \u00b7 salida \u00fanica (token 0)": {
+   "mean_diff": 0.26633549064668766,
+   "ci95": [
+    0.1984708856641354,
+    0.3360361994958276
+   ],
+   "wilcoxon_p": 1.670527103243823e-13
+  },
+  "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)  vs  Probe lineal sobre el embedding": {
+   "mean_diff": -0.2963725944596271,
+   "ci95": [
+    -0.3634508818473434,
+    -0.2289967444384994
+   ],
+   "wilcoxon_p": 2.4639514243172226e-11
+  },
+  "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)  vs  Auto-prompt: caja desde el probe \u2192 SAM": {
+   "mean_diff": -0.30461060628873576,
+   "ci95": [
+    -0.3752181640841323,
+    -0.23466759944820156
+   ],
+   "wilcoxon_p": 2.0681907012422148e-11
+  },
+  "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)  vs  Caja por p\u00f3lipo": {
+   "mean_diff": -0.5680888412594423,
+   "ci95": [
+    -0.6382695101142141,
+    -0.49793490206195645
+   ],
+   "wilcoxon_p": 4.2412164118892145e-20
+  },
+  "Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)  vs  Sin prompt \u00b7 salida \u00fanica (token 0)": {
+   "mean_diff": 0.3056215295439035,
+   "ci95": [
+    0.24007931841284866,
+    0.37385214117304416
+   ],
+   "wilcoxon_p": 9.464697243142094e-17
+  },
+  "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)  vs  Probe lineal sobre el embedding": {
+   "mean_diff": -0.606024560660613,
+   "ci95": [
+    -0.6536644199805909,
+    -0.557863815694141
+   ],
+   "wilcoxon_p": 4.209014223723733e-21
+  },
+  "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)  vs  Auto-prompt: caja desde el probe \u2192 SAM": {
+   "mean_diff": -0.6142625724897217,
+   "ci95": [
+    -0.6661211637328696,
+    -0.5610790332208352
+   ],
+   "wilcoxon_p": 4.783227214802498e-21
+  },
+  "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)  vs  Caja por p\u00f3lipo": {
+   "mean_diff": -0.8777408074604282,
+   "ci95": [
+    -0.9072501162680559,
+    -0.8425152642720141
+   ],
+   "wilcoxon_p": 1.9719517121524354e-21
+  },
+  "Tokens aprendidos k=4 \u00b7 init. aleatoria, pre-registrada (1 semilla)  vs  Sin prompt \u00b7 salida \u00fanica (token 0)": {
+   "mean_diff": -0.0040304366570824545,
+   "ci95": [
+    -0.01906200838502547,
+    0.007037042135155872
+   ],
+   "wilcoxon_p": 0.1265871911669003
+  },
+  "Tokens aprendidos k=1 \u00b7 init. clic medio (3 semillas)  vs  Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)": {
+   "mean_diff": -0.03928603889721585,
+   "ci95": [
+    -0.06926026075484658,
+    -0.010180417592294839
+   ],
+   "wilcoxon_p": 0.0006036216122073365
+  },
+  "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)  vs  Tokens aprendidos k=4 \u00b7 init. clic medio (3 semillas)": {
+   "mean_diff": 0.008652637355664348,
+   "ci95": [
+    -0.0017083045242658177,
+    0.019381483435528542
+   ],
+   "wilcoxon_p": 0.02777341172907621
+  },
+  "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)  vs  Caja por p\u00f3lipo": {
+   "mean_diff": -0.5594362039037778,
+   "ci95": [
+    -0.6311160432368255,
+    -0.4868392654475713
+   ],
+   "wilcoxon_p": 4.5621478213639394e-20
+  },
+  "Dos etapas: tokens k=4 \u2192 caja \u2192 SAM (3 semillas)  vs  Auto-prompt: caja desde el probe \u2192 SAM": {
+   "mean_diff": -0.2959579689330714,
+   "ci95": [
+    -0.3671263809880553,
+    -0.22460448587037454
+   ],
+   "wilcoxon_p": 5.857823212464531e-11
+  },
+  "Auto-prompt: caja + punto desde el probe \u2192 SAM  vs  Probe lineal sobre el embedding": {
+   "mean_diff": 0.04033469442559022,
+   "ci95": [
+    0.013352317135272032,
+    0.06751650653469536
+   ],
+   "wilcoxon_p": 0.0001393552119486564
+  },
+  "1 clic por p\u00f3lipo \u00b7 salida \u00fanica (token 0)  vs  Probe lineal sobre el embedding": {
+   "mean_diff": 0.08188129186182692,
+   "ci95": [
+    0.020047924113948262,
+    0.14303237722494222
+   ],
+   "wilcoxon_p": 0.00018229723796120282
+  },
+  "Auto-prompt: caja desde el probe \u2192 SAM  vs  Probe lineal sobre el embedding": {
+   "mean_diff": 0.008238011829108641,
+   "ci95": [
+    -0.015253113633922616,
+    0.028541941025189685
+   ],
+   "wilcoxon_p": 0.039552047469383754
+  },
+  "AMG \u00b7 mejor tras NMS (or\u00e1culo)  vs  AMG \u00b7 elige mayor IoU predicho": {
+   "mean_diff": 0.43528167190859224,
+   "ci95": [
+    0.36605851635747777,
+    0.5078060716266558
+   ],
+   "wilcoxon_p": 8.33039747348591e-18
+  },
+  "1 clic por p\u00f3lipo \u00b7 mejor de 3 (or\u00e1culo)  vs  1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": {
+   "mean_diff": 0.2694652175624571,
+   "ci95": [
+    0.21447267864763886,
+    0.32447094710776114
+   ],
+   "wilcoxon_p": 5.2803729173201584e-14
+  },
+  "1 clic por p\u00f3lipo \u00b7 salida \u00fanica (token 0)  vs  1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": {
+   "mean_diff": 0.12525865318335633,
+   "ci95": [
+    0.0795859270922177,
+    0.1709143269228081
+   ],
+   "wilcoxon_p": 7.063771918894482e-06
+  },
+  "Caja por p\u00f3lipo  vs  1 clic por p\u00f3lipo \u00b7 elige cabeza IoU": {
+   "mean_diff": 0.31509360812134457,
+   "ci95": [
+    0.24669727238186592,
+    0.38305925478796415
+   ],
+   "wilcoxon_p": 3.625476280448648e-14
+  }
+ },
+ "calibration": {
+  "noprompt": {
+   "spearman": 0.4436385296352196,
+   "mean_pred": 0.46459747813642027,
+   "mean_true": 0.03957985358507976,
+   "overconfidence": 0.4250176245513405,
+   "n": 480
+  },
+  "point": {
+   "spearman": 0.2338472020013756,
+   "mean_pred": 0.8570227366419915,
+   "mean_true": 0.4419882761809617,
+   "overconfidence": 0.41503446046102976,
+   "n": 381
+  },
+  "box": {
+   "spearman": 0.6790635545556805,
+   "mean_pred": 0.9545182139854732,
+   "mean_true": 0.8271339447222223,
+   "overconfidence": 0.12738426926325083,
+   "n": 127
+  },
+  "amg_raw": {
+   "spearman_pooled": 0.03198800803275628,
+   "spearman_within_image_median": 0.041673857728281014,
+   "mean_pred": 0.8688631057739258,
+   "mean_true": 0.1271594613790512,
+   "n": 92160
+  }
+ },
+ "teardown": {
+  "env": {
+   "python": "3.13.16",
+   "torch": "2.14.1+cu130",
+   "numpy": "2.5.3",
+   "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+   "threads": 2,
+   "cuda": false
+  },
+  "threads": 2,
+  "params": {
+   "total": 93735472,
+   "image_encoder": 89670912,
+   "prompt_encoder": 6220,
+   "mask_decoder": 4058340
+  },
+  "flops": {
+   "encoder_GFLOPs": 972.077334528,
+   "patch_embed_GFLOPs": 4.831838208,
+   "neck_GFLOPs": 6.442450944,
+   "blocks": [
+    {
+     "block": 0,
+     "type": "window",
+     "GFLOPs": 64.936894464,
+     "attn_matmul_GFLOPs": 3.161088,
+     "qkv_proj_GFLOPs": 23.1211008,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 1,
+     "type": "window",
+     "GFLOPs": 64.936894464,
+     "attn_matmul_GFLOPs": 3.161088,
+     "qkv_proj_GFLOPs": 23.1211008,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 2,
+     "type": "global",
+     "GFLOPs": 110.326972416,
+     "attn_matmul_GFLOPs": 52.34491392,
+     "qkv_proj_GFLOPs": 19.327352832,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 3,
+     "type": "window",
+     "GFLOPs": 64.936894464,
+     "attn_matmul_GFLOPs": 3.161088,
+     "qkv_proj_GFLOPs": 23.1211008,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 4,
+     "type": "window",
+     "GFLOPs": 64.936894464,
+     "attn_matmul_GFLOPs": 3.161088,
+     "qkv_proj_GFLOPs": 23.1211008,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 5,
+     "type": "global",
+     "GFLOPs": 110.326972416,
+     "attn_matmul_GFLOPs": 52.34491392,
+     "qkv_proj_GFLOPs": 19.327352832,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 6,
+     "type": "window",
+     "GFLOPs": 64.936894464,
+     "attn_matmul_GFLOPs": 3.161088,
+     "qkv_proj_GFLOPs": 23.1211008,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 7,
+     "type": "window",
+     "GFLOPs": 64.936894464,
+     "attn_matmul_GFLOPs": 3.161088,
+     "qkv_proj_GFLOPs": 23.1211008,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 8,
+     "type": "global",
+     "GFLOPs": 110.326972416,
+     "attn_matmul_GFLOPs": 52.34491392,
+     "qkv_proj_GFLOPs": 19.327352832,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 9,
+     "type": "window",
+     "GFLOPs": 64.936894464,
+     "attn_matmul_GFLOPs": 3.161088,
+     "qkv_proj_GFLOPs": 23.1211008,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 10,
+     "type": "window",
+     "GFLOPs": 64.936894464,
+     "attn_matmul_GFLOPs": 3.161088,
+     "qkv_proj_GFLOPs": 23.1211008,
+     "mlp_GFLOPs": 38.654705664
+    },
+    {
+     "block": 11,
+     "type": "global",
+     "GFLOPs": 110.326972416,
+     "attn_matmul_GFLOPs": 52.34491392,
+     "qkv_proj_GFLOPs": 19.327352832,
+     "mlp_GFLOPs": 38.654705664
+    }
+   ],
+   "decoder_1point_GFLOPs": 3.624702976,
+   "decoder_box_GFLOPs": 3.624702976,
+   "decoder_noprompt_GFLOPs": 3.5918848,
+   "decoder_64points_GFLOPs": 231.848869888,
+   "decoder_modules_1point_GFLOPs": {
+    "MaskDecoder": 3.6226048,
+    "transformer": 2.799142912,
+    "transformer.final_attn_token_to_image": 0.55246848,
+    "output_upscaling": 0.805306368,
+    "output_upscaling.0": 0.536870912,
+    "output_upscaling.3": 0.268435456,
+    "output_hypernetworks_mlps.0": 0.000278528,
+    "output_hypernetworks_mlps.1": 0.000278528,
+    "output_hypernetworks_mlps.2": 0.000278528,
+    "output_hypernetworks_mlps.3": 0.000278528,
+    "iou_prediction_head": 0.000264192
+   },
+   "global_over_window_ratio": 1.6989875066656221,
+   "encoder_share_1prompt": 0.9962850308427432
+  },
+  "latency": {
+   "encoder_fp32_s": [
+    10.565488925999944,
+    10.530305825000141,
+    10.640470996000204
+   ],
+   "encoder_bf16_s": [
+    5.144451204999996,
+    5.013636719000033,
+    5.169189902000198
+   ],
+   "decoder_1point_ms": [
+    54.268980999950145,
+    52.30411299999105,
+    75.98092800003542
+   ],
+   "decoder_box_ms": [
+    56.741145000046345,
+    51.40718699999525,
+    81.58225800002583
+   ],
+   "decoder_noprompt_ms": [
+    56.47291100001439,
+    52.899690999993254,
+    68.75273000014204
+   ],
+   "decoder_64points_ms": [
+    6860.8891825000455,
+    6591.041275999942,
+    7405.146706000096
+   ],
+   "postprocess_to_1024_ms": [
+    1.5044775000205846,
+    1.4450199998918833,
+    2.8483119999691553
+   ],
+   "bf16_vs_fp32_cosine": 0.9999641180038452,
+   "bf16_vs_fp32_rel_err": 0.007955431938171387
+  },
+  "memory": {
+   "enc_fp32": {
+    "kind": "enc_fp32",
+    "rss_idle_MB": 1028.93359375,
+    "rss_peak_MB": 3492.27734375,
+    "activation_peak_MB": 2463.34375
+   },
+   "enc_bf16": {
+    "kind": "enc_bf16",
+    "rss_idle_MB": 1029.03125,
+    "rss_peak_MB": 2328.78515625,
+    "activation_peak_MB": 1299.75390625
+   },
+   "dec_1pt": {
+    "kind": "dec_1pt",
+    "rss_idle_MB": 1029.08203125,
+    "rss_peak_MB": 1106.0859375,
+    "activation_peak_MB": 77.00390625
+   },
+   "dec_64pt": {
+    "kind": "dec_64pt",
+    "rss_idle_MB": 1028.93359375,
+    "rss_peak_MB": 2853.9140625,
+    "activation_peak_MB": 1824.98046875
+   }
+  }
+ },
+ "erf": {
+  "images": [
+   "cju0s690hkp960855tjuaqvv0",
+   "cju0sr5ghl0nd08789uzf1raf",
+   "cju0sxqiclckk08551ycbwhno",
+   "cju0t4oil7vzk099370nun5h9",
+   "cju0tl3uz8blh0993wxvn7ly3",
+   "cju0u2g7pmnux0801vkk47ivj"
+  ],
+  "tokens": {
+   "A": [
+    28,
+    28
+   ],
+   "B": [
+    27,
+    27
+   ]
+  },
+  "window_tokens": 14,
+  "stats": {
+   "0@28,28": {
+    "mass_in_home_window": 1.0000001192092896,
+    "radius50_px": 8.94427190999916,
+    "radius90_px": 180.27756377319946
+   },
+   "1@28,28": {
+    "mass_in_home_window": 1.0,
+    "radius50_px": 12.806248474865697,
+    "radius90_px": 212.84031572989173
+   },
+   "2@28,28": {
+    "mass_in_home_window": 0.6633529663085938,
+    "radius50_px": 122.48265183282079,
+    "radius90_px": 481.5018172343693
+   },
+   "5@28,28": {
+    "mass_in_home_window": 0.48021838068962097,
+    "radius50_px": 119.21828718783037,
+    "radius90_px": 443.71725231277634
+   },
+   "11@28,28": {
+    "mass_in_home_window": 0.3604581654071808,
+    "radius50_px": 163.783393541592,
+    "radius90_px": 476.3034746881446
+   },
+   "neck@28,28": {
+    "mass_in_home_window": 0.2919989228248596,
+    "radius50_px": 158.38244852255568,
+    "radius90_px": 465.80360668419047
+   },
+   "0@27,27": {
+    "mass_in_home_window": 1.0,
+    "radius50_px": 9.219544457292887,
+    "radius90_px": 185.02432272541898
+   },
+   "1@27,27": {
+    "mass_in_home_window": 1.0000001192092896,
+    "radius50_px": 22.360679774997898,
+    "radius90_px": 207.57649192526594
+   }
+  }
+ },
+ "features": {
+  "ids": [
+   "cju87zv8lni0o0850hbbecbq6",
+   "cju87z6o6nh73085045bzsx6o",
+   "cju87li0zn3yb0817kbwgjiz8",
+   "cju884985nlmx0817vzpax3y4"
+  ],
+  "input_size": {
+   "cju87zv8lni0o0850hbbecbq6": [
+    869,
+    1024
+   ],
+   "cju87z6o6nh73085045bzsx6o": [
+    873,
+    1024
+   ],
+   "cju87li0zn3yb0817kbwgjiz8": [
+    818,
+    1024
+   ],
+   "cju884985nlmx0817vzpax3y4": [
+    932,
+    1024
+   ]
+  },
+  "pca_explained_var_top3": {
+   "2": [
+    0.2092372534446911,
+    0.11582592570938345,
+    0.0615119499019257
+   ],
+   "5": [
+    0.29939314842329684,
+    0.10527313085037159,
+    0.04073799997282538
+   ],
+   "8": [
+    0.5927619852695747,
+    0.05626631330870884,
+    0.03371416715629996
+   ],
+   "11": [
+    0.5767925661175447,
+    0.061480357707374325,
+    0.04861725476314872
+   ],
+   "neck": [
+    0.28309510153039297,
+    0.12256033316654895,
+    0.084524175722173
+   ]
+  },
+  "mean_direction_separation": {
+   "2": 1.6673633456230164,
+   "5": 1.8371808528900146,
+   "8": 2.1485128104686737,
+   "11": 2.221179485321045,
+   "neck": 2.335312157869339
+  }
+ },
+ "probe_summary": {
+  "n_tokens_train": 600000,
+  "probe_threshold_dev": 0.0,
+  "probe_dice": 0.6141782340303427,
+  "selfbox_dice": 0.6224162458594513,
+  "selfpoint_dice": 0.4785462746853593,
+  "selfboxpoint_dice": 0.654512928455933,
+  "layers": {
+   "0": {
+    "auroc": 0.8335241055093113,
+    "ap": 0.4983178036037968
+   },
+   "1": {
+    "auroc": 0.845117446134494,
+    "ap": 0.5346506728028084
+   },
+   "2": {
+    "auroc": 0.8783387141011364,
+    "ap": 0.6330579366100103
+   },
+   "3": {
+    "auroc": 0.8798221317533593,
+    "ap": 0.6063754130224577
+   },
+   "4": {
+    "auroc": 0.8892505256850427,
+    "ap": 0.6511968388166027
+   },
+   "5": {
+    "auroc": 0.9041605561632097,
+    "ap": 0.6827163773770366
+   },
+   "6": {
+    "auroc": 0.9225216635109043,
+    "ap": 0.7500645314763149
+   },
+   "7": {
+    "auroc": 0.9285306593615997,
+    "ap": 0.7604063473713093
+   },
+   "8": {
+    "auroc": 0.9401889712434585,
+    "ap": 0.7950671603154804
+   },
+   "9": {
+    "auroc": 0.9405092949046275,
+    "ap": 0.7954776683491589
+   },
+   "10": {
+    "auroc": 0.9397257295428936,
+    "ap": 0.7951521808031379
+   },
+   "11": {
+    "auroc": 0.9446686284164021,
+    "ap": 0.8147932568985389
+   }
+  },
+  "layer_cells": {
+   "train": 90320,
+   "test": 26576,
+   "test_pos_rate": 0.15149006622516556
+  }
+ },
+ "attention_summary": {
+  "box_entropy": 0.587264353011992,
+  "box_lift": 5.4238739013671875,
+  "box_mass_in_gt": 0.5940139591693878,
+  "box_top1_mass": 0.11906693130731583,
+  "learned_entropy": 0.7134808452587819,
+  "learned_lift": 1.9016528129577637,
+  "learned_mass_in_gt": 0.22884566336870193,
+  "learned_top1_mass": 0.07485618069767952,
+  "noprompt_entropy": 0.7766603703214667,
+  "noprompt_lift": 0.4167979657649994,
+  "noprompt_mass_in_gt": 0.04922352731227875,
+  "noprompt_top1_mass": 0.05809587612748146,
+  "learned_tokens_file": "/home/claude/sam-prompt-cost/results/learned/lp_k4_meanpoint_s0/tokens.npy"
+ },
+ "twostage_summary": {
+  "lp_k1_meanpoint_s0": {
+   "tokens_dice": 0.27797143605230396,
+   "twostage_dice": 0.28692502799764896
+  },
+  "lp_k1_meanpoint_s1": {
+   "tokens_dice": 0.27670073414434204,
+   "twostage_dice": 0.2874951529913326
+  },
+  "lp_k1_meanpoint_s2": {
+   "tokens_dice": 0.28088588433382355,
+   "twostage_dice": 0.2910301993705389
+  },
+  "lp_k4_meanpoint_s0": {
+   "tokens_dice": 0.3254780376918661,
+   "twostage_dice": 0.32942173775165634
+  },
+  "lp_k4_meanpoint_s1": {
+   "tokens_dice": 0.3019882262442825,
+   "twostage_dice": 0.31483051612162477
+  },
+  "lp_k4_meanpoint_s2": {
+   "tokens_dice": 0.3259500140025524,
+   "twostage_dice": 0.33512257690585884
+  },
+  "lp_k4_s0": {
+   "tokens_dice": 0.00815447880203387,
+   "twostage_dice": 0.005855023175674627
+  }
+ }
+}

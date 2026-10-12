@@ -1,0 +1,15 @@
+{
+ "box_entropy": 0.587264353011992,
+ "box_lift": 5.4238739013671875,
+ "box_mass_in_gt": 0.5940139591693878,
+ "box_top1_mass": 0.11906693130731583,
+ "learned_entropy": 0.7134808452587819,
+ "learned_lift": 1.9016528129577637,
+ "learned_mass_in_gt": 0.22884566336870193,
+ "learned_top1_mass": 0.07485618069767952,
+ "noprompt_entropy": 0.7766603703214667,
+ "noprompt_lift": 0.4167979657649994,
+ "noprompt_mass_in_gt": 0.04922352731227875,
+ "noprompt_top1_mass": 0.05809587612748146,
+ "learned_tokens_file": "/home/claude/sam-prompt-cost/results/learned/lp_k4_meanpoint_s0/tokens.npy"
+}

@@ -1,0 +1,30 @@
+{
+ "lp_k1_meanpoint_s0": {
+  "tokens_dice": 0.27797143605230396,
+  "twostage_dice": 0.28692502799764896
+ },
+ "lp_k1_meanpoint_s1": {
+  "tokens_dice": 0.27670073414434204,
+  "twostage_dice": 0.2874951529913326
+ },
+ "lp_k1_meanpoint_s2": {
+  "tokens_dice": 0.28088588433382355,
+  "twostage_dice": 0.2910301993705389
+ },
+ "lp_k4_meanpoint_s0": {
+  "tokens_dice": 0.3254780376918661,
+  "twostage_dice": 0.32942173775165634
+ },
+ "lp_k4_meanpoint_s1": {
+  "tokens_dice": 0.3019882262442825,
+  "twostage_dice": 0.31483051612162477
+ },
+ "lp_k4_meanpoint_s2": {
+  "tokens_dice": 0.3259500140025524,
+  "twostage_dice": 0.33512257690585884
+ },
+ "lp_k4_s0": {
+  "tokens_dice": 0.00815447880203387,
+  "twostage_dice": 0.005855023175674627
+ }
+}

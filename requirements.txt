@@ -1,0 +1,11 @@
+# Entorno usado en el E1 (CPU): Python 3.13.16, Linux x86_64
+torch==2.14.1
+torchvision==0.29.1
+numpy==2.5.3
+scipy==1.18.1
+scikit-learn==1.9.1
+scikit-image==0.26.0
+pillow==12.3.0
+matplotlib==3.11.2
+psutil
+segment-anything @ git+https://github.com/facebookresearch/segment-anything.git@dca509fe793f601edb92606367a655c15ac00fdf

@@ -1,0 +1,10 @@
+# datos y artefactos pesados (se regeneran con los scripts)
+data/Kvasir-SEG/
+cache/
+checkpoints/*.pth
+logs/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+results/learned/*/test_lowres.npz
+data/kavsir_bboxes_official.json

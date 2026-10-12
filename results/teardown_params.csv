@@ -1,0 +1,27 @@
+componente,bloque,parametros,porcentaje
+encoder,"patch_embed (conv 16x16, 3→768)",590592,0.630
+encoder,pos_embed absoluto (64×64×768),3145728,3.356
+encoder,block 00 (ventana 14×14),7091328,7.565
+encoder,block 01 (ventana 14×14),7091328,7.565
+encoder,block 02 (global),7104128,7.579
+encoder,block 03 (ventana 14×14),7091328,7.565
+encoder,block 04 (ventana 14×14),7091328,7.565
+encoder,block 05 (global),7104128,7.579
+encoder,block 06 (ventana 14×14),7091328,7.565
+encoder,block 07 (ventana 14×14),7091328,7.565
+encoder,block 08 (global),7104128,7.579
+encoder,block 09 (ventana 14×14),7091328,7.565
+encoder,block 10 (ventana 14×14),7091328,7.565
+encoder,block 11 (global),7104128,7.579
+encoder,"neck (1×1 768→256, 3×3 256→256, 2×LN)",787456,0.840
+prompt_encoder,point_embeddings (4×256) + not_a_point,1280,0.001
+prompt_encoder,mask_downscaling (convs),4684,0.005
+prompt_encoder,no_mask_embed (1×256),256,0.000
+prompt_encoder,"pe_layer (Fourier aleatorio, buffer no entrenable)",0,0.000
+mask_decoder,"two-way layer 0 (self-attn tokens, t→i, MLP, i→t)",1579520,1.685
+mask_decoder,"two-way layer 1 (self-attn tokens, t→i, MLP, i→t)",1579520,1.685
+mask_decoder,final attn token→imagen + LN,132224,0.141
+mask_decoder,output_upscaling (2 ConvTranspose ×2),73952,0.079
+mask_decoder,hypernetwork MLPs (4 × MLP 256→32),559232,0.597
+mask_decoder,iou_prediction_head (MLP 256→4),132612,0.141
+mask_decoder,iou_token + 4 mask_tokens,1280,0.001

@@ -1,0 +1,22 @@
+metodo,dice_media,ic95_lo,ic95_hi,prompts_humanos,parametros_entrenados
+Sin prompt · salida única (token 0),0.0122,0.0007,0.0277,0,0
+"Sin prompt · multimáscara, elige cabeza IoU",0.1259,0.0921,0.1634,0,0
+Sin prompt · mejor de 4 salidas (oráculo),0.1573,0.1206,0.1975,0 (oráculo),0
+1 clic por pólipo · elige cabeza IoU,0.5708,0.5053,0.6364,1 clic/pólipo,0
+1 clic por pólipo · salida única (token 0),0.6961,0.6377,0.7528,1 clic/pólipo,0
+1 clic por pólipo · mejor de 3 (oráculo),0.8403,0.8082,0.8694,1 clic/pólipo,0
+Caja por pólipo,0.8859,0.8518,0.9142,1 caja/pólipo,0
+AMG · mejor propuesta cruda (oráculo),0.8946,0.874,0.9138,0 (oráculo),0
+AMG · mejor tras filtros de calidad (oráculo),0.4995,0.4354,0.5673,0 (oráculo),0
+AMG · mejor tras NMS (oráculo),0.4931,0.4285,0.5614,0 (oráculo),0
+AMG · elige mayor IoU predicho,0.0578,0.0362,0.0824,0,0
+AMG · elige la mayor,0.2414,0.1974,0.2878,0,0
+AMG · elige la más central,0.2185,0.1784,0.2621,0,0
+Probe lineal sobre el embedding,0.6142,0.5669,0.6605,0,257
+Auto-prompt: caja desde el probe → SAM,0.6224,0.5701,0.6739,0,257
+Auto-prompt: punto desde el probe → SAM,0.4785,0.4133,0.5454,0,257
+Auto-prompt: caja + punto desde el probe → SAM,0.6545,0.5957,0.7123,0,257
+Tokens aprendidos k=1 · init. clic medio (3 semillas),0.2785,0.21,0.3475,0,256
+Tokens aprendidos k=4 · init. clic medio (3 semillas),0.3178,0.2534,0.3833,0,1024
+"Tokens aprendidos k=4 · init. aleatoria, pre-registrada (1 semilla)",0.0082,0.0024,0.0161,0,1024
+Dos etapas: tokens k=4 → caja → SAM (3 semillas),0.3265,0.2587,0.3944,0,1024

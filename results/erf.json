@@ -1,0 +1,63 @@
+{
+ "images": [
+  "cju0s690hkp960855tjuaqvv0",
+  "cju0sr5ghl0nd08789uzf1raf",
+  "cju0sxqiclckk08551ycbwhno",
+  "cju0t4oil7vzk099370nun5h9",
+  "cju0tl3uz8blh0993wxvn7ly3",
+  "cju0u2g7pmnux0801vkk47ivj"
+ ],
+ "tokens": {
+  "A": [
+   28,
+   28
+  ],
+  "B": [
+   27,
+   27
+  ]
+ },
+ "window_tokens": 14,
+ "stats": {
+  "0@28,28": {
+   "mass_in_home_window": 1.0000001192092896,
+   "radius50_px": 8.94427190999916,
+   "radius90_px": 180.27756377319946
+  },
+  "1@28,28": {
+   "mass_in_home_window": 1.0,
+   "radius50_px": 12.806248474865697,
+   "radius90_px": 212.84031572989173
+  },
+  "2@28,28": {
+   "mass_in_home_window": 0.6633529663085938,
+   "radius50_px": 122.48265183282079,
+   "radius90_px": 481.5018172343693
+  },
+  "5@28,28": {
+   "mass_in_home_window": 0.48021838068962097,
+   "radius50_px": 119.21828718783037,
+   "radius90_px": 443.71725231277634
+  },
+  "11@28,28": {
+   "mass_in_home_window": 0.3604581654071808,
+   "radius50_px": 163.783393541592,
+   "radius90_px": 476.3034746881446
+  },
+  "neck@28,28": {
+   "mass_in_home_window": 0.2919989228248596,
+   "radius50_px": 158.38244852255568,
+   "radius90_px": 465.80360668419047
+  },
+  "0@27,27": {
+   "mass_in_home_window": 1.0,
+   "radius50_px": 9.219544457292887,
+   "radius90_px": 185.02432272541898
+  },
+  "1@27,27": {
+   "mass_in_home_window": 1.0000001192092896,
+   "radius50_px": 22.360679774997898,
+   "radius90_px": 207.57649192526594
+  }
+ }
+}
