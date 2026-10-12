@@ -54,7 +54,8 @@ def main():
                                           "area": float(np.mean(col(base, f'np_area_t{k}', ids))),
                                           "border_frac": float(np.mean(col(base, f'np_border_t{k}', ids))),
                                           "pred_iou": float(np.mean(col(base, f'np_pred_iou_t{k}', ids))),
-                                          "empty_rate": float(np.mean(col(base, f'np_area_t{k}', ids) < 1e-4))}
+                                          "empty_rate": float(np.mean(col(base, f'np_area_t{k}', ids) == 0)),
+                                          "near_empty_rate": float(np.mean(col(base, f'np_area_t{k}', ids) < 1e-4))}
                                 for k in range(4)}
         S["gt_area_median"] = float(np.median(col(base, "gt_area", ids)))
         # NoC

@@ -115,9 +115,9 @@ def main():
     modes = set(a.modes.split(","))
     cs = CachedSAM(load_sam())
     ids = read_split(a.split)
-    ids = [i for i in ids if i in cs.meta]
     if a.limit:
         ids = ids[:a.limit]
+    cs.require_ids(ids)
     t0 = time.time()
     RESULTS.mkdir(exist_ok=True)
     if "amg" in modes:

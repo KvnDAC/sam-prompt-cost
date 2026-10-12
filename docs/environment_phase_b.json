@@ -1,0 +1,25 @@
+{
+  "python": "3.13.5",
+  "torch": "2.7.1+cpu",
+  "numpy": "1.26.4",
+  "cpu": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
+  "threads": 4,
+  "cuda": false,
+  "packages": {
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "numpy": "1.26.4",
+    "scipy": "1.16.0",
+    "scikit-learn": "1.9.1",
+    "pillow": "12.1.1",
+    "segment-anything": "1.0"
+  },
+  "sam_source": {
+    "url": "https://github.com/facebookresearch/segment-anything.git",
+    "vcs_info": {
+      "commit_id": "dca509fe793f601edb92606367a655c15ac00fdf",
+      "requested_revision": "dca509fe793f601edb92606367a655c15ac00fdf",
+      "vcs": "git"
+    }
+  }
+}

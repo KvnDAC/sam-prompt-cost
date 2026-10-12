@@ -16,7 +16,7 @@ class LearnedPrompt(nn.Module):
     def __init__(self, sam, k=4, init_std=None, learn_dense=False, out_token=0, init_tokens=None):
         super().__init__()
         self.sam = sam
-        if init_std is None:  # escala de un prompt real (punto en el centro: embedding + codificación posicional)
+        if init_std is None and init_tokens is None:  # escala de un prompt real
             with torch.no_grad():
                 sp, _ = sam.prompt_encoder(points=(torch.tensor([[[512.0, 512.0]]]), torch.ones(1, 1, dtype=torch.int)),
                                            boxes=None, masks=None)
@@ -37,6 +37,41 @@ class LearnedPrompt(nn.Module):
         dense = (self.dense if self.dense is not None else self.no_mask).expand(b, -1, 64, 64)
         masks, iou = predict_masks_batched(self.sam.mask_decoder, emb, self.pe, sparse, dense)
         return masks[:, self.out_token], iou[:, self.out_token]
+
+    def train(self, mode=True):
+        super().train(mode)
+        self.sam.eval()
+        return self
+
+
+class ConditionalPrompt(LearnedPrompt):
+    """Residual image-conditioned prompts; SAM frozen, pooled spatial keys with SAM PE."""
+
+    def __init__(self, sam, k=4, init_tokens=None):
+        super().__init__(sam, k=k, init_tokens=init_tokens)
+        self.feature_norm = nn.LayerNorm(256)
+        self.query_norm = nn.LayerNorm(256)
+        self.attention = nn.MultiheadAttention(256, 8, batch_first=True)
+        self.residual = nn.Linear(256, 256)
+        # Start close to static prompts without blocking gradients to attention.
+        nn.init.normal_(self.residual.weight, std=1e-3)
+        nn.init.zeros_(self.residual.bias)
+
+    def prompt_embeddings(self, emb):
+        b = emb.shape[0]
+        features = F.adaptive_avg_pool2d(emb, (16, 16)).flatten(2).transpose(1, 2)
+        position = F.adaptive_avg_pool2d(self.pe, (16, 16)).flatten(2).transpose(1, 2)
+        query = self.tokens.expand(b, -1, -1)
+        values = self.feature_norm(features)
+        update, _ = self.attention(self.query_norm(query), values + position, values, need_weights=False)
+        return query + self.residual(update)
+
+    def forward(self, emb):
+        b = emb.shape[0]
+        sparse = self.prompt_embeddings(emb)
+        dense = self.no_mask.expand(b, -1, 64, 64)
+        masks, quality = predict_masks_batched(self.sam.mask_decoder, emb, self.pe, sparse, dense)
+        return masks[:, self.out_token], quality[:, self.out_token]
 
 
 def seg_loss(logits, target, valid):

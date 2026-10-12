@@ -1,0 +1,69 @@
+{
+ "split": "dev",
+ "ids": [
+  "cju7fob3x301u0755x985pmmq",
+  "cju88y1mwoln50871emyfny1g",
+  "cju40sdwukv3k0755y99ug1k8"
+ ],
+ "selection": "largest GT-box minus GT-point Dice; post-hoc extremes",
+ "warning": "Illustrations are not representative or causal evidence.",
+ "reproduced_tolerance": 1e-08,
+ "input_csv_sha256": "8c1eb7577f6736e0d6dbd8ffd89c9182f2b0ecdbde7372618ab8bdf61dc19429",
+ "source_sha256": "f00b1590914b00e42dcae46e2e7a1bcee300c2f9e09a7e9c082d26c24abcd344",
+ "cache_meta": {
+  "cju7fob3x301u0755x985pmmq": {
+   "original_size": [
+    528,
+    577
+   ],
+   "input_size": [
+    937,
+    1024
+   ],
+   "split": "dev",
+   "precision": "fp32",
+   "storage": "fp32",
+   "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+   "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+   "image_sha256": "1b4cfe512fc5ab602cf41a0955308cd6dbff59a62d9da5995f53563909c2139d",
+   "torch_version": "2.7.1+cpu",
+   "device": "cpu"
+  },
+  "cju88y1mwoln50871emyfny1g": {
+   "original_size": [
+    529,
+    621
+   ],
+   "input_size": [
+    872,
+    1024
+   ],
+   "split": "dev",
+   "precision": "fp32",
+   "storage": "fp32",
+   "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+   "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+   "image_sha256": "42b152781b64ee5e66989d88b0f552d31e289f9bd416efe76eaeaa8fd1800beb",
+   "torch_version": "2.7.1+cpu",
+   "device": "cpu"
+  },
+  "cju40sdwukv3k0755y99ug1k8": {
+   "original_size": [
+    528,
+    615
+   ],
+   "input_size": [
+    879,
+    1024
+   ],
+   "split": "dev",
+   "precision": "fp32",
+   "storage": "fp32",
+   "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+   "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+   "image_sha256": "45e13489876d1eb2573c2037c1cc09a51eabeb05286bd3f993079e6a4db457b7",
+   "torch_version": "2.7.1+cpu",
+   "device": "cpu"
+  }
+ }
+}

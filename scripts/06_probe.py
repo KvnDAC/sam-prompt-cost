@@ -18,7 +18,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import average_precision_score, roc_auc_score
 from sklearn.preprocessing import StandardScaler
 
-from samcost.common import CACHE, RESULTS, load_sam, save_json, set_seed, set_threads
+from samcost.common import CACHE, RESULTS, env_info, load_sam, save_json, set_seed, set_threads
 from samcost.data import load_mask, read_split
 from samcost.decode import CachedSAM
 from samcost.metrics import dice, iou
@@ -73,11 +73,23 @@ def main():
     import argparse
     ap = argparse.ArgumentParser()
     ap.add_argument("--part", choices=["main", "layers", "all"], default="all")
+    ap.add_argument("--split", choices=["dev", "test"], default="test")
+    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--output_root", type=Path)
     a = ap.parse_args()
+    if a.split == "dev" and a.part != "main":
+        ap.error("Use --part main para desarrollo en dev sin probes por capa")
+    output = a.output_root or RESULTS
+    if a.output_root:
+        if output.exists():
+            raise FileExistsError(f"Salida existente: {output}")
+        output.mkdir(parents=True)
     set_threads()
     sam = load_sam()
     cs = CachedSAM(sam)
-    tr, dev, te = read_split("train400"), read_split("dev"), read_split("test")
+    tr, dev, te = read_split("train400"), read_split("dev"), read_split(a.split)
+    for ids in (tr, dev, te):
+        cs.require_ids(ids)
     t0 = time.time()
     if a.part == "layers":
         out = json.load(open(RESULTS / "probe_summary.json"))
@@ -85,7 +97,11 @@ def main():
         return
     X, Y = collect(cs, tr, per_img=1500)
     out = {"n_tokens_train": int(len(Y))}
-    lin, mu, sd = train_probe(X, Y)
+    lin, mu, sd = train_probe(X, Y, seed=a.seed)
+    if a.output_root:
+        save_json({"env": env_info(), "seed": a.seed, "split": a.split,
+                   "train_ids": tr, "dev_ids": dev, "evaluation_ids": te,
+                   "cache_meta": {i: cs.meta[i] for i in set(tr + dev + te)}}, output / "manifest.json")
     # umbral en dev
     thr_grid = np.linspace(-3, 3, 25)
     dscore = np.zeros(len(thr_grid))
@@ -96,6 +112,9 @@ def main():
         dscore += [dice(full > t, gt) for t in thr_grid]
     thr = float(thr_grid[np.argmax(dscore)])
     out["probe_threshold_dev"] = thr
+    out["seed"] = a.seed
+    out["split"] = a.split
+    torch.save({"linear": lin.state_dict(), "mu": mu, "sd": sd, "threshold": thr}, output / "probe_state.pt")
     rows = []
     for iid in te:
         lr, emb, osz, isz = probe_logits(cs, lin, mu, sd, iid)
@@ -123,12 +142,12 @@ def main():
         else:
             r.update(selfbox_dice=0.0, selfpoint_dice=0.0, selfboxpoint_dice=0.0, selfbox_iou=0.0, probe_n_comp=0)
         rows.append(r)
-    with open(RESULTS / "probe_test_per_image.csv", "w", newline="") as f:
+    with open(output / f"probe_{a.split}_per_image.csv", "w", newline="", encoding="utf-8") as f:
         wr = csv.DictWriter(f, fieldnames=list(rows[0].keys())); wr.writeheader(); wr.writerows(rows)
     for k in ["probe_dice", "selfbox_dice", "selfpoint_dice", "selfboxpoint_dice"]:
         out[k] = float(np.mean([r[k] for r in rows]))
     print(json.dumps(out), f"{(time.time() - t0) / 60:.1f} min", flush=True)
-    save_json(out, RESULTS / "probe_summary.json")
+    save_json(out, output / "probe_summary.json")
     if a.part == "all":
         layer_probe(cs, tr, te, out)
 

@@ -26,10 +26,14 @@ def stats_of(att, lab, valid):
     a = att.reshape(64, 64)
     a = a / a.sum()
     area = (lab * valid).sum() / valid.sum()
+    valid_mass = float((a * valid).sum())
     m = float((a * lab).sum())
     p = a[valid > 0].ravel(); p = p / p.sum()
     ent = float(-(p * np.log(p + 1e-12)).sum() / np.log(len(p)))
-    return {"mass_in_gt": m, "lift": m / max(area, 1e-6), "entropy": ent, "top1_mass": float(a.max())}
+    return {"mass_in_gt": m, "mass_in_valid": valid_mass,
+            "mass_in_padding": 1.0 - valid_mass,
+            "lift": m / max(valid_mass * area, 1e-12),
+            "entropy": ent, "top1_mass": float(a.max())}
 
 
 def main():

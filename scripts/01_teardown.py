@@ -4,7 +4,7 @@ Uso:  python scripts/01_teardown.py            (todo)
       python scripts/01_teardown.py --mem_probe enc_fp32   (uso interno: mide memoria en un proceso limpio)
 Salida: results/teardown.json, results/teardown_blocks.csv
 """
-import argparse, csv, json, resource, subprocess, sys, time
+import argparse, csv, json, subprocess, sys, time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))

@@ -45,6 +45,13 @@ class CachedSAM:
         m = self.meta[iid]
         return e, tuple(m["original_size"]), tuple(m["input_size"])
 
+    def require_ids(self, ids):
+        """Fail rather than silently evaluating a subset of a declared split."""
+        missing = [i for i in ids if i not in self.meta or not (CACHE / "emb" / f"{i}.npy").is_file()]
+        if missing:
+            raise FileNotFoundError(f"Faltan {len(missing)} embeddings/metadatos: {missing[:5]}. Ejecute 02_encode.py.")
+        return ids
+
     def no_mask_dense(self, b=1):
         return self.sam.prompt_encoder.no_mask_embed.weight.reshape(1, -1, 1, 1).expand(b, -1, 64, 64)
 
