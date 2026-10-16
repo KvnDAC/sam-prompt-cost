@@ -22,6 +22,10 @@ nb.cells = [
     md("## 2. Kvasir-SEG oficial y particiones\nTérminos: solo investigación y educación; citar Jha et al. (MMM 2020). "
        "Si el enlace cambia, descargar desde https://datasets.simula.no/kvasir-seg/."),
     code("!wget -q https://datasets.simula.no/downloads/kvasir-seg.zip -O kvasir-seg.zip\n!python scripts/00_prepare_kvasir.py --official_zip kvasir-seg.zip"),
+    md("## Carpeta de esta corrida\nResultados y figuras se escriben en `runs/<fecha>`; los artefactos versionados del E1 "
+       "(`results/`, `figures/`) no se sobrescriben."),
+    code("import os, datetime\nos.environ[\"SAMCOST_RUN_DIR\"] = \"runs/\" + datetime.datetime.now().strftime(\"%Y%m%d_%H%M%S\")\n"
+         "print(\"Corrida:\", os.environ[\"SAMCOST_RUN_DIR\"])"),
     md("## 3. Fase A — teardown"),
     code("!python scripts/01_teardown.py\n!python scripts/04_receptive_field.py"),
     md("## 4. Embeddings (una pasada del encoder por imagen)"),

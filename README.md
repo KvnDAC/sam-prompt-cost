@@ -44,7 +44,9 @@ wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth -O che
 # 2) Kvasir-SEG oficial (https://datasets.simula.no/kvasir-seg/) y particiones
 python scripts/00_prepare_kvasir.py --official_zip kvasir-seg.zip
 
-# 3) Pipeline
+# 3) Pipeline. Cada corrida escribe resultados y figuras en su propia carpeta;
+#    results/ y figures/ (artefactos versionados del E1) no se sobrescriben.
+export SAMCOST_RUN_DIR=runs/$(date +%Y%m%d_%H%M%S)
 python scripts/01_teardown.py                      # parámetros, FLOPs, latencia, memoria
 python scripts/02_encode.py --split test --precision fp32
 python scripts/02_encode.py --split dev --precision fp32
@@ -60,11 +62,13 @@ done; done
 python scripts/07b_twostage.py                   # tokens -> caja -> SAM (dos etapas)
 python scripts/05b_attention_stats.py            # hacia dónde mira el token de máscara
 python scripts/08b_subgroups.py test             # atributos por imagen para subgrupos
-python scripts/08_summarize.py                   # tabla principal, pruebas, results/summary_main.json
+python scripts/08_summarize.py                   # tabla principal, pruebas, $SAMCOST_RUN_DIR/summary_main.json
 python scripts/09_figures.py
 ```
 
 `scripts/02_encode.py` usa GPU automáticamente si está disponible (`SAMCOST_DEVICE=cpu` para forzar CPU). Todo lo demás corre sobre los embeddings en caché y es rápido en CPU.
+
+**Carpeta por corrida.** Con `SAMCOST_RUN_DIR` definida, todos los scripts escriben en esa carpeta (las figuras, en su subcarpeta `figures/`). Para comparar con el E1, contrastar `$SAMCOST_RUN_DIR/summary_main.json` con `results/summary_main.json`. `runs/` está en `.gitignore`: versionar una corrida es una decisión explícita. En PowerShell: `$env:SAMCOST_RUN_DIR = "runs/$(Get-Date -Format yyyyMMdd_HHmmss)"`. Sin la variable, los scripts escriben en `results/` y `figures/`, y `07_learned_prompts.py` se detiene si la carpeta de la corrida ya existe, en lugar de sobrescribirla. La caché de embeddings (`cache/`) sí es compartida entre corridas.
 
 ## Semillas y entorno
 
@@ -86,4 +90,4 @@ El código, la ejecución de los experimentos del E1 y el borrador de la documen
 
 ## Continuación: Fase B
 
-Protocolo y comandos en [docs/fase_b.md](docs/fase_b.md). Los resultados E1 usan encoder FP32 en test/dev, caché FP16 y decoder FP32. Las nuevas ejecuciones permiten `--storage fp32` y validan la procedencia de la caché. No mezclar resultados de ambas precisiones. Las corridas existentes se protegen contra sobrescritura.
+Protocolo y comandos en [docs/fase_b.md](docs/fase_b.md). Los resultados E1 usan encoder FP32 en test/dev, caché FP16 y decoder FP32. Las nuevas ejecuciones permiten `--storage fp32` y validan la procedencia de la caché. No mezclar resultados de ambas precisiones. Las corridas existentes se protegen contra sobrescritura. El experimento de desarrollo `results/phase_b/full_dev_20261012/` está **incompleto** (se versionó durante la ejecución): estado y pasos para reanudarlo en [docs/fase_b.md](docs/fase_b.md#estado-del-experimento-versionado-revisión-del-16-de-octubre).

@@ -79,3 +79,40 @@ La ablación ya terminó: 100 imágenes dev, 2.400 evaluaciones y 12 condiciones
 Después de entrenar, ejecutar `scripts/14_conditioning_diagnostic.py --experiment results/phase_b/full_dev_20261012` para el control D17: decoder e imagen objetivo fijos, contexto del generador permutado. Antes de interpretarlo, el script verifica que los checkpoints recargados reproducen su Dice dev seleccionado.
 
 El resumen automatizado `13_summarize_phase_b.py` ya ejecuta este control si falta su resultado y lo incorpora al informe. También incorpora el control exploratorio de selección ejecutado mediante `17_output_selection.py`: con punto, salida única 0,6831; elección por IoU predicho 0,5401; mejor candidato según GT 0,8600. Sin prompt, mejor de cuatro según GT 0,1824. Los casos reproducidos con contornos de predicción están en `results/phase_b/full_dev_20261012/spatial_cases/predictions.png`. Estas extensiones no alteran la configuración de entrenamiento fijada en D16.
+
+## Estado del experimento versionado (revisión del 16 de octubre)
+
+El commit `eb3e7e3` (12 de octubre, 18:29) guardó `results/phase_b/full_dev_20261012/` **con la ejecución en curso**. `status.json` registra `state: running` y `current_stage: static_k4_s1`. **El experimento está incompleto.**
+
+| Etapa | Estado en el repositorio |
+|---|---|
+| `encode_dev`, `encode_train400` | Completas (exit 0) |
+| `perturbations_dev` y controles derivados (subgrupos, casos, selección de salidas) | Completos |
+| Barrido de LR del condicionado (`search/`, 3 corridas) | Completo; elegido LR 1e-4 (`selection.json`) |
+| `static_k4_s0` | Completa |
+| `static_k4_s1` | **Interrumpida**: `progress.json` con 3 de 6 épocas, sin `summary.json` ni `dev_per_image.csv`. No es un resultado; no citarla |
+| `static_k4_s2`, `conditional_k4_s0–s2`, `probe_s0–s2` | Sin ejecutar |
+| `13_summarize_phase_b.py` (incluye el control D17 de `14_conditioning_diagnostic.py`) | Sin ejecutar: no existen `report.md`, `table.csv` ni `summary.json` del experimento |
+
+Por tanto, **todavía no hay comparación estático vs. condicionado vs. probe en dev**. Lo disponible son lecturas parciales de una semilla, sin IC:
+
+- Estático, semilla 0: la inicialización meanpoint sin entrenar ya da Dice dev 0,3505, y la mejor época (6) llega a 0,3513.
+- Barrido del condicionado, semilla 0: 0,3607 con LR 1e-5, 0,3602 con 3e-5 y 0,3987 con 1e-4.
+
+### Cómo reanudar
+
+1. **Confirmar con quien lanzó la corrida** si el proceso sigue activo o si hay resultados locales más nuevos sin subir. El commit es una foto a mitad de camino.
+2. **Reanudar solo en la copia de trabajo original.** `12_run_phase_b.py` compara `plan.json`, que incluye el SHA-256 de siete archivos fuente calculado sobre los bytes en disco, con claves de ruta en formato Windows (`scripts\02_encode.py`). Verificado el 16 de octubre:
+   - **Clon nuevo en Windows** (`core.autocrlf=true`): `scripts/10_prompt_perturbations.py` no coincide. El hash del plan corresponde a la versión con fin de línea LF, y el clon la tiene con CRLF.
+   - **Linux/Colab**: no coinciden los otros seis archivos (sus hashes corresponden a CRLF), ni las claves con `\`.
+   - **Cualquier edición** de `02_encode.py`, `06_probe.py`, `07_learned_prompts.py`, `10_prompt_perturbations.py`, `learned.py`, `decode.py` o `data.py` también bloquea la reanudación. Es intencional: evita mezclar versiones de código dentro de un experimento.
+3. **Mover, no borrar**, la corrida parcial (las corridas fallidas se conservan, D15). Por ejemplo, `runs/static_k4_s1` → `interrumpidas/static_k4_s1_20261012`, dentro de la carpeta del experimento. Si sigue en `runs/`, `07_learned_prompts.py` lanza `FileExistsError` y la etapa queda como fallida.
+4. **Relanzar** `.\.venv\Scripts\python.exe scripts\12_run_phase_b.py --output_root results\phase_b\full_dev_20261012 --threads 4`. Las etapas `complete` se saltan y `static_k4_s1` se repite desde cero.
+5. **Antes de reanudar, decidir sobre la grilla de LR.** El valor elegido (1e-4) es el extremo superior de {1e-5, 3e-5, 1e-4}, y su mejor época fue la última del barrido. Ampliar la grilla cambia `plan.json` y exige una carpeta de experimento nueva.
+
+Si no se puede reanudar (otra máquina, Colab o grilla ampliada), crear una carpeta nueva con `--output_root` y repetir el protocolo completo. Duraciones registradas con 4 hilos de CPU:
+
+- `encode_train400`: 68,5 min. En la misma máquina se omite si la caché es válida, porque la firma incluye precisión, hashes, versión de torch y dispositivo.
+- Cada corrida de 6 épocas: unos 7 min.
+- Cada corrida del barrido: unos 4 min.
+- Ablación espacial: 4,3 min.
