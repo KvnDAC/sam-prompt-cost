@@ -3,6 +3,7 @@ import json
 import os
 import platform
 import random
+from importlib import metadata
 from pathlib import Path
 
 import numpy as np
@@ -51,6 +52,17 @@ def env_info() -> dict:
         "threads": torch.get_num_threads(),
         "cuda": torch.cuda.is_available(),
     }
+    info["packages"] = {}
+    for package in ("torch", "torchvision", "numpy", "scipy", "scikit-learn", "pillow", "segment-anything"):
+        try:
+            info["packages"][package] = metadata.version(package)
+        except metadata.PackageNotFoundError:
+            info["packages"][package] = None
+    try:
+        direct = metadata.distribution("segment-anything").read_text("direct_url.json")
+        info["sam_source"] = json.loads(direct) if direct else None
+    except metadata.PackageNotFoundError:
+        info["sam_source"] = None
     try:
         with open("/proc/cpuinfo") as f:
             for line in f:
@@ -64,5 +76,7 @@ def env_info() -> dict:
 
 def save_json(obj, path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w") as f:
+    temporary = path.with_name(path.name + ".tmp")
+    with open(temporary, "w", encoding="utf-8") as f:
         json.dump(obj, f, indent=1, default=float)
+    temporary.replace(path)

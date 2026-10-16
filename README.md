@@ -14,6 +14,7 @@ Este repositorio corresponde al **Entregable 1** (propuesta, teardown, intervenc
 | AMG 16×16, mejor propuesta (oráculo) | — | 0,895 [0,874–0,914] |
 | Tokens aprendidos k = 4, SAM congelado (3 semillas) | — | 0,318 [0,253–0,383] |
 | Probe lineal → caja → SAM | — | 0,622 [0,570–0,674] |
+| Probe lineal → caja + punto → SAM | — | 0,655 [0,596–0,712] |
 | 1 clic por pólipo, salida única | 1 clic | 0,696 [0,638–0,753] |
 | Caja por pólipo | 1 caja | 0,886 [0,852–0,914] |
 
@@ -54,7 +55,7 @@ python scripts/04_receptive_field.py
 python scripts/05_features.py
 python scripts/06_probe.py
 for k in 4 1; do for s in 0 1 2; do
-  python scripts/07_learned_prompts.py --k $k --seed $s --epochs 6 --lr 5e-3 --bs 8
+  python scripts/07_learned_prompts.py --k $k --seed $s --init meanpoint --epochs 6 --lr 5e-3 --bs 8
 done; done
 python scripts/07b_twostage.py                   # tokens -> caja -> SAM (dos etapas)
 python scripts/05b_attention_stats.py            # hacia dónde mira el token de máscara
@@ -82,3 +83,7 @@ python scripts/09_figures.py
 ## Uso de asistentes de IA
 
 El código, la ejecución de los experimentos del E1 y el borrador de la documentación se hicieron con asistencia de Claude (Anthropic). Cada decisión asistida está marcada con **[IA]** en el cuaderno de decisiones; el equipo es responsable de revisarlas y defenderlas.
+
+## Continuación: Fase B
+
+Protocolo y comandos en [docs/fase_b.md](docs/fase_b.md). Los resultados E1 usan encoder FP32 en test/dev, caché FP16 y decoder FP32. Las nuevas ejecuciones permiten `--storage fp32` y validan la procedencia de la caché. No mezclar resultados de ambas precisiones. Las corridas existentes se protegen contra sobrescritura.

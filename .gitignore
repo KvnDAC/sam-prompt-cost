@@ -5,6 +5,8 @@ checkpoints/*.pth
 logs/
 __pycache__/
 *.pyc
+.venv/
+data/kvasir-seg-official.zip
 .ipynb_checkpoints/
 results/learned/*/test_lowres.npz
 data/kavsir_bboxes_official.json

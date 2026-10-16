@@ -29,9 +29,9 @@ nb.cells = [
     md("## 5. Línea base: el costo del prompt"),
     code("!python scripts/03_prompt_cost.py --split test --modes noprompt,point,box,clicks\n!python scripts/03_prompt_cost.py --split test --modes amg --pps 16\n!python scripts/05_features.py\n!python scripts/05b_attention_stats.py"),
     md("## 6. Probe lineal, auto-prompts e intervención (tokens aprendidos)"),
-    code("!python scripts/06_probe.py\nfor k in (4, 1):\n    for s in (0, 1, 2):\n        !python scripts/07_learned_prompts.py --k {k} --seed {s} --epochs 6 --lr 5e-3 --bs 8"),
+    code("!python scripts/06_probe.py\nfor k in (4, 1):\n    for s in (0, 1, 2):\n        !python scripts/07_learned_prompts.py --k {k} --seed {s} --init meanpoint --epochs 6 --lr 5e-3 --bs 8"),
     md("## 7. Resumen y figuras"),
-    code("!python scripts/05b_attention_stats.py\n!python scripts/08_summarize.py\n!python scripts/09_figures.py"),
+    code("!python scripts/07b_twostage.py\n!python scripts/08b_subgroups.py test\n!python scripts/05b_attention_stats.py\n!python scripts/08_summarize.py\n!python scripts/09_figures.py"),
 ]
 nbf.write(nb, NB / "01_reproducir_E1_colab.ipynb")
 

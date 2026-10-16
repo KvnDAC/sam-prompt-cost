@@ -1,0 +1,37 @@
+{
+ "tag": "cp_k4_meanpoint_s0_low_lr",
+ "model": "conditional",
+ "k": 4,
+ "seed": 0,
+ "init": "meanpoint",
+ "learn_dense": false,
+ "n_params": 331008,
+ "n_train": 4,
+ "epochs": 2,
+ "lr": 1e-05,
+ "bs": 2,
+ "best_dev_dice": 0.2530897561661361,
+ "initial_dev_dice": 0.2530897561661361,
+ "best_epoch": 0,
+ "test_dice": null,
+ "test_iou": null,
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 1.2907467782497406,
+   "dev_dice": 0.2447725137056627,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.0,
+   "min": 0.023262691497802735
+  },
+  {
+   "epoch": 2,
+   "train_loss": 1.279847264289856,
+   "dev_dice": 0.24334056628604475,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.0,
+   "min": 0.041669678688049314
+  }
+ ],
+ "minutes": 0.041775933901468915
+}

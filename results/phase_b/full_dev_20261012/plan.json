@@ -1,0 +1,39 @@
+{
+ "train_split": "train400",
+ "n_train": 400,
+ "n_dev": 100,
+ "evaluation_split": "dev",
+ "test_evaluated": false,
+ "storage": "fp32",
+ "encoder_precision": "fp32",
+ "intermediate_blocks": false,
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "k": 4,
+ "init": "meanpoint",
+ "include_initial": true,
+ "lr_grid_conditional": [
+  1e-05,
+  3e-05,
+  0.0001
+ ],
+ "search_epochs": 3,
+ "final_epochs": 6,
+ "static_lr": 0.005,
+ "batch_size": 8,
+ "threads": 4,
+ "selection": "best mean dev Dice, ties prefer smaller LR",
+ "source_sha256": {
+  "scripts\\02_encode.py": "ed508275002c7c19a01849eadc517e355e9a05a8080d955225dfb9b324c00adc",
+  "scripts\\06_probe.py": "b0d70098016f9931ef28620a4e441e023ea45cbd9b02c6b701f7175ad759aeee",
+  "scripts\\07_learned_prompts.py": "92e4c622865eb007892cc66b360fc33a0d97c36786083f8783e1413e9b2a3031",
+  "scripts\\10_prompt_perturbations.py": "ab3c9081048e5f71e27db84f5e74d55824c65cda7bd9138a4bc5d4cc6441f53f",
+  "src\\samcost\\learned.py": "6accf21b49c675e2dddbfc61c8b8d65f24bb602620e03e2e9fdd076129255e0e",
+  "src\\samcost\\decode.py": "b326a11abfd4423a777bf8ba9bcce861d655c5b22c67337586b7162aa93c52e2",
+  "src\\samcost\\data.py": "7dd305fa760145ae8343656ec9bdaac1fd222742af79d499565ba0ac04341e0d"
+ },
+ "note": "Development scores are used for selection, not held-out generalization."
+}

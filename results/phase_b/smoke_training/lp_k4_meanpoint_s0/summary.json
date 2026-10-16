@@ -1,0 +1,33 @@
+{
+ "tag": "lp_k4_meanpoint_s0",
+ "model": "static",
+ "k": 4,
+ "seed": 0,
+ "init": "meanpoint",
+ "learn_dense": false,
+ "n_params": 1024,
+ "n_train": 4,
+ "epochs": 2,
+ "lr": 0.001,
+ "bs": 2,
+ "best_dev_dice": 0.2500238556522248,
+ "initial_dev_dice": 0.26101126691947274,
+ "best_epoch": 1,
+ "test_dice": null,
+ "test_iou": null,
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 1.3011988401412964,
+   "dev_dice": 0.2500238556522248,
+   "min": 0.03747297128041585
+  },
+  {
+   "epoch": 2,
+   "train_loss": 1.2852861881256104,
+   "dev_dice": 0.2482082299967594,
+   "min": 0.06377837260564169
+  }
+ ],
+ "minutes": 0.06389903624852498
+}

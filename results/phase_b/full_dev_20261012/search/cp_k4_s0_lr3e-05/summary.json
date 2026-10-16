@@ -1,0 +1,45 @@
+{
+ "tag": "cp_k4_s0_lr3e-05",
+ "model": "conditional",
+ "k": 4,
+ "seed": 0,
+ "init": "meanpoint",
+ "learn_dense": false,
+ "n_params": 331008,
+ "n_train": 400,
+ "epochs": 3,
+ "lr": 3e-05,
+ "bs": 8,
+ "best_dev_dice": 0.36024675843893683,
+ "initial_dev_dice": 0.35053993863370986,
+ "best_epoch": 3,
+ "test_dice": null,
+ "test_iou": null,
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 1.251306813955307,
+   "dev_dice": 0.29570046580205783,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.0,
+   "min": 1.139399246374766
+  },
+  {
+   "epoch": 2,
+   "train_loss": 1.0589100706577301,
+   "dev_dice": 0.35203067427414647,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.0,
+   "min": 2.275130256017049
+  },
+  {
+   "epoch": 3,
+   "train_loss": 1.033726327419281,
+   "dev_dice": 0.36024675843893683,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.0,
+   "min": 3.461497875054677
+  }
+ ],
+ "minutes": 3.6107969681421914
+}

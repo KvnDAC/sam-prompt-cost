@@ -1,0 +1,267 @@
+{
+ "split": "dev",
+ "ids": [
+  "cju17bz250pgd0799u1hqkj5u",
+  "cju1c3218411b08014g9f6gig"
+ ],
+ "env": {
+  "python": "3.13.5",
+  "torch": "2.7.1+cpu",
+  "numpy": "1.26.4",
+  "cpu": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
+  "threads": 2,
+  "cuda": false,
+  "packages": {
+   "torch": "2.7.1",
+   "torchvision": "0.22.1",
+   "numpy": "1.26.4",
+   "scipy": "1.16.0",
+   "scikit-learn": "1.9.1",
+   "pillow": "12.1.1",
+   "segment-anything": "1.0"
+  },
+  "sam_source": {
+   "url": "https://github.com/facebookresearch/segment-anything.git",
+   "vcs_info": {
+    "commit_id": "dca509fe793f601edb92606367a655c15ac00fdf",
+    "requested_revision": "dca509fe793f601edb92606367a655c15ac00fdf",
+    "vcs": "git"
+   }
+  }
+ },
+ "point_offset_unit": "interior distance-transform radius",
+ "box_severity": "scale around GT box center, clipped to image",
+ "conditions": [
+  [
+   "noprompt",
+   0,
+   [
+    0,
+    0
+   ]
+  ],
+  [
+   "fullbox",
+   0,
+   [
+    0,
+    0
+   ]
+  ],
+  [
+   "point",
+   0,
+   [
+    0,
+    0
+   ]
+  ],
+  [
+   "box",
+   1,
+   [
+    0,
+    0
+   ]
+  ],
+  [
+   "point",
+   0.5,
+   [
+    1,
+    0
+   ]
+  ],
+  [
+   "point",
+   0.5,
+   [
+    -1,
+    0
+   ]
+  ],
+  [
+   "point",
+   0.5,
+   [
+    0,
+    1
+   ]
+  ],
+  [
+   "point",
+   0.5,
+   [
+    0,
+    -1
+   ]
+  ],
+  [
+   "point",
+   1.0,
+   [
+    1,
+    0
+   ]
+  ],
+  [
+   "point",
+   1.0,
+   [
+    -1,
+    0
+   ]
+  ],
+  [
+   "point",
+   1.0,
+   [
+    0,
+    1
+   ]
+  ],
+  [
+   "point",
+   1.0,
+   [
+    0,
+    -1
+   ]
+  ],
+  [
+   "point",
+   2.0,
+   [
+    1,
+    0
+   ]
+  ],
+  [
+   "point",
+   2.0,
+   [
+    -1,
+    0
+   ]
+  ],
+  [
+   "point",
+   2.0,
+   [
+    0,
+    1
+   ]
+  ],
+  [
+   "point",
+   2.0,
+   [
+    0,
+    -1
+   ]
+  ],
+  [
+   "point",
+   4.0,
+   [
+    1,
+    0
+   ]
+  ],
+  [
+   "point",
+   4.0,
+   [
+    -1,
+    0
+   ]
+  ],
+  [
+   "point",
+   4.0,
+   [
+    0,
+    1
+   ]
+  ],
+  [
+   "point",
+   4.0,
+   [
+    0,
+    -1
+   ]
+  ],
+  [
+   "box",
+   0.75,
+   [
+    0,
+    0
+   ]
+  ],
+  [
+   "box",
+   1.25,
+   [
+    0,
+    0
+   ]
+  ],
+  [
+   "box",
+   1.5,
+   [
+    0,
+    0
+   ]
+  ],
+  [
+   "box",
+   2.0,
+   [
+    0,
+    0
+   ]
+  ]
+ ],
+ "multimask": false,
+ "cache_meta": {
+  "cju17bz250pgd0799u1hqkj5u": {
+   "original_size": [
+    547,
+    626
+   ],
+   "input_size": [
+    895,
+    1024
+   ],
+   "split": "dev",
+   "precision": "fp32",
+   "storage": "fp32",
+   "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+   "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+   "image_sha256": "dbc6fd256c4b3188943b4520a3885ec7dce1a0ba03dabf0c39daf906fcea4499",
+   "torch_version": "2.7.1+cpu",
+   "device": "cpu"
+  },
+  "cju1c3218411b08014g9f6gig": {
+   "original_size": [
+    546,
+    626
+   ],
+   "input_size": [
+    893,
+    1024
+   ],
+   "split": "dev",
+   "precision": "fp32",
+   "storage": "fp32",
+   "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+   "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+   "image_sha256": "ce0917bde1b63af35b8b83476e4ffb05bb3173459bceb18779b6a5cf0d0b8461",
+   "torch_version": "2.7.1+cpu",
+   "device": "cpu"
+  }
+ }
+}
