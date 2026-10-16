@@ -1,8 +1,11 @@
 """Synthetic checks; these do not substitute for inference with the official checkpoint."""
 import importlib.util
 import io
+import os
 from pathlib import Path
+import subprocess
 import sys
+import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
@@ -152,6 +155,23 @@ class PhaseBTests(unittest.TestCase):
         self.assertTrue(module.cache_matches(meta, meta, emb, blocks, False))
         self.assertFalse(module.cache_matches(meta, {**meta, "storage": "fp32"}, emb, blocks, False))
         self.assertFalse(module.cache_matches(meta, meta, emb, blocks, True))
+
+    def test_run_dir_redirects_results_and_figures(self):
+        code = "import samcost.common as c; print(c.RESULTS); print(c.FIGURES)"
+
+        def paths(run_dir):
+            env = {k: v for k, v in os.environ.items() if k != "SAMCOST_RUN_DIR"}
+            if run_dir:
+                env["SAMCOST_RUN_DIR"] = str(run_dir)
+            out = subprocess.run([sys.executable, "-c", code], cwd=ROOT / "src", env=env,
+                                 capture_output=True, text=True, check=True).stdout.splitlines()
+            return Path(out[0]), Path(out[1])
+
+        self.assertEqual(paths(None), (ROOT / "results", ROOT / "figures"))
+        with tempfile.TemporaryDirectory() as tmp:
+            run = Path(tmp) / "run_1"
+            self.assertEqual(paths(run), (run, run / "figures"))
+            self.assertTrue(run.is_dir())
 
     def test_perturbations_clip_coordinates_and_preserve_identity(self):
         module = script("10_prompt_perturbations")

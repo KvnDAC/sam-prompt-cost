@@ -3,6 +3,7 @@ data/Kvasir-SEG/
 cache/
 checkpoints/*.pth
 logs/
+/runs/
 __pycache__/
 *.pyc
 .venv/

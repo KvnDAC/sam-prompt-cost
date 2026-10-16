@@ -12,8 +12,16 @@ import torch
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data"
 CACHE = ROOT / "cache"
-RESULTS = ROOT / "results"
-FIGURES = ROOT / "figures"
+# Con SAMCOST_RUN_DIR definida, cada corrida escribe resultados y figuras en su propia carpeta
+# (p. ej. runs/20261016_183000) y los artefactos versionados del E1 en results/ y figures/ no se tocan.
+_RUN_DIR = os.environ.get("SAMCOST_RUN_DIR")
+if _RUN_DIR:
+    RESULTS = Path(_RUN_DIR) if Path(_RUN_DIR).is_absolute() else ROOT / _RUN_DIR
+    FIGURES = RESULTS / "figures"
+    RESULTS.mkdir(parents=True, exist_ok=True)  # algunos scripts abren archivos sin crear la carpeta
+else:
+    RESULTS = ROOT / "results"
+    FIGURES = ROOT / "figures"
 CKPT = Path(os.environ.get("SAM_CKPT", ROOT / "checkpoints" / "sam_vit_b_01ec64.pth"))
 SAM_MD5 = "01ec64d29a2fca3f0661936605ae66f8"  # md5 del checkpoint oficial sam_vit_b_01ec64.pth
 
