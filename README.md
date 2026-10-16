@@ -3,7 +3,7 @@
 Proyecto de investigación de INF659 Deep Learning (Maestría en Informática, 2026-2).
 **Pregunta:** ¿qué parte del desempeño de Segment Anything (SAM) en segmentación de pólipos depende de la información que aporta el prompt humano, en qué componente se origina la caída cuando el prompt se elimina, y cuánto de esa brecha recupera un prompt aprendido sin humano?
 
-Este repositorio corresponde al **Entregable 1** (propuesta, teardown, intervención preliminar, cuaderno de decisiones y related work inicial). El cuaderno de decisiones está en [`docs/design_log.md`](docs/design_log.md).
+Este repositorio corresponde al **Entregable 1** (propuesta, teardown, intervención preliminar, cuaderno de decisiones y related work inicial). El cuaderno de decisiones está en [`docs/design_log.md`](docs/design_log.md); los trabajos relacionados, el diferencial y el plan de comparación con otros modelos, en [`docs/related_work.md`](docs/related_work.md).
 
 ## Resultados principales del E1 (test oficial, 120 imágenes)
 
@@ -28,7 +28,7 @@ scripts/         pipeline numerado (00 → 09), cada script escribe en results/ 
 src/samcost/     código común: datos, decoder sobre caché, AMG, prompts, métricas, tokens aprendidos
 results/         métricas por imagen (csv), resúmenes (json)
 figures/         figuras del documento
-docs/            cuaderno de decisiones
+docs/            cuaderno de decisiones, Fase B, trabajos relacionados y revisión técnica
 notebooks/       cuaderno para reproducir en Colab y cuaderno de resultados
 ```
 

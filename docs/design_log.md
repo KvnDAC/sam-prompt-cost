@@ -181,3 +181,22 @@ Convención: cada entrada tiene fecha y hora (America/Lima), la decisión, la ju
 - **Sin cambios en los siete archivos con hash en `results/phase_b/full_dev_20261012/plan.json`:** modificarlos impediría reanudar ese experimento. Solo cambió `src/samcost/common.py`, que no está en el plan; con la variable sin definir, las rutas son idénticas a las anteriores.
 - **Estado del experimento de desarrollo:** se versionó a mitad de ejecución. `static_k4_s1` quedó interrumpida y faltan 7 corridas y el resumen. Además, el plan solo se puede reanudar en la copia de trabajo original (hashes sensibles a fin de línea y rutas con `\`). Detalle y pasos en `docs/fase_b.md`, sección «Estado del experimento versionado». No se modificaron sus resultados.
 - **Verificación:** se comprobó la resolución de rutas sin variable, con ruta absoluta y con ruta relativa (relativa a la raíz del repositorio). Se añadió una prueba unitaria. Las pruebas no se ejecutaron en esta máquina porque no tiene torch instalado.
+
+## 2026-10-16 19:12 · D20 · Trabajos relacionados, diferencial y comparación con otros modelos **[IA: Claude]**
+- **Contexto:** los docentes preguntaron si ya existen trabajos que hagan lo mismo, pidieron encontrar el diferencial (el objetivo es WAIMLAp 2026) y sugirieron comparar SAM con otros modelos. Búsqueda, tablas y referencias en `docs/related_work.md`.
+- **Hallazgo:**
+  - *SAM sin prompt falla en pólipos* ya está publicado (Zhou 2023; Huang 2024).
+  - *Prompts automáticos con SAM congelado* también: AutoSAM equivale a nuestro generador condicionado y Self-Prompting a nuestro probe → caja/punto.
+  - *La selección, no la propuesta, es el cuello de botella* lo muestra HYDRA (julio 2026), en imágenes naturales con segmentadores tipo DETR y SAM 3.
+  - No encontramos: el embudo del AMG en dominio médico (incluido el filtro de estabilidad, −0,29), la cabeza IoU como selector de lesión con 1 clic, la ablación espacial como instrumento de diagnóstico, ni la atención del decoder con y sin prompt.
+- **Decisión de enfoque:** presentar el trabajo como **diagnóstico** del costo del prompt, descompuesto en propuesta, filtros, selección y localización, más una mitigación dirigida al cuello de botella medido (selector sobre propuestas del AMG y ablación del filtro de estabilidad). La comparación con otros modelos se limita a **MedSAM, SAM 2.1 y SAM 3 con texto**, para probar si el diagnóstico generaliza. Los especialistas (PraNet, Polyp-PVT) solo se citan, porque usan otra partición.
+- **Alternativas descartadas:**
+  - Una tabla de ranking con muchos modelos: no responde una pregunta y no alcanza el tiempo.
+  - Presentar el generador condicionado como contribución: AutoSAM y *Automating MedSAM* lo anteceden, y su único resultado hasta ahora es una semilla del barrido (0,399 en dev).
+- **Consecuencia para el relato del E1:** en dev, la inicialización con el clic medio sin entrenar (0,3505) explica casi todo el desempeño de los tokens estáticos entrenados (0,3513, semilla 0). En el artículo deben describirse como «prompt de clic medio» y no como aprendizaje del «qué».
+- **Predicciones en borrador [IA, a validar por el equipo antes de correr; una vez corrido cada experimento no se editan]:**
+  - **P-D1 (MedSAM):** sin prompt seguirá por debajo de 0,20 de Dice: el ajuste médico se hizo con cajas y no enseña el «qué» sin ubicación. Con caja superará a SAM. Su cabeza IoU ordenará peor que la de SAM (Spearman con 1 clic < 0,23), porque su ajuste no supervisa la calidad de las múltiples salidas.
+  - **P-D2 (SAM 2.1):** el embudo del AMG tendrá la misma forma. El oráculo de propuestas crudas será ≥ 0,85 y la elección por IoU predicho ≤ 0,20. El fallo de selección es del diseño de la familia, no del encoder ViT-B.
+  - **P-D3 (SAM 3, texto «polyp»):** Dice solo con texto < 0,30, con el fallo en el reconocimiento (presencia o elección del objeto) y no en la máscara: con texto + caja será ≥ 0,85.
+  - **P-D4 (selector sobre propuestas del AMG, entrenado en train y elegido en dev):** recuperará al menos la mitad de la brecha entre la elección por IoU predicho (0,058) y el oráculo crudo (0,895), es decir Dice ≥ 0,48. Rendirá más aplicado a las propuestas crudas que a las filtradas, por la pérdida que causa el filtro de estabilidad.
+- **Pendiente:** leer los artículos completos señalados en la sección 8 de `docs/related_work.md` y verificar si Kvasir-SEG forma parte del entrenamiento de MedSAM antes de usarlo.
