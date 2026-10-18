@@ -23,6 +23,30 @@
    "dev_empty_rate": 0.0,
    "dev_near_empty_rate": 0.01,
    "min": 3.3749550223350524
+  },
+  {
+   "epoch": 4,
+   "train_loss": 0.9891878163814545,
+   "dev_dice": 0.34197228058528445,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.01,
+   "min": 5.292354607582093
+  },
+  {
+   "epoch": 5,
+   "train_loss": 0.9771249520778656,
+   "dev_dice": 0.3413462302441625,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.01,
+   "min": 6.465595821539561
+  },
+  {
+   "epoch": 6,
+   "train_loss": 0.9732799673080444,
+   "dev_dice": 0.3389197139536545,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.01,
+   "min": 7.610323556264242
   }
  ],
  "best_epoch": 2,

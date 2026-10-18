@@ -1,0 +1,189 @@
+{
+  "method": "SAM ViT-B + linear probe -> largest-component box+point -> SAM",
+  "seed": 0,
+  "threads": 4,
+  "batch_size": 1,
+  "warmup": 5,
+  "repeats": 20,
+  "test_evaluated": false,
+  "input_longest_side": 1024,
+  "ids": [
+    "cju17bz250pgd0799u1hqkj5u",
+    "cju1c3218411b08014g9f6gig",
+    "cju1d31sp4d4k0878r3fr02ul",
+    "cju1dhfok4mhe0878jlgrag0h",
+    "cju1egh885m1l0855ci1lt37c",
+    "cju1expq45zst0855rjqwwj4m",
+    "cju1f15k3w4ct0835cmde6ypo",
+    "cju1ftaji6isw0855108yqcse",
+    "cju1gghyjwxt80835vx0wgxw0",
+    "cju1gi7jlwyld0835cdf6g6qz",
+    "cju2hlm19vjjf0801o69qnber",
+    "cju2m71z2ywwv080131bcrsd3",
+    "cju2ma647l0nj0993ot4deq2q",
+    "cju2nyc5f02m40801ojqbtiea",
+    "cju2okvco06xc0799kxe5n1qh",
+    "cju2omjpeqj5a0988pjdlb8l1",
+    "cju2qh5le1ock0878oahaql7d",
+    "cju2qqn5ys4uo0988ewrt2ip2",
+    "cju2rqo702wpx0855fn7d5cxh",
+    "cju2tpfa5uyx408359datxqqj"
+  ],
+  "rows": [
+    {
+      "id": "cju1expq45zst0855rjqwwj4m",
+      "total_ms": 7906.442099993001,
+      "preprocess_ms": 20.17329999944195,
+      "encoder_ms": 7780.002699997567,
+      "probe_prompts_decoder_ms": 106.26609999599168
+    },
+    {
+      "id": "cju1f15k3w4ct0835cmde6ypo",
+      "total_ms": 8064.456000000064,
+      "preprocess_ms": 23.3795000021928,
+      "encoder_ms": 7938.8553999961005,
+      "probe_prompts_decoder_ms": 102.22110000177054
+    },
+    {
+      "id": "cju1ftaji6isw0855108yqcse",
+      "total_ms": 8876.726599999529,
+      "preprocess_ms": 21.968199995171744,
+      "encoder_ms": 8758.9758000031,
+      "probe_prompts_decoder_ms": 95.78260000125738
+    },
+    {
+      "id": "cju1gghyjwxt80835vx0wgxw0",
+      "total_ms": 8288.749999999709,
+      "preprocess_ms": 20.805699998163618,
+      "encoder_ms": 8138.426299999992,
+      "probe_prompts_decoder_ms": 129.51800000155345
+    },
+    {
+      "id": "cju1gi7jlwyld0835cdf6g6qz",
+      "total_ms": 8347.326899995096,
+      "preprocess_ms": 22.26389999850653,
+      "encoder_ms": 8220.144699997036,
+      "probe_prompts_decoder_ms": 104.91829999955371
+    },
+    {
+      "id": "cju2hlm19vjjf0801o69qnber",
+      "total_ms": 8391.428000002634,
+      "preprocess_ms": 22.322200005874038,
+      "encoder_ms": 8267.561299995577,
+      "probe_prompts_decoder_ms": 101.54450000118231
+    },
+    {
+      "id": "cju2m71z2ywwv080131bcrsd3",
+      "total_ms": 8851.718900004926,
+      "preprocess_ms": 21.4990000022226,
+      "encoder_ms": 8728.1101999979,
+      "probe_prompts_decoder_ms": 102.10970000480302
+    },
+    {
+      "id": "cju2ma647l0nj0993ot4deq2q",
+      "total_ms": 8692.272699998284,
+      "preprocess_ms": 22.105500000179745,
+      "encoder_ms": 8537.867799997912,
+      "probe_prompts_decoder_ms": 132.2994000001927
+    },
+    {
+      "id": "cju2nyc5f02m40801ojqbtiea",
+      "total_ms": 8861.544400002458,
+      "preprocess_ms": 22.51320000505075,
+      "encoder_ms": 8712.675799994031,
+      "probe_prompts_decoder_ms": 126.35540000337642
+    },
+    {
+      "id": "cju2okvco06xc0799kxe5n1qh",
+      "total_ms": 8476.334200000565,
+      "preprocess_ms": 22.48150000377791,
+      "encoder_ms": 8351.473599999736,
+      "probe_prompts_decoder_ms": 102.37909999705153
+    },
+    {
+      "id": "cju2omjpeqj5a0988pjdlb8l1",
+      "total_ms": 8286.726300000737,
+      "preprocess_ms": 21.548700002313126,
+      "encoder_ms": 8163.1443000005675,
+      "probe_prompts_decoder_ms": 102.03329999785637
+    },
+    {
+      "id": "cju2qh5le1ock0878oahaql7d",
+      "total_ms": 8187.276799995743,
+      "preprocess_ms": 20.78409999376163,
+      "encoder_ms": 8065.161600003194,
+      "probe_prompts_decoder_ms": 101.33109999878798
+    },
+    {
+      "id": "cju2qqn5ys4uo0988ewrt2ip2",
+      "total_ms": 8467.566899998928,
+      "preprocess_ms": 20.675700005085673,
+      "encoder_ms": 8337.929299996176,
+      "probe_prompts_decoder_ms": 108.96189999766648
+    },
+    {
+      "id": "cju2rqo702wpx0855fn7d5cxh",
+      "total_ms": 8151.4780999932555,
+      "preprocess_ms": 20.71369999612216,
+      "encoder_ms": 7998.492999999144,
+      "probe_prompts_decoder_ms": 132.27139999798965
+    },
+    {
+      "id": "cju2tpfa5uyx408359datxqqj",
+      "total_ms": 8017.412400004105,
+      "preprocess_ms": 22.167700000863988,
+      "encoder_ms": 7873.011199997563,
+      "probe_prompts_decoder_ms": 122.23350000567734
+    },
+    {
+      "id": "cju17bz250pgd0799u1hqkj5u",
+      "total_ms": 8063.774700000067,
+      "preprocess_ms": 21.030900003097486,
+      "encoder_ms": 7936.097399993741,
+      "probe_prompts_decoder_ms": 106.64640000322834
+    },
+    {
+      "id": "cju1c3218411b08014g9f6gig",
+      "total_ms": 7898.223600001074,
+      "preprocess_ms": 20.767499998328276,
+      "encoder_ms": 7776.030500004708,
+      "probe_prompts_decoder_ms": 101.4255999980378
+    },
+    {
+      "id": "cju1d31sp4d4k0878r3fr02ul",
+      "total_ms": 9457.5823999985,
+      "preprocess_ms": 20.266300001821946,
+      "encoder_ms": 9308.964899995772,
+      "probe_prompts_decoder_ms": 128.35120000090683
+    },
+    {
+      "id": "cju1dhfok4mhe0878jlgrag0h",
+      "total_ms": 8548.357899999246,
+      "preprocess_ms": 21.711000001232605,
+      "encoder_ms": 8425.285400000575,
+      "probe_prompts_decoder_ms": 101.36149999743793
+    },
+    {
+      "id": "cju1egh885m1l0855ci1lt37c",
+      "total_ms": 8622.583500000474,
+      "preprocess_ms": 21.684700004698243,
+      "encoder_ms": 8480.387700001302,
+      "probe_prompts_decoder_ms": 120.51109999447362
+    }
+  ],
+  "median_ms": 8369.377449998865,
+  "p95_ms": 8905.769389999477,
+  "parameters_total_unique": 93735729,
+  "parameters_trainable": 257,
+  "cached_and_fresh_predictions_reproduced": true,
+  "includes": "RGB preprocessing + image encoder + probe + connected components + prompt encoder + mask decoder + original-size restore + threshold",
+  "excludes": "disk decode, load weights, GT access and metric computation",
+  "environment": {
+    "python": "3.13.5",
+    "torch": "2.7.1+cpu",
+    "device": "cpu"
+  },
+  "sam_checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+  "probe_checkpoint_sha256": "c783beb12123237c70b92eb5d82c02bb548a01f576b16aa6809af140f2dc40a9",
+  "source_sha256": "a319d8f859272a153f14735b55cd6e6da949c0cd26558fbf52c98538a51797ab"
+}

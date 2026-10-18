@@ -1,0 +1,1 @@
+Weights intentionally remain in ignored runs/model_comparison/unet_pilot_20261016/model.pt. Metrics describe a technical pilot, not a full benchmark.

@@ -1,0 +1,30 @@
+{
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 1.2042250478267669,
+   "dev_dice": 0.3135319444933909,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.0,
+   "min": 1.1515319069226584
+  },
+  {
+   "epoch": 2,
+   "train_loss": 1.0190064775943757,
+   "dev_dice": 0.3826111871158831,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.01,
+   "min": 2.2967312932014465
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.9264615416526795,
+   "dev_dice": 0.47655194063496986,
+   "dev_empty_rate": 0.0,
+   "dev_near_empty_rate": 0.0,
+   "min": 3.4827539602915447
+  }
+ ],
+ "best_epoch": 3,
+ "best_dev_dice": 0.47655194063496986
+}

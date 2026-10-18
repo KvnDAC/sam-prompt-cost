@@ -1,0 +1,285 @@
+{
+ "model": "UNet_padded",
+ "pretraining": "none",
+ "args": {
+  "output_dir": "runs\\model_comparison\\unet_pilot20_20261016",
+  "epochs": 20,
+  "train_limit": 32,
+  "dev_limit": 16,
+  "base_channels": 16,
+  "image_size": 256,
+  "batch_size": 4,
+  "lr": 0.001,
+  "seed": 0,
+  "threads": 1,
+  "device": "cpu"
+ },
+ "ids": {
+  "train": [
+   "cju1fm3id6gl50801r3fok20c",
+   "cju1h5w4wxajx0835mc954kxy",
+   "cju2hqt33lmra0988fr5ijv8j",
+   "cju2lz8vqktne0993fuym6drw",
+   "cju2saez63gxl08559ucjq3kt",
+   "cju2syxa93yw40799x2iuwabz",
+   "cju2t3ibkuecr0835o7si16zv",
+   "cju2txjfzv60w098839dcimys",
+   "cju2ysg748ru80878sp6j0gm0",
+   "cju2z1nxlzaj40835wj81s1iy",
+   "cju30nyxe0gfb0835p256yoju",
+   "cju3v0fl3gwce0755qkjhzmd4",
+   "cju42dwedlmk60871jbgu4ehi",
+   "cju42m60jlpcm08186kqppzqv",
+   "cju5bbtwsa8cl0987wgfsqpao",
+   "cju5hwonqedw10801vsd3w6kk",
+   "cju5wqonpm0e60801z88ewmy1",
+   "cju5yeqiwmkgl0801fzv2douc",
+   "cju6v1m1xv07w09870ah3njy1",
+   "cju7awzmu1ncs0871hziy65zx",
+   "cju7b2l561oas0871decgslaf",
+   "cju7b4mtw1n9n080186209f3d",
+   "cju7fbndk2sl608015ravktum",
+   "cju7fd6yt2p740987wkr8exo1",
+   "cju7fmvpk2q170987v6i3ola8",
+   "cju8402x1kcy70801t6kz6bdi",
+   "cju887ftknop008177nnjt46y",
+   "cju88rl5eo94l0850kf5wtrm1",
+   "cju8914beokbf0850isxpocrk",
+   "cju892fesoq2g0801n0e0jyia",
+   "cju89y9h0puti0818i5yw29e6",
+   "cju8aqq8uqmoq0987hphto9gg"
+  ],
+  "dev": [
+   "cju17bz250pgd0799u1hqkj5u",
+   "cju1c3218411b08014g9f6gig",
+   "cju1d31sp4d4k0878r3fr02ul",
+   "cju1dhfok4mhe0878jlgrag0h",
+   "cju1egh885m1l0855ci1lt37c",
+   "cju1expq45zst0855rjqwwj4m",
+   "cju1f15k3w4ct0835cmde6ypo",
+   "cju1ftaji6isw0855108yqcse",
+   "cju1gghyjwxt80835vx0wgxw0",
+   "cju1gi7jlwyld0835cdf6g6qz",
+   "cju2hlm19vjjf0801o69qnber",
+   "cju2m71z2ywwv080131bcrsd3",
+   "cju2ma647l0nj0993ot4deq2q",
+   "cju2nyc5f02m40801ojqbtiea",
+   "cju2okvco06xc0799kxe5n1qh",
+   "cju2omjpeqj5a0988pjdlb8l1"
+  ],
+  "test": []
+ },
+ "test_evaluated": false,
+ "pilot": true,
+ "n_parameters": 1941105,
+ "input": "RGB [0,1], longest side resize, top-left zero padding; nearest GT; valid-only BCE+Dice",
+ "augmentation": "independent horizontal and vertical flips, probability 0.5 each, train only",
+ "selection": "maximum mean dev Dice including initialization; fixed logit threshold 0",
+ "environment": {
+  "python": "3.13.5",
+  "torch": "2.7.1+cpu",
+  "numpy": "1.26.4",
+  "device": "cpu",
+  "threads": 1
+ },
+ "source_sha256": {
+  "scripts\\18_unet_baseline.py": "c55999931ff5d47ac1d76af37a7be95adfae5335cf10bd1b4d26c538ee350640",
+  "src\\samcost\\unet.py": "d2875eb2e6e29036641616779309e37a4b7da2eb59f4ed6a2701a8da880a4b9a",
+  "src\\samcost\\data.py": "7dd305fa760145ae8343656ec9bdaac1fd222742af79d499565ba0ac04341e0d",
+  "src\\samcost\\learned.py": "6accf21b49c675e2dddbfc61c8b8d65f24bb602620e03e2e9fdd076129255e0e"
+ },
+ "data_sha256": {
+  "cju1fm3id6gl50801r3fok20c": {
+   "images": "a86e51adb08f80b9c353afac04113a097c9f8c550472f856839094e719642b7f",
+   "masks": "825252af0359fae383303004b5d9f62920bc2d1e140e58413a44c68c98f8adb0"
+  },
+  "cju1h5w4wxajx0835mc954kxy": {
+   "images": "1ebffc3c1f20de73274a5c51ec4f044f92cf925aeb49cfc06c9d1a8a86997088",
+   "masks": "51a8da082ea6a8b2be57cf0435766a761e569661c4293d6f04aec714fa20e87c"
+  },
+  "cju2hqt33lmra0988fr5ijv8j": {
+   "images": "6897b4b3706b4ffb8aba3514c7fe16bf53f3682123190329b9138da92331ccb0",
+   "masks": "020436c3b2240d1dae21ac28d31cbfa30c00d54f3cbdd000e4abfe9daf8e0406"
+  },
+  "cju2lz8vqktne0993fuym6drw": {
+   "images": "a884941943026b300d88ddf26a14a4ab5c5448c65c429d4a0f123a7717789754",
+   "masks": "c3146ee2634db7f5527060c3b652b6035c4b42d855836214f6d35a9d2b418b6e"
+  },
+  "cju2saez63gxl08559ucjq3kt": {
+   "images": "54c0ea5ed209be54cbc7532cef4335e70dfe504ff7a4bb7ee1ad696ed7f6cec7",
+   "masks": "435add4500c52eaa8212cd32f03505a8fbb3d64e7551bf8e677b8ca1775c5bd9"
+  },
+  "cju2syxa93yw40799x2iuwabz": {
+   "images": "bfaa625d2b83d0ad6af88aa71161c722018859e8e7cb26ae33b7c55e443a1bed",
+   "masks": "efac4af976ba15c7f8ab695e4196d647274f70d65cf83d29a09c20d307d13e89"
+  },
+  "cju2t3ibkuecr0835o7si16zv": {
+   "images": "07398fa2e74551a7e2ce7e5a0e5d2b1c8e575ac5ea7375a214b3293f2842aced",
+   "masks": "1fed529072c7a005f136082f4d365b5662ea46b158996ed3f52cced0df9e5b12"
+  },
+  "cju2txjfzv60w098839dcimys": {
+   "images": "8fabc29a38dd159eec535d2be0d875f9d28896a8ad59f2d1528e0ccbe7561115",
+   "masks": "4921b9b161cf1580ba7b6c8dad803712a3570b748f632920c7892ae78d04cc9f"
+  },
+  "cju2ysg748ru80878sp6j0gm0": {
+   "images": "cdf3b1b1478788cf5b02c37283510fe3e4dd1e1d50ae352e97aba6ff53f03d51",
+   "masks": "4c882a4893a6d4e54c54509630c67963813fc005a5ee50090e406fd1ea564687"
+  },
+  "cju2z1nxlzaj40835wj81s1iy": {
+   "images": "605fca58f03d0d963180a4996f68a099350e9a7ef669abab77128f0421a34f67",
+   "masks": "012f54f4baa795bccd113007f078bf5bf83a854d090ff7afcba492fc9a8639a8"
+  },
+  "cju30nyxe0gfb0835p256yoju": {
+   "images": "2e454f2dcf59a4ae74d698243852ef030f64e83487e85ea7f041ff73140fbbc1",
+   "masks": "5f3fbbb68e57ab9e151c2390b0916f98031181e7a7fff1c5f4ed3ba8ca2d9e27"
+  },
+  "cju3v0fl3gwce0755qkjhzmd4": {
+   "images": "9f933438bf0ecb1fc3f5c7f90124ba90a4aa9de5a97011a08716c1ec98805f36",
+   "masks": "9a8b1e9aeb4f702f7f35f941e782d6555b1df99cee8bb96c9d2718c6e61c6776"
+  },
+  "cju42dwedlmk60871jbgu4ehi": {
+   "images": "438243ab676ffdea1ac71dbd02b7ef1e49e9d1bff66314b5f4eb1e6d0967ceed",
+   "masks": "1d8b97f9f8b3bdadf5499114a8403084d26c33c3abf525cb886ead4ffcbdcafc"
+  },
+  "cju42m60jlpcm08186kqppzqv": {
+   "images": "64154596b3df2b47b4cdb85545e3be784bbee48870cf24e880a911e1e29e1569",
+   "masks": "c2ff933738193480e6e57287617d4cb06fd721ad143c9ee3eb24ccc1ece73cc3"
+  },
+  "cju5bbtwsa8cl0987wgfsqpao": {
+   "images": "44e43b596626b4697bf76011047ce1c51952644e8eb7f25913becc11b29b8fee",
+   "masks": "9eabd2050a95deff21bf43034f899aead33582584570b519e58e01e0f1362756"
+  },
+  "cju5hwonqedw10801vsd3w6kk": {
+   "images": "ed36f9688d5268a6e89f2a765161a3f2829ca022a4c824e286fe910ec3a40616",
+   "masks": "6caa5d616592f3f653caccdc73ff3e0e51d016df897a6993267e5ec4efb54bd1"
+  },
+  "cju5wqonpm0e60801z88ewmy1": {
+   "images": "98268f1eacb72991cf1dd98c0f1a026d166adc42823041d441482ab25be786d3",
+   "masks": "a78e0cabb167bd2d502ddba66a19f66081411fa9b338c985a009f1c52cbc633a"
+  },
+  "cju5yeqiwmkgl0801fzv2douc": {
+   "images": "b585d58ac57d94e083d1f77e01c9e4e3dc29fbdc73eb3be1518ceb4091689f1f",
+   "masks": "2296d55f093a51efc466825060e49ab6e24bc9b424fbc255fae85aece46944bf"
+  },
+  "cju6v1m1xv07w09870ah3njy1": {
+   "images": "c414e62ddc678d5a2422ce160e74167eff758a072be7adc4c361060b19d2574d",
+   "masks": "e0ab7b40d2c4f6907d36d8829c1e5abc2093f61516484100a9dbe4e8e589af13"
+  },
+  "cju7awzmu1ncs0871hziy65zx": {
+   "images": "d5c899a56d04621eaa72dfc495886a8b3d68e1c4a1457d917a1391734ce26f9f",
+   "masks": "7e738eef9e107ddfe5961a890e9eaa9ddba8358b066953426cf225455646cced"
+  },
+  "cju7b2l561oas0871decgslaf": {
+   "images": "5df9ecaeeeade45cd48de641d18e7be875f78491a7c0662d755b1ed38b996eb1",
+   "masks": "e74bf1c502474733d7dff386e3a9ff55133211ac33beac2341ae82bfdee55df0"
+  },
+  "cju7b4mtw1n9n080186209f3d": {
+   "images": "10ad516c59b1e649aeeac9d236c68d2f9c9af399bfc4f66cbe9fb83ccc831109",
+   "masks": "5be7e76732deb63bb0f9f4965f40afd878e8d4a7ed092180c916dcd4e3708990"
+  },
+  "cju7fbndk2sl608015ravktum": {
+   "images": "789e8bf21547b07e65c4680b577abffdf8a3f923d1538245844052d197fd53dd",
+   "masks": "c67043f7bf806191df8b52438c3bc59ce6a4e874349945541f20a53cb8b8ee77"
+  },
+  "cju7fd6yt2p740987wkr8exo1": {
+   "images": "0e191d2a2c238d9c6abc2b0c6d1d0fa91f115f60dfd25c2162a17f727b4a007e",
+   "masks": "49670d696af934ce2bff671fda3ffe119681086c99f842d6c6b274173fd90c92"
+  },
+  "cju7fmvpk2q170987v6i3ola8": {
+   "images": "9b9ba1d59aa32ef85f694ed43703b6bc36f16b81e78a52cd97d2004430a30d10",
+   "masks": "00e56d7c531b0c07ebca056fea4c0d39d316767dada88567a152960f55cd6774"
+  },
+  "cju8402x1kcy70801t6kz6bdi": {
+   "images": "232891b106d7f96a71355dd3a433ee210099dc49f5ae03ed9b9f65d3475062de",
+   "masks": "9438a1bc3109107e8d50f269ca298f76848be0942305471306f6878a688ba090"
+  },
+  "cju887ftknop008177nnjt46y": {
+   "images": "406b33869623adfc208839dccfab233ca0cff34d1be43cf9a41d8d6c2263012a",
+   "masks": "f9a9f5b9e168e459f27ef83915ed734c292123c15529e907c58ff5643553609e"
+  },
+  "cju88rl5eo94l0850kf5wtrm1": {
+   "images": "a918ed6a66c63cb3e7a0af423b769aeff91c506a433217a77f86dc479273c8cf",
+   "masks": "839b27aa816c91cd6e7bf488d0c2039ce87d9da0f585d1977b908a73cc054f26"
+  },
+  "cju8914beokbf0850isxpocrk": {
+   "images": "ba20a0677b0b01ad1ef020ca7b5f99b9067b93b71c387795daa14ca550612569",
+   "masks": "090468b89684748d2ef1ba6b69207aa2a1afc480758f8e4e9a186a0390f56aa6"
+  },
+  "cju892fesoq2g0801n0e0jyia": {
+   "images": "955650df18ba99e10d4cac32830b342d564b12bd668ddcf756ce5b2f439f125a",
+   "masks": "610f2104c588ff8fb542ee51ab461173ccd4a4560ad4bc69d6fcca8649b44886"
+  },
+  "cju89y9h0puti0818i5yw29e6": {
+   "images": "4778a49ea886c500e77bd7db1fc83cf3445c87e69d81e43229f85ba89312beb0",
+   "masks": "191e290824d08e6be47312ede7076a4ebafa411f22db5eb62ef9319b371d8c5f"
+  },
+  "cju8aqq8uqmoq0987hphto9gg": {
+   "images": "4be6ee8566e21af9c0f7373e8629c23da3431ec1016dce6d37e6b9f10606dd90",
+   "masks": "83e760fe8b0251be309a0446876c00ca37984e5b7fca6fa09ce5207e60e08597"
+  },
+  "cju17bz250pgd0799u1hqkj5u": {
+   "images": "dbc6fd256c4b3188943b4520a3885ec7dce1a0ba03dabf0c39daf906fcea4499",
+   "masks": "748aa8e12e55591d93aa3abeec8fa4be1f0d3a0da3a801a17b594d04d35550ac"
+  },
+  "cju1c3218411b08014g9f6gig": {
+   "images": "ce0917bde1b63af35b8b83476e4ffb05bb3173459bceb18779b6a5cf0d0b8461",
+   "masks": "9c80597aa1154a92ed386006590989a9260ebfe1f4bfcbb1ef960a3b6af9bde6"
+  },
+  "cju1d31sp4d4k0878r3fr02ul": {
+   "images": "c173362ba5b981f6fda04fa4e4df0656a175e11d8b7006cd9c3144446ce936ab",
+   "masks": "bfc5afdd96ce492d99d681591fb4a50b2fa554db1386a081983247fe564dbf0c"
+  },
+  "cju1dhfok4mhe0878jlgrag0h": {
+   "images": "058a1739bab2fabf8386ffb6a498534c54829ec1ad4afb5c96ea4a5515bcce3b",
+   "masks": "4023698e32a8aac7073c7e17e4ca49be5fd987df0c55f8c309837987f854da10"
+  },
+  "cju1egh885m1l0855ci1lt37c": {
+   "images": "a9d82d6d9bb2ad78d9b218e6b5cc41e93eade4f33c5eedeb823d479158852c5a",
+   "masks": "14d2bab991e8a466d034f517046dc3c60982c1bd7db9631980367617fea957ea"
+  },
+  "cju1expq45zst0855rjqwwj4m": {
+   "images": "27e8438b037e111a68082019dd68ccfe10fcc5f2857ad4bce85972692ee25f73",
+   "masks": "3fb38230edc7615abc9f2df1968e2a7eec7011ffa28f51c8a27a915737fc5cd9"
+  },
+  "cju1f15k3w4ct0835cmde6ypo": {
+   "images": "5dfd6aebe29e3f15b89a4ee1f30e2fc70e91e9237062492f26f0d778b9f848a9",
+   "masks": "edc7846054a2815da2f50dfc90fc9caef7e06440079855ffa0c350b89b1ec30e"
+  },
+  "cju1ftaji6isw0855108yqcse": {
+   "images": "5e5d8e58e66fff94d040724a323562e1fccd3fcfb21c7690559061166d0655ce",
+   "masks": "92cd407bfb4052bdec38c8e0bba6d8d6d878a6371d6d50f9260179d17239b86e"
+  },
+  "cju1gghyjwxt80835vx0wgxw0": {
+   "images": "5c0850903a6a89f24f7e1beb9a83a2f8d64f4f58a670d0b165c9f53564eea99e",
+   "masks": "39bd12488685086ee6b26f6f442cd0ca76bce29f8db3d393d96aafa21fb69292"
+  },
+  "cju1gi7jlwyld0835cdf6g6qz": {
+   "images": "2ef775c13a6f7424149c678a6d1a4ec99464f13b96efd63f935e12486ed65a2a",
+   "masks": "de490f2f87d3043df8663209e2f9a8ef0797e235dfc03c03f7d232157fb734f0"
+  },
+  "cju2hlm19vjjf0801o69qnber": {
+   "images": "99e5838ac2dcd11ce35e01073ea69f38aa629b0f5afbdec5dbd8322e836cf600",
+   "masks": "dcaada9042a070f4019816da997cb80c173c4a52925832677bcd8a22315ec775"
+  },
+  "cju2m71z2ywwv080131bcrsd3": {
+   "images": "da47ab9c8531f664183bcfe3ded5623f9decaa0cf3539c249ff3f3a00d83af98",
+   "masks": "be4ca1792e3d7d2b155ef839a2899fc6f8245106e537ee108eee9bc9e79bc216"
+  },
+  "cju2ma647l0nj0993ot4deq2q": {
+   "images": "86a7b4778d613d72a8c59e91643f1362a279ec81bd6de0d3d4040f5fa862d41f",
+   "masks": "2bdf8eb04a7e004ceecdddb9b3abca930229b4a5942896932d7bbe27ed4fea66"
+  },
+  "cju2nyc5f02m40801ojqbtiea": {
+   "images": "adba85334a642e56c022144a8c04cb028ae7fcd417980f55be6b9fe964327bab",
+   "masks": "455902a63b61f00f6f38a61a76f0cd2c73c1f4b924c761c9c0fdb21bb3ea5024"
+  },
+  "cju2okvco06xc0799kxe5n1qh": {
+   "images": "131e6551123c36f86b8ffdeba7330dddcfd43675624c599695d3cb5fcece8827",
+   "masks": "364e5919c5d53dc569c7adf433d34f371e84a028e3e5e668ecedf33bd1bbecbc"
+  },
+  "cju2omjpeqj5a0988pjdlb8l1": {
+   "images": "2aa7a76f4c647704a28b46e3fb718c4c0184ada77403374750f2a1b5d1c8d82c",
+   "masks": "b2f85dfb4a961ceb102572815f36cbb0b8e3251014b763b0788d2305b28fe264"
+  }
+ }
+}

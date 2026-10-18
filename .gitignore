@@ -8,6 +8,11 @@ __pycache__/
 *.pyc
 .venv/
 data/kvasir-seg-official.zip
+data/CVC-ClinicDB/
+data/CVC-ClinicDB.rar
+data/hyperkvasir_cecum/
 .ipynb_checkpoints/
+.pytest_cache/
+pytest-cache-files-*/
 results/learned/*/test_lowres.npz
 data/kavsir_bboxes_official.json

@@ -1,0 +1,15 @@
+{
+  "template_sha256": "e261a3e5a0c8daab542d954ecdf0004e1340659ce3bd3a4a4da40a840d8822e0",
+  "preserved_parts": [
+    "word/header1.xml",
+    "word/media/image1.png",
+    "word/media/image2.png"
+  ],
+  "authorship_confirmed": false,
+  "status": "review draft; not submitted",
+  "word_page_count": 2,
+  "pdf": "Abstract_TheInformationalCostOfSpatialPromptsInSAM.pdf",
+  "independent_pdf_reader_pages": 2,
+  "pdf_sha256": "fbbda928a22a7bf75fdcdceb90e50225ca81e948ea94797c63a62ee9090ac333",
+  "data_source": "results/model_comparison/comparison_train400_20261017/summary_with_runtime.json"
+}

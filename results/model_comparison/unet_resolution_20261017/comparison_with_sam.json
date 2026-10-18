@@ -1,0 +1,59 @@
+{
+  "test_evaluated": false,
+  "n_dev": 100,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "bootstrap": "10000 paired image resamples after seed averaging; RNG seed 0",
+  "comparisons": {
+    "sam_auto minus unet_128_endpoint": {
+      "mean": 0.02244330114860439,
+      "ci95": [
+        -0.01685401093984942,
+        0.05990667170082913
+      ]
+    },
+    "sam_auto minus unet_128_selected": {
+      "mean": -0.003498240267690299,
+      "ci95": [
+        -0.042443449382956175,
+        0.03290045602034984
+      ]
+    },
+    "sam_auto minus unet_256_endpoint": {
+      "mean": -0.008811614734828326,
+      "ci95": [
+        -0.04717154327365316,
+        0.02814688762725323
+      ]
+    },
+    "sam_auto minus unet_256_selected": {
+      "mean": -0.009288177141309887,
+      "ci95": [
+        -0.04807887018031494,
+        0.027931260922966064
+      ]
+    }
+  },
+  "unet_latency": {
+    "128": {
+      "median_ms_across_seed_medians": 13.300399998115608,
+      "seed_medians_ms": [
+        13.058600001386367,
+        13.300399998115608,
+        18.6318499945628
+      ]
+    },
+    "256": {
+      "median_ms_across_seed_medians": 27.075999998487532,
+      "seed_medians_ms": [
+        27.075999998487532,
+        27.72335000190651,
+        27.020950001315214
+      ]
+    }
+  },
+  "warning": "Exploratory development comparison; intervals do not establish equivalence."
+}

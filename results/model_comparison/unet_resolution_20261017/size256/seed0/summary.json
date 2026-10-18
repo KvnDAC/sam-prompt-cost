@@ -1,0 +1,153 @@
+{
+  "model": "unet",
+  "seed": 0,
+  "n_train": 400,
+  "n_dev": 100,
+  "test_evaluated": false,
+  "parameters": 487289,
+  "best_epoch": 14,
+  "epochs_run": 15,
+  "stopped_early": false,
+  "best_dev_dice": 0.8236591658136665,
+  "mean_iou": 0.7263507097860117,
+  "training_and_dev_seconds": 484.91403150000406,
+  "process_rss_peak_sampled_bytes": 1666797568,
+  "checkpoint_reproduced_per_image": true,
+  "latency": {
+    "median_ms": 27.075999998487532,
+    "p95_ms": 29.00631500197051,
+    "samples_ms": [
+      28.756300001987256,
+      27.070600001025014,
+      27.28499999648193,
+      27.573899998969864,
+      28.013399998599198,
+      26.75209999870276,
+      27.144900006533135,
+      27.08139999595005,
+      26.473300000361633,
+      27.045499999076128,
+      26.768299998366274,
+      26.5778999964823,
+      28.34239999356214,
+      26.758699998026714,
+      26.90939999592956,
+      28.526899994176347,
+      33.75660000165226,
+      26.749900003778748,
+      26.41859999857843,
+      27.163999999174848
+    ],
+    "warmup": 5,
+    "repeats": 20,
+    "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+    "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6071801137924194,
+      "dev_dice": 0.6628931300881565,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 32.67986740000197
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5722048902511596,
+      "dev_dice": 0.7506267129071472,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 64.34632889999921
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5369195765256882,
+      "dev_dice": 0.7746486231084744,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 97.60187540000334
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5229841074347497,
+      "dev_dice": 0.7611394716875165,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 130.3005278000055
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5174598890542984,
+      "dev_dice": 0.7601797188235644,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 162.2285017000031
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.48521603107452393,
+      "dev_dice": 0.7531573929064246,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 194.57739690000017
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.475055987238884,
+      "dev_dice": 0.7794764652652811,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 226.3653667000035
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.4593597823381424,
+      "dev_dice": 0.7854027796833737,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 258.6174253000063
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.4614580821990967,
+      "dev_dice": 0.7937365933182279,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 291.6793808000075
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.47072596848011017,
+      "dev_dice": 0.7992331942157523,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 324.1082571000079
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.4593184280395508,
+      "dev_dice": 0.8226694325102717,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 356.24607020000985
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.41894987255334853,
+      "dev_dice": 0.8075954436861909,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 388.71918520001054
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.3998399478197098,
+      "dev_dice": 0.8118905781086329,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 420.7329737000109
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.4129631993174553,
+      "dev_dice": 0.8236591658136665,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 452.7740258000049
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.41690708994865416,
+      "dev_dice": 0.8222294785942217,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 484.91403150000406
+    }
+  ]
+}

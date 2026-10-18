@@ -1,0 +1,186 @@
+{
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 1.4234978258609772,
+   "dev_dice": 0.4226468775023342,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.2755966857075691,
+   "dev_mean_probability": 0.4047809522598982,
+   "elapsed_seconds": 19.28959880000184
+  },
+  {
+   "epoch": 2,
+   "train_loss": 1.2604102492332458,
+   "dev_dice": 0.3763975244416799,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.2401830181479454,
+   "dev_mean_probability": 0.3626284580677748,
+   "elapsed_seconds": 38.66456440000184
+  },
+  {
+   "epoch": 3,
+   "train_loss": 1.2059343755245209,
+   "dev_dice": 0.4210913711437591,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.193840853869915,
+   "dev_mean_probability": 0.3485406916588545,
+   "elapsed_seconds": 58.19842400000198
+  },
+  {
+   "epoch": 4,
+   "train_loss": 1.1561604738235474,
+   "dev_dice": 0.4888981128214521,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.1168570145964622,
+   "dev_mean_probability": 0.3361570965498686,
+   "elapsed_seconds": 78.3894838999986
+  },
+  {
+   "epoch": 5,
+   "train_loss": 1.1183249801397324,
+   "dev_dice": 0.44032278284064846,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.158823635429144,
+   "dev_mean_probability": 0.3335160408169031,
+   "elapsed_seconds": 97.23913600000378
+  },
+  {
+   "epoch": 6,
+   "train_loss": 1.0915153473615646,
+   "dev_dice": 0.4097072766782272,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.1576637588441372,
+   "dev_mean_probability": 0.30222263373434544,
+   "elapsed_seconds": 116.83504749999702
+  },
+  {
+   "epoch": 7,
+   "train_loss": 1.0594819858670235,
+   "dev_dice": 0.48005545799412763,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.0843379497528076,
+   "dev_mean_probability": 0.30077528953552246,
+   "elapsed_seconds": 136.892551500001
+  },
+  {
+   "epoch": 8,
+   "train_loss": 1.031353436410427,
+   "dev_dice": 0.4426469514070864,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.0980845168232918,
+   "dev_mean_probability": 0.2866574041545391,
+   "elapsed_seconds": 157.46564930000022
+  },
+  {
+   "epoch": 9,
+   "train_loss": 0.9993950724601746,
+   "dev_dice": 0.45089571277070634,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.0922922864556313,
+   "dev_mean_probability": 0.2795942407101393,
+   "elapsed_seconds": 177.31456730000355
+  },
+  {
+   "epoch": 10,
+   "train_loss": 1.0082379207015038,
+   "dev_dice": 0.4705036216132433,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.0616732500493526,
+   "dev_mean_probability": 0.2698182463645935,
+   "elapsed_seconds": 197.0219053000037
+  },
+  {
+   "epoch": 11,
+   "train_loss": 0.991232730448246,
+   "dev_dice": 0.49278806204453907,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.0259627141058445,
+   "dev_mean_probability": 0.26767830457538366,
+   "elapsed_seconds": 218.09027410000272
+  },
+  {
+   "epoch": 12,
+   "train_loss": 0.9653384014964104,
+   "dev_dice": 0.5082472589586065,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 0.9987326376140118,
+   "dev_mean_probability": 0.2504759393632412,
+   "elapsed_seconds": 237.77315899999667
+  },
+  {
+   "epoch": 13,
+   "train_loss": 0.9559298753738403,
+   "dev_dice": 0.40039866476747393,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.098815307021141,
+   "dev_mean_probability": 0.2542742816731334,
+   "elapsed_seconds": 257.2065864000033
+  },
+  {
+   "epoch": 14,
+   "train_loss": 0.9530178681015968,
+   "dev_dice": 0.45356770864296875,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.040084209293127,
+   "dev_mean_probability": 0.2418518541380763,
+   "elapsed_seconds": 277.0444886999976
+  },
+  {
+   "epoch": 15,
+   "train_loss": 0.9260433912277222,
+   "dev_dice": 0.475678282125398,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.0094011276960373,
+   "dev_mean_probability": 0.23926542978733778,
+   "elapsed_seconds": 295.75720130000263
+  },
+  {
+   "epoch": 16,
+   "train_loss": 0.8906485810875893,
+   "dev_dice": 0.48951778825510883,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 0.9914124868810177,
+   "dev_mean_probability": 0.22953415755182505,
+   "elapsed_seconds": 316.2054356000008
+  },
+  {
+   "epoch": 17,
+   "train_loss": 0.9020285606384277,
+   "dev_dice": 0.49692403400496443,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 0.9715949110686779,
+   "dev_mean_probability": 0.23042386770248413,
+   "elapsed_seconds": 336.0381907999981
+  },
+  {
+   "epoch": 18,
+   "train_loss": 0.9099703878164291,
+   "dev_dice": 0.44728074686079344,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.0200984291732311,
+   "dev_mean_probability": 0.22899948712438345,
+   "elapsed_seconds": 355.9130772999997
+  },
+  {
+   "epoch": 19,
+   "train_loss": 0.9091804400086403,
+   "dev_dice": 0.4770054144611098,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 0.99233128875494,
+   "dev_mean_probability": 0.22755405772477388,
+   "elapsed_seconds": 375.73768250000285
+  },
+  {
+   "epoch": 20,
+   "train_loss": 0.8966836482286453,
+   "dev_dice": 0.42273220513532606,
+   "dev_empty_rate": 0.0,
+   "dev_native_loss": 1.0424526929855347,
+   "dev_mean_probability": 0.21675566025078297,
+   "elapsed_seconds": 394.0991095999998
+  }
+ ],
+ "best_epoch": 12,
+ "best_dev_dice": 0.5082472589586065
+}
