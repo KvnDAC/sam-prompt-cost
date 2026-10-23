@@ -1,0 +1,24 @@
+{
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 1.4729744344949722,
+   "dev_dice": 0.0,
+   "elapsed_seconds": 17.444681000000855
+  },
+  {
+   "epoch": 2,
+   "train_loss": 1.4186580926179886,
+   "dev_dice": 0.0,
+   "elapsed_seconds": 34.82735700000194
+  },
+  {
+   "epoch": 3,
+   "train_loss": 1.394544467329979,
+   "dev_dice": 0.0,
+   "elapsed_seconds": 51.16664170000149
+  }
+ ],
+ "best_epoch": 0,
+ "best_dev_dice": 0.0
+}

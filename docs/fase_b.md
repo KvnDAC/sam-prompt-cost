@@ -1,5 +1,7 @@
 # Fase B: localización y prompts condicionados
 
+**Cierre del 16 de octubre de 2026:** las 16 etapas terminaron correctamente en esta copia local, incluidas las tres semillas condicionadas, tres probes, control de contexto y resumen. Ver [informe final de desarrollo](../results/phase_b/full_dev_20261012/report.md) y [registro de ejecución](experimentos_modelos.md). Las instrucciones de recuperación más abajo describen la interrupción anterior: no archivar ni reiniciar ahora corridas completas. No se evaluó nuevamente test.
+
 Protocolo preparado el 12 de octubre de 2026, antes de ejecutar estos nuevos experimentos. Los resultados de E1 ya se inspeccionaron: esta fase es exploratoria y necesita evaluación externa para confirmar generalización.
 
 En el workspace local se instaló SAM y scikit-learn en `.venv` con acceso a los paquetes existentes del sistema. Ejecutar los comandos con `.\.venv\Scripts\python.exe` en lugar de `python`; no hace falta activar el entorno. Las versiones y el commit oficial están en `docs/environment_phase_b.json`.
@@ -90,24 +92,26 @@ El commit `eb3e7e3` (12 de octubre, 18:29) guardó `results/phase_b/full_dev_202
 | `perturbations_dev` y controles derivados (subgrupos, casos, selección de salidas) | Completos |
 | Barrido de LR del condicionado (`search/`, 3 corridas) | Completo; elegido LR 1e-4 (`selection.json`) |
 | `static_k4_s0` | Completa |
-| `static_k4_s1` | **Interrumpida**: `progress.json` con 3 de 6 épocas, sin `summary.json` ni `dev_per_image.csv`. No es un resultado; no citarla |
-| `static_k4_s2`, `conditional_k4_s0–s2`, `probe_s0–s2` | Sin ejecutar |
+| `static_k4_s1` | **Parcial en ese commit**: `progress.json` con 3 de 6 épocas, sin `summary.json` ni `dev_per_image.csv`. Esa foto no es un resultado final ni demuestra que el proceso se hubiera detenido |
+| `static_k4_s2`, `conditional_k4_s0–s2`, `probe_s0–s2` | Sin artefactos versionados en ese commit; comprobar también los archivos locales |
 | `13_summarize_phase_b.py` (incluye el control D17 de `14_conditioning_diagnostic.py`) | Sin ejecutar: no existen `report.md`, `table.csv` ni `summary.json` del experimento |
 
-Por tanto, **todavía no hay comparación estático vs. condicionado vs. probe en dev**. Lo disponible son lecturas parciales de una semilla, sin IC:
+Por tanto, **ese commit no contiene la comparación estático vs. condicionado vs. probe en dev**. Sus resultados de entrenamiento completos se limitan a una semilla estática y al barrido:
 
 - Estático, semilla 0: la inicialización meanpoint sin entrenar ya da Dice dev 0,3505, y la mejor época (6) llega a 0,3513.
 - Barrido del condicionado, semilla 0: 0,3607 con LR 1e-5, 0,3602 con 3e-5 y 0,3987 con 1e-4.
 
+**Comprobación de la copia local original el 16 de octubre:** hay resultados posteriores al commit. Las tres semillas estáticas sí terminaron, con Dice dev 0,3513; 0,3625; 0,3762 (media 0,3633). Sus CSV contienen los 100 IDs dev y reproducen los resúmenes. `conditional_k4_s0` quedó parcial en la época 3/6, con mejor score registrado 0,4766, sin resumen final. No se encontraron procesos Python activos durante la revisión; `running` en el JSON es el último estado persistido y no confirma actividad. Faltan las corridas condicionadas completas, los probes, el control de contexto y el resumen final. Detalles en [revision_sam_20261016.md](revision_sam_20261016.md).
+
 ### Cómo reanudar
 
-1. **Confirmar con quien lanzó la corrida** si el proceso sigue activo o si hay resultados locales más nuevos sin subir. El commit es una foto a mitad de camino.
+1. **Examinar procesos y archivos locales**, incluyendo los no versionados. El commit es una foto a mitad de camino y `state: running` por sí solo no prueba que el proceso siga activo.
 2. **Reanudar solo en la copia de trabajo original.** `12_run_phase_b.py` compara `plan.json`, que incluye el SHA-256 de siete archivos fuente calculado sobre los bytes en disco, con claves de ruta en formato Windows (`scripts\02_encode.py`). Verificado el 16 de octubre:
    - **Clon nuevo en Windows** (`core.autocrlf=true`): `scripts/10_prompt_perturbations.py` no coincide. El hash del plan corresponde a la versión con fin de línea LF, y el clon la tiene con CRLF.
    - **Linux/Colab**: no coinciden los otros seis archivos (sus hashes corresponden a CRLF), ni las claves con `\`.
    - **Cualquier edición** de `02_encode.py`, `06_probe.py`, `07_learned_prompts.py`, `10_prompt_perturbations.py`, `learned.py`, `decode.py` o `data.py` también bloquea la reanudación. Es intencional: evita mezclar versiones de código dentro de un experimento.
-3. **Mover, no borrar**, la corrida parcial (las corridas fallidas se conservan, D15). Por ejemplo, `runs/static_k4_s1` → `interrumpidas/static_k4_s1_20261012`, dentro de la carpeta del experimento. Si sigue en `runs/`, `07_learned_prompts.py` lanza `FileExistsError` y la etapa queda como fallida.
-4. **Relanzar** `.\.venv\Scripts\python.exe scripts\12_run_phase_b.py --output_root results\phase_b\full_dev_20261012 --threads 4`. Las etapas `complete` se saltan y `static_k4_s1` se repite desde cero.
+3. **Archivar solamente la corrida que siga parcial**, conservándola dentro de la carpeta del experimento. En la copia local revisada es `runs/conditional_k4_s0` → `interrumpidas/conditional_k4_s0_<fecha>`; no mover `static_k4_s1`, que sí terminó localmente. En otro checkout, decidir según sus propios artefactos y procesos. Si la carpeta parcial sigue en `runs/`, `07_learned_prompts.py` lanza `FileExistsError`. No se realizó ese movimiento durante la revisión.
+4. **Relanzar después de archivar y validar el plan** `.\.venv\Scripts\python.exe scripts\12_run_phase_b.py --output_root results\phase_b\full_dev_20261012 --threads 4`. Las etapas `complete` se saltan y la etapa incompleta se repite desde cero. El checkpoint guarda parámetros del prompt, pero no el estado completo del optimizador/scheduler para continuar exactamente en la época 4.
 5. **Antes de reanudar, decidir sobre la grilla de LR.** El valor elegido (1e-4) es el extremo superior de {1e-5, 3e-5, 1e-4}, y su mejor época fue la última del barrido. Ampliar la grilla cambia `plan.json` y exige una carpeta de experimento nueva.
 
 Si no se puede reanudar (otra máquina, Colab o grilla ampliada), crear una carpeta nueva con `--output_root` y repetir el protocolo completo. Duraciones registradas con 4 hilos de CPU:

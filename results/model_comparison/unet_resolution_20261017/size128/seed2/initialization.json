@@ -1,0 +1,7 @@
+{
+  "parent_epoch": 30,
+  "parent_checkpoint_sha256": "22b95ab18eab7a90bf3ab4ea3417cb38ae8e280bbfd116a03c5363baeda3684d",
+  "size": 128,
+  "initial_dice": 0.7690207155179196,
+  "selection": "stage 0 (parent endpoint at arm resolution) plus new epochs"
+}

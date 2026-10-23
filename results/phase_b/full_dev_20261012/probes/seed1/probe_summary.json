@@ -1,0 +1,10 @@
+{
+ "n_tokens_train": 600000,
+ "probe_threshold_dev": 0.0,
+ "seed": 1,
+ "split": "dev",
+ "probe_dice": 0.7486260440937491,
+ "selfbox_dice": 0.7714439309566403,
+ "selfpoint_dice": 0.5945855774967089,
+ "selfboxpoint_dice": 0.8118731650028501
+}

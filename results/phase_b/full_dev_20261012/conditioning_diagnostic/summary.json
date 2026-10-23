@@ -1,0 +1,27 @@
+{
+ "n_images": 100,
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "normal": [
+  0.501336860967504,
+  0.4260422771599699,
+  0.5761547070532995
+ ],
+ "shuffled": [
+  0.4952952469124028,
+  0.4199480257683686,
+  0.5701082932438374
+ ],
+ "normal_minus_shuffled": {
+  "mean_diff": 0.006041614055101193,
+  "ci95": [
+   0.00083953308113107,
+   0.011244674524275515
+  ],
+  "wilcoxon_p": 0.019088469782606338
+ },
+ "interpretation": "Exploratory sensitivity to context, not a held-out generalization result or a parameter-matched baseline."
+}

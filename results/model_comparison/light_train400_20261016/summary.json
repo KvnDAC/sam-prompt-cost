@@ -1,0 +1,66 @@
+{
+  "test_evaluated": false,
+  "table": [
+    {
+      "model": "fcn_lite",
+      "dice": [
+        0.6002185404479566,
+        0.5561882150190077,
+        0.6429340281921776
+      ],
+      "seed_std": 0.011578365511052286,
+      "seed_means": [
+        0.6114621240427793,
+        0.588332172139144,
+        0.6008613251619466
+      ],
+      "parameters": 18355,
+      "latency_ms_median_across_seeds": 5.93980000121519
+    },
+    {
+      "model": "ds_unet",
+      "dice": [
+        0.6548333663099437,
+        0.611898078292492,
+        0.6940309793189641
+      ],
+      "seed_std": 0.015046388578533888,
+      "seed_means": [
+        0.6612942982116091,
+        0.6655702221667366,
+        0.6376355785514858
+      ],
+      "parameters": 18665,
+      "latency_ms_median_across_seeds": 14.873199997964548
+    },
+    {
+      "model": "unet",
+      "dice": [
+        0.781442546175851,
+        0.7439260530935404,
+        0.8143094285460102
+      ],
+      "seed_std": 0.010891941442480301,
+      "seed_means": [
+        0.7730058179213911,
+        0.7937386946934146,
+        0.7775831259127473
+      ],
+      "parameters": 487289,
+      "latency_ms_median_across_seeds": 13.883349998650374
+    }
+  ],
+  "paired_differences_exploratory": {
+    "ds_unet minus unet": [
+      -0.12660917986590714,
+      -0.1508486066764585,
+      -0.10348804541318105
+    ],
+    "fcn_lite minus unet": [
+      -0.18122400572789424,
+      -0.21682994333627487,
+      -0.14856179540575826
+    ]
+  },
+  "selection_warning": "Development-selected checkpoints; not independent generalization. Different pretraining/input size from SAM."
+}

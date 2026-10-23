@@ -1,0 +1,40 @@
+{
+  "test_evaluated": false,
+  "n_train": 400,
+  "n_dev": 100,
+  "modes": {
+    "fixed_point": {
+      "dice": [
+        0.36334922817313,
+        0.2937064805952595,
+        0.43399338832656625
+      ],
+      "empty_rate": 0.0
+    },
+    "fixed_box": {
+      "dice": [
+        0.29690226124306485,
+        0.22926765937537721,
+        0.3657357474748433
+      ],
+      "empty_rate": 0.0
+    },
+    "fixed_boxpoint": {
+      "dice": [
+        0.358180002130579,
+        0.2909371508572015,
+        0.4260291574981916
+      ],
+      "empty_rate": 0.0
+    }
+  },
+  "probe_boxpoint_minus_fixed_boxpoint": {
+    "mean_diff": 0.459742090605417,
+    "ci95": [
+      0.3808658712231307,
+      0.536967095737156
+    ],
+    "wilcoxon_p": 7.810649014598995e-15
+  },
+  "interpretation": "Exploratory fixed-prior control, supervised by train masks; not zero-supervision, no retraining/capacity-matched generator control."
+}

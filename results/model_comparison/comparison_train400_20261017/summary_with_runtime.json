@@ -1,0 +1,1147 @@
+{
+  "test_evaluated": false,
+  "n_train": 400,
+  "n_dev": 100,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "table": [
+    {
+      "method": "fcn_lite",
+      "family": "RGB compact",
+      "dice": [
+        0.6002185404479566,
+        0.5549462895709293,
+        0.6429258349724164
+      ],
+      "iou": [
+        0.46854816596931753,
+        0.4250485727357776,
+        0.510507882355892
+      ],
+      "seed_std": 0.011578365511052286,
+      "parameters_total": 18355,
+      "parameters_trainable": 18355,
+      "input_longest_side": 128,
+      "pretraining": "none",
+      "latency_median_ms": 6.864750001113862
+    },
+    {
+      "method": "ds_unet",
+      "family": "RGB compact",
+      "dice": [
+        0.6548333663099437,
+        0.6121816966205643,
+        0.6946301198688525
+      ],
+      "iou": [
+        0.5260267486325617,
+        0.48296224987071507,
+        0.5678561632986413
+      ],
+      "seed_std": 0.015046388578533888,
+      "parameters_total": 18665,
+      "parameters_trainable": 18665,
+      "input_longest_side": 128,
+      "pretraining": "none",
+      "latency_median_ms": 14.076650000788504
+    },
+    {
+      "method": "unet",
+      "family": "RGB compact",
+      "dice": [
+        0.781442546175851,
+        0.74469800381571,
+        0.8139545097935083
+      ],
+      "iou": [
+        0.6737881489525508,
+        0.6337835262879039,
+        0.7111922254627778
+      ],
+      "seed_std": 0.010891941442480301,
+      "parameters_total": 487289,
+      "parameters_trainable": 487289,
+      "input_longest_side": 128,
+      "pretraining": "none",
+      "latency_median_ms": 12.111299998650793
+    },
+    {
+      "method": "Probe lineal",
+      "family": "SAM-based",
+      "dice": [
+        0.7489157588785612,
+        0.7066885118446316,
+        0.7879192496212071
+      ],
+      "seed_std": 0.0007270499209099943,
+      "parameters_total": null,
+      "parameters_trainable": 257,
+      "input_longest_side": 1024,
+      "pretraining": "SAM ViT-B generic",
+      "latency_median_ms": null
+    },
+    {
+      "method": "Probe → caja → SAM",
+      "family": "SAM-based",
+      "dice": [
+        0.7737656725333043,
+        0.7271065689325203,
+        0.8170043418493274
+      ],
+      "seed_std": 0.0024781087428647616,
+      "parameters_total": null,
+      "parameters_trainable": 257,
+      "input_longest_side": 1024,
+      "pretraining": "SAM ViT-B generic",
+      "latency_median_ms": null
+    },
+    {
+      "method": "Probe → caja + punto → SAM",
+      "family": "SAM-based",
+      "dice": [
+        0.8179220927359961,
+        0.7707340696628139,
+        0.8599511547937574
+      ],
+      "seed_std": 0.005274250219460719,
+      "parameters_total": 93735729,
+      "parameters_trainable": 257,
+      "input_longest_side": 1024,
+      "pretraining": "SAM ViT-B generic",
+      "latency_median_ms": 8369.377449998865,
+      "latency_p95_ms": 8905.769389999477,
+      "latency_seed": 0
+    },
+    {
+      "method": "Tokens estáticos",
+      "family": "SAM-based",
+      "dice": [
+        0.3633122537717005,
+        0.291345373228927,
+        0.4374867152067308
+      ],
+      "seed_std": 0.012462352395087396,
+      "parameters_total": null,
+      "parameters_trainable": 1024,
+      "input_longest_side": 1024,
+      "pretraining": "SAM ViT-B generic",
+      "latency_median_ms": null
+    },
+    {
+      "method": "Tokens condicionados",
+      "family": "SAM-based",
+      "dice": [
+        0.501336860967504,
+        0.4260422771599699,
+        0.5761547070532995
+      ],
+      "seed_std": 0.008892871247760866,
+      "parameters_total": null,
+      "parameters_trainable": 331008,
+      "input_longest_side": 1024,
+      "pretraining": "SAM ViT-B generic",
+      "latency_median_ms": null
+    }
+  ],
+  "paired_exploratory": {
+    "Probe → caja + punto → SAM minus fcn_lite": {
+      "mean_diff": 0.2177035522880394,
+      "ci95": [
+        0.16890143829869864,
+        0.266791804455748
+      ],
+      "wilcoxon_p": 1.342808921407084e-12
+    },
+    "Probe → caja + punto → SAM minus ds_unet": {
+      "mean_diff": 0.16308872642605227,
+      "ci95": [
+        0.1211612582861649,
+        0.20519155985010123
+      ],
+      "wilcoxon_p": 1.484253910357382e-11
+    },
+    "Probe → caja + punto → SAM minus unet": {
+      "mean_diff": 0.03647954656014514,
+      "ci95": [
+        -0.005537314805776032,
+        0.0771193028748617
+      ],
+      "wilcoxon_p": 0.0004191532414062229
+    },
+    "image-specific boxpoint minus fixed boxpoint": {
+      "mean_diff": 0.459742090605417,
+      "ci95": [
+        0.3808658712231307,
+        0.536967095737156
+      ],
+      "wilcoxon_p": 7.810649014598995e-15
+    },
+    "static tokens minus fixed point": {
+      "mean_diff": -3.697440142955401e-05,
+      "ci95": [
+        -0.051092656979416964,
+        0.05358952423674587
+      ],
+      "wilcoxon_p": 0.045043106161184954
+    }
+  },
+  "isolated_rgb_latency": {
+    "fcn_lite": [
+      {
+        "median_ms": 6.93429999955697,
+        "p95_ms": 7.564640001146472,
+        "samples_ms": [
+          5.464400004711933,
+          6.592199999431614,
+          5.238899997493718,
+          7.042199998977594,
+          6.0908000014023855,
+          5.284500002744608,
+          7.10350000008475,
+          6.9411000004038215,
+          7.095599998137914,
+          7.346799997321796,
+          6.376099998306017,
+          7.450999997672625,
+          6.927499998710118,
+          6.697000004351139,
+          7.3228999972343445,
+          6.881699999212287,
+          7.645199999387842,
+          7.039600001007784,
+          7.5604000012390316,
+          6.460800002969336
+        ],
+        "warmup": 5,
+        "repeats": 20,
+        "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+        "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+      },
+      {
+        "median_ms": 6.864750001113862,
+        "p95_ms": 7.726444997751969,
+        "samples_ms": [
+          6.9711000032839365,
+          6.559299996297341,
+          6.946599998627789,
+          6.683400002657436,
+          7.486800001061056,
+          6.4894999959506094,
+          6.405499996617436,
+          7.453899997926783,
+          6.591800003661774,
+          7.375700006377883,
+          6.417600001441315,
+          7.930599997052923,
+          6.782900003599934,
+          6.764899997506291,
+          7.715699997788761,
+          6.985200001508929,
+          7.6869999975315295,
+          6.6246999995200895,
+          7.477599996491335,
+          6.485899997642264
+        ],
+        "warmup": 5,
+        "repeats": 20,
+        "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+        "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+      },
+      {
+        "median_ms": 5.762500000855653,
+        "p95_ms": 7.01308999741741,
+        "samples_ms": [
+          6.175400005304255,
+          6.125100000645034,
+          5.2937000000383705,
+          7.0027999972808175,
+          5.433999998786021,
+          5.651499996019993,
+          6.139700002677273,
+          5.6756000049063005,
+          5.411300000560004,
+          7.208600000012666,
+          5.459199994220398,
+          5.907699996896554,
+          6.081599996832665,
+          5.522200000996236,
+          5.849399996805005,
+          6.062600004952401,
+          5.56269999651704,
+          6.364599998050835,
+          5.607899998722132,
+          5.375400003686082
+        ],
+        "warmup": 5,
+        "repeats": 20,
+        "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+        "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+      }
+    ],
+    "ds_unet": [
+      {
+        "median_ms": 14.076650000788504,
+        "p95_ms": 15.701064996756033,
+        "samples_ms": [
+          15.176000000792556,
+          14.987100003054366,
+          13.173799998185132,
+          13.9675000027637,
+          15.582499996526167,
+          12.958999999682419,
+          15.232500001729932,
+          13.483499998983461,
+          14.260299998568371,
+          13.826299997163005,
+          14.474700001301244,
+          13.985199999297038,
+          13.160399998014327,
+          14.053500002773944,
+          13.595700002042577,
+          14.215200004400685,
+          14.099799998803064,
+          15.115700000023935,
+          13.334000002942048,
+          17.953800001123454
+        ],
+        "warmup": 5,
+        "repeats": 20,
+        "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+        "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+      },
+      {
+        "median_ms": 13.95214999865857,
+        "p95_ms": 15.311094998469345,
+        "samples_ms": [
+          13.647600004333071,
+          13.993500004289672,
+          13.29779999650782,
+          13.939000004029367,
+          13.818300001730677,
+          14.276900001277681,
+          13.207099997089244,
+          13.566200002969708,
+          14.226999999664258,
+          13.755800006038044,
+          13.887700006307568,
+          13.519100000848994,
+          13.808900002914015,
+          14.261300006182864,
+          13.965299993287772,
+          18.40989999618614,
+          14.981799999077339,
+          14.582600000721868,
+          15.147999998589512,
+          14.79799999651732
+        ],
+        "warmup": 5,
+        "repeats": 20,
+        "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+        "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+      },
+      {
+        "median_ms": 14.550950003467733,
+        "p95_ms": 16.841900004146737,
+        "samples_ms": [
+          13.80099999369122,
+          14.611700004024897,
+          13.625999999931082,
+          14.362699999765027,
+          14.74890000099549,
+          13.944499994977377,
+          12.746499996865168,
+          14.621499998611398,
+          14.613499995903112,
+          15.076799994858447,
+          14.49020000291057,
+          14.69589999760501,
+          14.237500006856862,
+          13.047000000369735,
+          16.773200004536193,
+          18.147199996747077,
+          14.458199999353383,
+          15.62990000093123,
+          14.88940000126604,
+          13.73310000053607
+        ],
+        "warmup": 5,
+        "repeats": 20,
+        "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+        "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+      }
+    ],
+    "unet": [
+      {
+        "median_ms": 12.111299998650793,
+        "p95_ms": 13.204649997715023,
+        "samples_ms": [
+          12.953500001458451,
+          11.076099995989352,
+          12.094099998648744,
+          12.565999997605104,
+          12.32729999901494,
+          11.699099995894358,
+          12.53030000225408,
+          13.33860000158893,
+          12.128499998652842,
+          10.990000002493616,
+          13.048300002992619,
+          11.888999993971083,
+          10.986599998432212,
+          11.72960000258172,
+          12.656899998546578,
+          12.485699997341726,
+          11.23619999998482,
+          11.653499997919425,
+          13.197599997511134,
+          10.870400001294911
+        ],
+        "warmup": 5,
+        "repeats": 20,
+        "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+        "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+      },
+      {
+        "median_ms": 12.013599996862467,
+        "p95_ms": 12.689399996452266,
+        "samples_ms": [
+          11.949699997785501,
+          12.31059999554418,
+          11.472099999082275,
+          12.564499993459322,
+          11.745399999199435,
+          12.3440000024857,
+          10.940100000880193,
+          11.866400003782474,
+          12.822400000004563,
+          12.296200002310798,
+          10.854400003154296,
+          12.682399996265303,
+          12.290500002563931,
+          11.533800003235228,
+          12.269700004253536,
+          11.962699994910508,
+          12.424800006556325,
+          11.36899999983143,
+          11.851700000988785,
+          12.064499998814426
+        ],
+        "warmup": 5,
+        "repeats": 20,
+        "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+        "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+      },
+      {
+        "median_ms": 12.212700003146892,
+        "p95_ms": 17.21208500021021,
+        "samples_ms": [
+          12.720600003376603,
+          11.88700000056997,
+          10.582499999145512,
+          12.438700003258418,
+          11.999100002867635,
+          12.15990000491729,
+          12.271200001123361,
+          12.011599996185396,
+          16.971500001091044,
+          17.59180000226479,
+          16.67029999953229,
+          17.192100000102073,
+          12.673799996264279,
+          11.324700004479382,
+          11.713799998688046,
+          12.265500001376495,
+          11.02099999843631,
+          11.748699995223433,
+          12.458199998945929,
+          12.1383000005153
+        ],
+        "warmup": 5,
+        "repeats": 20,
+        "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+        "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+      }
+    ]
+  },
+  "epoch_selection": {
+    "fcn_lite": [
+      {
+        "seed": 0,
+        "selected_epoch": 30,
+        "epochs_run": 30,
+        "selected_last_available": true
+      },
+      {
+        "seed": 1,
+        "selected_epoch": 29,
+        "epochs_run": 30,
+        "selected_last_available": false
+      },
+      {
+        "seed": 2,
+        "selected_epoch": 28,
+        "epochs_run": 30,
+        "selected_last_available": false
+      }
+    ],
+    "ds_unet": [
+      {
+        "seed": 0,
+        "selected_epoch": 30,
+        "epochs_run": 30,
+        "selected_last_available": true
+      },
+      {
+        "seed": 1,
+        "selected_epoch": 30,
+        "epochs_run": 30,
+        "selected_last_available": true
+      },
+      {
+        "seed": 2,
+        "selected_epoch": 30,
+        "epochs_run": 30,
+        "selected_last_available": true
+      }
+    ],
+    "unet": [
+      {
+        "seed": 0,
+        "selected_epoch": 30,
+        "epochs_run": 30,
+        "selected_last_available": true
+      },
+      {
+        "seed": 1,
+        "selected_epoch": 30,
+        "epochs_run": 30,
+        "selected_last_available": true
+      },
+      {
+        "seed": 2,
+        "selected_epoch": 28,
+        "epochs_run": 30,
+        "selected_last_available": false
+      }
+    ]
+  },
+  "subgroups_descriptive": {
+    "area_bin=5-15%": {
+      "n": 38,
+      "methods": {
+        "fcn_lite": [
+          0.6555833652657669,
+          0.5943672918537551,
+          0.7148138028070824
+        ],
+        "ds_unet": [
+          0.7414383766434626,
+          0.6805532264660139,
+          0.7969438479732851
+        ],
+        "unet": [
+          0.8152266995603465,
+          0.7504745618091865,
+          0.8686923993383556
+        ],
+        "Probe lineal": [
+          0.8255457236394016,
+          0.7735133305648976,
+          0.8685842140330554
+        ],
+        "Probe → caja → SAM": [
+          0.8436158087043273,
+          0.7936734848584776,
+          0.8846923726355372
+        ],
+        "Probe → caja + punto → SAM": [
+          0.8776224705960278,
+          0.8150338552388251,
+          0.9240596172344498
+        ],
+        "Tokens estáticos": [
+          0.3490398832692785,
+          0.22690289132510993,
+          0.473350016579025
+        ],
+        "Tokens condicionados": [
+          0.49569212809544866,
+          0.3653312619448713,
+          0.626810728014635
+        ],
+        "fixed_point": [
+          0.32492328578714363,
+          0.21940472765197697,
+          0.4380669042233416
+        ],
+        "fixed_box": [
+          0.24113013094597768,
+          0.12858641519437305,
+          0.36522340249410623
+        ],
+        "fixed_boxpoint": [
+          0.34606635410968123,
+          0.23013178137378662,
+          0.46549319335795475
+        ]
+      }
+    },
+    "area_bin=<5%": {
+      "n": 25,
+      "methods": {
+        "fcn_lite": [
+          0.43896006521296266,
+          0.35615141322855026,
+          0.5225324936989642
+        ],
+        "ds_unet": [
+          0.47933297624852256,
+          0.4021180460368523,
+          0.5526876833288071
+        ],
+        "unet": [
+          0.7144927713684892,
+          0.6256131052883178,
+          0.7955717715259564
+        ],
+        "Probe lineal": [
+          0.6888048975447749,
+          0.6141273970052591,
+          0.7579729937375943
+        ],
+        "Probe → caja → SAM": [
+          0.6966923594966725,
+          0.5976171109502247,
+          0.7840020614540387
+        ],
+        "Probe → caja + punto → SAM": [
+          0.7990653016218477,
+          0.7124550578672623,
+          0.8688220277990653
+        ],
+        "Tokens estáticos": [
+          0.13528529307339834,
+          0.04393464958261486,
+          0.2503093037816735
+        ],
+        "Tokens condicionados": [
+          0.31242298672143387,
+          0.18333336234799746,
+          0.4503843213740849
+        ],
+        "fixed_point": [
+          0.12942142801899092,
+          0.05077059262368588,
+          0.234755753903562
+        ],
+        "fixed_box": [
+          0.2047989680681543,
+          0.09520609415351039,
+          0.3309188108184438
+        ],
+        "fixed_boxpoint": [
+          0.16616891939633202,
+          0.07744079950737146,
+          0.2684352335604275
+        ]
+      }
+    },
+    "area_bin=>=15%": {
+      "n": 37,
+      "methods": {
+        "fcn_lite": [
+          0.6523157982262826,
+          0.5837042002850268,
+          0.7164873320742163
+        ],
+        "ds_unet": [
+          0.6844690246575605,
+          0.6296108970181953,
+          0.7359562041283167
+        ],
+        "unet": [
+          0.7919816418940456,
+          0.7605072055724489,
+          0.8249679975093992
+        ],
+        "Probe lineal": [
+          0.7108301608362021,
+          0.6297782824465405,
+          0.7836862762059513
+        ],
+        "Probe → caja → SAM": [
+          0.7541042577067352,
+          0.6635091628778222,
+          0.834288312331583
+        ],
+        "Probe → caja + punto → SAM": [
+          0.7693492662271445,
+          0.6764112764942664,
+          0.8507520200090108
+        ],
+        "Tokens estáticos": [
+          0.5320426347595272,
+          0.4260173994676634,
+          0.6351837147273505
+        ],
+        "Tokens condicionados": [
+          0.6347786638131755,
+          0.5314268472638481,
+          0.7309570630960371
+        ],
+        "fixed_point": [
+          0.5608730339709939,
+          0.44749185770639033,
+          0.6728325472293609
+        ],
+        "fixed_box": [
+          0.4164137012609588,
+          0.31848279641877436,
+          0.513309103673051
+        ],
+        "fixed_boxpoint": [
+          0.500358264107614,
+          0.40368628027253345,
+          0.5946533452569468
+        ]
+      }
+    },
+    "multiple_components=0": {
+      "n": 95,
+      "methods": {
+        "fcn_lite": [
+          0.6073679384240372,
+          0.5602417954784578,
+          0.6515041777186761
+        ],
+        "ds_unet": [
+          0.6616539207642964,
+          0.6178673304628994,
+          0.7028321695452407
+        ],
+        "unet": [
+          0.7863636247296287,
+          0.7494545391995769,
+          0.8198457365510313
+        ],
+        "Probe lineal": [
+          0.7539346431860532,
+          0.7110753533974038,
+          0.7935394638098772
+        ],
+        "Probe → caja → SAM": [
+          0.7797147687354978,
+          0.7327062382941235,
+          0.822838116515996
+        ],
+        "Probe → caja + punto → SAM": [
+          0.8274104551100641,
+          0.7800469607564771,
+          0.8689948307526406
+        ],
+        "Tokens estáticos": [
+          0.3660281928083618,
+          0.29178871011733826,
+          0.4407769832092051
+        ],
+        "Tokens condicionados": [
+          0.49967957912300726,
+          0.42307783985029346,
+          0.5775266839266366
+        ],
+        "fixed_point": [
+          0.3661135553539589,
+          0.29305141587364375,
+          0.4386162785241504
+        ],
+        "fixed_box": [
+          0.296255891919256,
+          0.2298405726808187,
+          0.3666969596281203
+        ],
+        "fixed_boxpoint": [
+          0.3613198388771054,
+          0.29380171819049805,
+          0.42995636818509103
+        ]
+      }
+    },
+    "multiple_components=1": {
+      "n": 5,
+      "methods": {
+        "fcn_lite": [
+          0.4643799789024249,
+          0.35473020792159493,
+          0.5740297498832547
+        ],
+        "ds_unet": [
+          0.5252428316772431,
+          0.41588289144720647,
+          0.6344085296464075
+        ],
+        "unet": [
+          0.6879420536540748,
+          0.6074668249294003,
+          0.7584314154643633
+        ],
+        "Probe lineal": [
+          0.6535569570362104,
+          0.39767888875032026,
+          0.8243428030256155
+        ],
+        "Probe → caja → SAM": [
+          0.6607328446916287,
+          0.38489560222452496,
+          0.8671987244597421
+        ],
+        "Probe → caja + punto → SAM": [
+          0.6376432076286987,
+          0.3846449720255285,
+          0.7794823890622594
+        ],
+        "Tokens estáticos": [
+          0.3117094120751361,
+          0.04487086377978452,
+          0.5785479603704876
+        ],
+        "Tokens condicionados": [
+          0.5328252160129422,
+          0.29663050199336133,
+          0.7315194838360808
+        ],
+        "fixed_point": [
+          0.31082701173738236,
+          0.06294839504666022,
+          0.5748896786175262
+        ],
+        "fixed_box": [
+          0.30918327839543325,
+          0.07772796289661756,
+          0.5739863480481171
+        ],
+        "fixed_boxpoint": [
+          0.29852310394657733,
+          0.05237140458744656,
+          0.5517725643721956
+        ]
+      }
+    },
+    "touches_edge=0": {
+      "n": 79,
+      "methods": {
+        "fcn_lite": [
+          0.5962544788932558,
+          0.5451640345512556,
+          0.6471453972692081
+        ],
+        "ds_unet": [
+          0.6599787005171459,
+          0.6109166325954646,
+          0.7074233062221262
+        ],
+        "unet": [
+          0.7886007379874089,
+          0.7445608475681167,
+          0.8282578268837437
+        ],
+        "Probe lineal": [
+          0.7612146655999956,
+          0.7153688429793625,
+          0.8046158079489258
+        ],
+        "Probe → caja → SAM": [
+          0.7797099537065698,
+          0.7292215814860192,
+          0.8271704763850825
+        ],
+        "Probe → caja + punto → SAM": [
+          0.8362958652527575,
+          0.7851538838406591,
+          0.8803296284675709
+        ],
+        "Tokens estáticos": [
+          0.353072272842682,
+          0.27088963500410657,
+          0.43634077226226053
+        ],
+        "Tokens condicionados": [
+          0.49156567336612744,
+          0.40807925922322047,
+          0.5754802818267869
+        ],
+        "fixed_point": [
+          0.3345397021166663,
+          0.25960446662484177,
+          0.4140853761333313
+        ],
+        "fixed_box": [
+          0.3038984571510482,
+          0.22610752661332606,
+          0.3825726831441053
+        ],
+        "fixed_boxpoint": [
+          0.3634564880102657,
+          0.2865588433609038,
+          0.4439116257149194
+        ]
+      }
+    },
+    "touches_edge=1": {
+      "n": 21,
+      "methods": {
+        "fcn_lite": [
+          0.6151309624870696,
+          0.5371118046218664,
+          0.6798515782818575
+        ],
+        "ds_unet": [
+          0.6354771090542778,
+          0.5616593405811059,
+          0.6961390583724942
+        ],
+        "unet": [
+          0.7545141103133225,
+          0.7181780162672656,
+          0.7908249693274083
+        ],
+        "Probe lineal": [
+          0.7026484431169742,
+          0.6053919404678593,
+          0.7867870338186875
+        ],
+        "Probe → caja → SAM": [
+          0.7514038528814965,
+          0.634087333203785,
+          0.8488124861541875
+        ],
+        "Probe → caja + punto → SAM": [
+          0.7488017104110364,
+          0.634847290160895,
+          0.8494665128345461
+        ],
+        "Tokens estáticos": [
+          0.40183408679038923,
+          0.26220509742488496,
+          0.5451670073624938
+        ],
+        "Tokens condicionados": [
+          0.5380951381345872,
+          0.38152356958337486,
+          0.6830304714359438
+        ],
+        "fixed_point": [
+          0.47172792143316,
+          0.3156817041333384,
+          0.6311080147281188
+        ],
+        "fixed_box": [
+          0.27058323854160377,
+          0.15118545083822427,
+          0.3931920739843901
+        ],
+        "fixed_boxpoint": [
+          0.33833036477366246,
+          0.2153223838292134,
+          0.46158568455342047
+        ]
+      }
+    }
+  },
+  "sam_runtime": {
+    "method": "SAM ViT-B + linear probe -> largest-component box+point -> SAM",
+    "seed": 0,
+    "threads": 4,
+    "batch_size": 1,
+    "warmup": 5,
+    "repeats": 20,
+    "test_evaluated": false,
+    "input_longest_side": 1024,
+    "ids": [
+      "cju17bz250pgd0799u1hqkj5u",
+      "cju1c3218411b08014g9f6gig",
+      "cju1d31sp4d4k0878r3fr02ul",
+      "cju1dhfok4mhe0878jlgrag0h",
+      "cju1egh885m1l0855ci1lt37c",
+      "cju1expq45zst0855rjqwwj4m",
+      "cju1f15k3w4ct0835cmde6ypo",
+      "cju1ftaji6isw0855108yqcse",
+      "cju1gghyjwxt80835vx0wgxw0",
+      "cju1gi7jlwyld0835cdf6g6qz",
+      "cju2hlm19vjjf0801o69qnber",
+      "cju2m71z2ywwv080131bcrsd3",
+      "cju2ma647l0nj0993ot4deq2q",
+      "cju2nyc5f02m40801ojqbtiea",
+      "cju2okvco06xc0799kxe5n1qh",
+      "cju2omjpeqj5a0988pjdlb8l1",
+      "cju2qh5le1ock0878oahaql7d",
+      "cju2qqn5ys4uo0988ewrt2ip2",
+      "cju2rqo702wpx0855fn7d5cxh",
+      "cju2tpfa5uyx408359datxqqj"
+    ],
+    "rows": [
+      {
+        "id": "cju1expq45zst0855rjqwwj4m",
+        "total_ms": 7906.442099993001,
+        "preprocess_ms": 20.17329999944195,
+        "encoder_ms": 7780.002699997567,
+        "probe_prompts_decoder_ms": 106.26609999599168
+      },
+      {
+        "id": "cju1f15k3w4ct0835cmde6ypo",
+        "total_ms": 8064.456000000064,
+        "preprocess_ms": 23.3795000021928,
+        "encoder_ms": 7938.8553999961005,
+        "probe_prompts_decoder_ms": 102.22110000177054
+      },
+      {
+        "id": "cju1ftaji6isw0855108yqcse",
+        "total_ms": 8876.726599999529,
+        "preprocess_ms": 21.968199995171744,
+        "encoder_ms": 8758.9758000031,
+        "probe_prompts_decoder_ms": 95.78260000125738
+      },
+      {
+        "id": "cju1gghyjwxt80835vx0wgxw0",
+        "total_ms": 8288.749999999709,
+        "preprocess_ms": 20.805699998163618,
+        "encoder_ms": 8138.426299999992,
+        "probe_prompts_decoder_ms": 129.51800000155345
+      },
+      {
+        "id": "cju1gi7jlwyld0835cdf6g6qz",
+        "total_ms": 8347.326899995096,
+        "preprocess_ms": 22.26389999850653,
+        "encoder_ms": 8220.144699997036,
+        "probe_prompts_decoder_ms": 104.91829999955371
+      },
+      {
+        "id": "cju2hlm19vjjf0801o69qnber",
+        "total_ms": 8391.428000002634,
+        "preprocess_ms": 22.322200005874038,
+        "encoder_ms": 8267.561299995577,
+        "probe_prompts_decoder_ms": 101.54450000118231
+      },
+      {
+        "id": "cju2m71z2ywwv080131bcrsd3",
+        "total_ms": 8851.718900004926,
+        "preprocess_ms": 21.4990000022226,
+        "encoder_ms": 8728.1101999979,
+        "probe_prompts_decoder_ms": 102.10970000480302
+      },
+      {
+        "id": "cju2ma647l0nj0993ot4deq2q",
+        "total_ms": 8692.272699998284,
+        "preprocess_ms": 22.105500000179745,
+        "encoder_ms": 8537.867799997912,
+        "probe_prompts_decoder_ms": 132.2994000001927
+      },
+      {
+        "id": "cju2nyc5f02m40801ojqbtiea",
+        "total_ms": 8861.544400002458,
+        "preprocess_ms": 22.51320000505075,
+        "encoder_ms": 8712.675799994031,
+        "probe_prompts_decoder_ms": 126.35540000337642
+      },
+      {
+        "id": "cju2okvco06xc0799kxe5n1qh",
+        "total_ms": 8476.334200000565,
+        "preprocess_ms": 22.48150000377791,
+        "encoder_ms": 8351.473599999736,
+        "probe_prompts_decoder_ms": 102.37909999705153
+      },
+      {
+        "id": "cju2omjpeqj5a0988pjdlb8l1",
+        "total_ms": 8286.726300000737,
+        "preprocess_ms": 21.548700002313126,
+        "encoder_ms": 8163.1443000005675,
+        "probe_prompts_decoder_ms": 102.03329999785637
+      },
+      {
+        "id": "cju2qh5le1ock0878oahaql7d",
+        "total_ms": 8187.276799995743,
+        "preprocess_ms": 20.78409999376163,
+        "encoder_ms": 8065.161600003194,
+        "probe_prompts_decoder_ms": 101.33109999878798
+      },
+      {
+        "id": "cju2qqn5ys4uo0988ewrt2ip2",
+        "total_ms": 8467.566899998928,
+        "preprocess_ms": 20.675700005085673,
+        "encoder_ms": 8337.929299996176,
+        "probe_prompts_decoder_ms": 108.96189999766648
+      },
+      {
+        "id": "cju2rqo702wpx0855fn7d5cxh",
+        "total_ms": 8151.4780999932555,
+        "preprocess_ms": 20.71369999612216,
+        "encoder_ms": 7998.492999999144,
+        "probe_prompts_decoder_ms": 132.27139999798965
+      },
+      {
+        "id": "cju2tpfa5uyx408359datxqqj",
+        "total_ms": 8017.412400004105,
+        "preprocess_ms": 22.167700000863988,
+        "encoder_ms": 7873.011199997563,
+        "probe_prompts_decoder_ms": 122.23350000567734
+      },
+      {
+        "id": "cju17bz250pgd0799u1hqkj5u",
+        "total_ms": 8063.774700000067,
+        "preprocess_ms": 21.030900003097486,
+        "encoder_ms": 7936.097399993741,
+        "probe_prompts_decoder_ms": 106.64640000322834
+      },
+      {
+        "id": "cju1c3218411b08014g9f6gig",
+        "total_ms": 7898.223600001074,
+        "preprocess_ms": 20.767499998328276,
+        "encoder_ms": 7776.030500004708,
+        "probe_prompts_decoder_ms": 101.4255999980378
+      },
+      {
+        "id": "cju1d31sp4d4k0878r3fr02ul",
+        "total_ms": 9457.5823999985,
+        "preprocess_ms": 20.266300001821946,
+        "encoder_ms": 9308.964899995772,
+        "probe_prompts_decoder_ms": 128.35120000090683
+      },
+      {
+        "id": "cju1dhfok4mhe0878jlgrag0h",
+        "total_ms": 8548.357899999246,
+        "preprocess_ms": 21.711000001232605,
+        "encoder_ms": 8425.285400000575,
+        "probe_prompts_decoder_ms": 101.36149999743793
+      },
+      {
+        "id": "cju1egh885m1l0855ci1lt37c",
+        "total_ms": 8622.583500000474,
+        "preprocess_ms": 21.684700004698243,
+        "encoder_ms": 8480.387700001302,
+        "probe_prompts_decoder_ms": 120.51109999447362
+      }
+    ],
+    "median_ms": 8369.377449998865,
+    "p95_ms": 8905.769389999477,
+    "parameters_total_unique": 93735729,
+    "parameters_trainable": 257,
+    "cached_and_fresh_predictions_reproduced": true,
+    "includes": "RGB preprocessing + image encoder + probe + connected components + prompt encoder + mask decoder + original-size restore + threshold",
+    "excludes": "disk decode, load weights, GT access and metric computation",
+    "environment": {
+      "python": "3.13.5",
+      "torch": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "sam_checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+    "probe_checkpoint_sha256": "c783beb12123237c70b92eb5d82c02bb548a01f576b16aa6809af140f2dc40a9",
+    "source_sha256": "a319d8f859272a153f14735b55cd6e6da949c0cd26558fbf52c98538a51797ab"
+  },
+  "differences": "Same label IDs, different input sizes/pretraining/training recipes. Local compact variants, no SOTA claim.",
+  "selection": "All values development-selected, no independent new test.",
+  "source_sha256": "153669807be9c2cc09dd9ea9d5435dd12b054fadc516a840d6eb6543ce5992cd",
+  "runtime_report_source_sha256": "cfd69120d7184cf173e1cef9840abb4b0a16065adeb5ca32b158abb1879c390a",
+  "runtime_note": "Same CPU/4 threads/FP32, batch1, 5 warmup/20 timed, same 20 decoded RGB dev images. Prototype implementations, different input resolutions; SAM latency seed0 vs three separately timed RGB seeds."
+}

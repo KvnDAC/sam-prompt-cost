@@ -177,7 +177,7 @@
    "exit_code": 0
   },
   "static_k4_s1": {
-   "state": "running",
+   "state": "complete",
    "started_utc": "2026-10-12T23:24:30.845071+00:00",
    "command": [
     "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\.venv\\Scripts\\python.exe",
@@ -203,10 +203,207 @@
     "--output_root",
     "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\runs"
    ],
-   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\static_k4_s1.log"
+   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\static_k4_s1.log",
+   "ended_utc": "2026-10-12T23:32:44.294029+00:00",
+   "exit_code": 0
+  },
+  "static_k4_s2": {
+   "state": "complete",
+   "started_utc": "2026-10-12T23:32:44.296405+00:00",
+   "command": [
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\scripts\\07_learned_prompts.py",
+    "--k",
+    "4",
+    "--init",
+    "meanpoint",
+    "--bs",
+    "8",
+    "--dev_only",
+    "--include_initial",
+    "--model",
+    "static",
+    "--seed",
+    "2",
+    "--epochs",
+    "6",
+    "--lr",
+    "0.005",
+    "--tag",
+    "static_k4_s2",
+    "--output_root",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\runs"
+   ],
+   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\static_k4_s2.log",
+   "ended_utc": "2026-10-12T23:40:01.587319+00:00",
+   "exit_code": 0
+  },
+  "conditional_k4_s0": {
+   "state": "complete",
+   "started_utc": "2026-10-17T03:02:24.712754+00:00",
+   "command": [
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\scripts\\07_learned_prompts.py",
+    "--k",
+    "4",
+    "--init",
+    "meanpoint",
+    "--bs",
+    "8",
+    "--dev_only",
+    "--include_initial",
+    "--model",
+    "conditional",
+    "--seed",
+    "0",
+    "--epochs",
+    "6",
+    "--lr",
+    "0.0001",
+    "--tag",
+    "conditional_k4_s0",
+    "--output_root",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\runs"
+   ],
+   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\conditional_k4_s0.log",
+   "ended_utc": "2026-10-17T03:11:45.669639+00:00",
+   "exit_code": 0
+  },
+  "conditional_k4_s1": {
+   "state": "complete",
+   "started_utc": "2026-10-17T03:11:45.671862+00:00",
+   "command": [
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\scripts\\07_learned_prompts.py",
+    "--k",
+    "4",
+    "--init",
+    "meanpoint",
+    "--bs",
+    "8",
+    "--dev_only",
+    "--include_initial",
+    "--model",
+    "conditional",
+    "--seed",
+    "1",
+    "--epochs",
+    "6",
+    "--lr",
+    "0.0001",
+    "--tag",
+    "conditional_k4_s1",
+    "--output_root",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\runs"
+   ],
+   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\conditional_k4_s1.log",
+   "ended_utc": "2026-10-17T03:21:38.219350+00:00",
+   "exit_code": 0
+  },
+  "conditional_k4_s2": {
+   "state": "complete",
+   "started_utc": "2026-10-17T03:21:38.221148+00:00",
+   "command": [
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\scripts\\07_learned_prompts.py",
+    "--k",
+    "4",
+    "--init",
+    "meanpoint",
+    "--bs",
+    "8",
+    "--dev_only",
+    "--include_initial",
+    "--model",
+    "conditional",
+    "--seed",
+    "2",
+    "--epochs",
+    "6",
+    "--lr",
+    "0.0001",
+    "--tag",
+    "conditional_k4_s2",
+    "--output_root",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\runs"
+   ],
+   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\conditional_k4_s2.log",
+   "ended_utc": "2026-10-17T03:29:22.889997+00:00",
+   "exit_code": 0
+  },
+  "probe_s0": {
+   "state": "complete",
+   "started_utc": "2026-10-17T03:29:22.891981+00:00",
+   "command": [
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\scripts\\06_probe.py",
+    "--part",
+    "main",
+    "--split",
+    "dev",
+    "--seed",
+    "0",
+    "--output_root",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\probes\\seed0"
+   ],
+   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\probe_s0.log",
+   "ended_utc": "2026-10-17T03:30:28.230146+00:00",
+   "exit_code": 0
+  },
+  "probe_s1": {
+   "state": "complete",
+   "started_utc": "2026-10-17T03:30:28.231989+00:00",
+   "command": [
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\scripts\\06_probe.py",
+    "--part",
+    "main",
+    "--split",
+    "dev",
+    "--seed",
+    "1",
+    "--output_root",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\probes\\seed1"
+   ],
+   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\probe_s1.log",
+   "ended_utc": "2026-10-17T03:31:32.204219+00:00",
+   "exit_code": 0
+  },
+  "probe_s2": {
+   "state": "complete",
+   "started_utc": "2026-10-17T03:31:32.206116+00:00",
+   "command": [
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\scripts\\06_probe.py",
+    "--part",
+    "main",
+    "--split",
+    "dev",
+    "--seed",
+    "2",
+    "--output_root",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\probes\\seed2"
+   ],
+   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\probe_s2.log",
+   "ended_utc": "2026-10-17T03:32:34.705099+00:00",
+   "exit_code": 0
+  },
+  "summarize": {
+   "state": "complete",
+   "started_utc": "2026-10-17T03:32:34.707037+00:00",
+   "command": [
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\scripts\\13_summarize_phase_b.py",
+    "--experiment",
+    "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012"
+   ],
+   "log": "C:\\Users\\PC\\Desktop\\TA_DataMining\\sam-prompt-cost\\results\\phase_b\\full_dev_20261012\\logs\\summarize.log",
+   "ended_utc": "2026-10-17T03:33:35.609950+00:00",
+   "exit_code": 0
   }
  },
- "state": "running",
- "current_stage": "static_k4_s1",
- "dev_embeddings_ready": 91
+ "state": "complete",
+ "current_stage": null,
+ "dev_embeddings_ready": 91,
+ "ended_utc": "2026-10-17T03:33:35.611944+00:00"
 }

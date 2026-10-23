@@ -5,7 +5,8 @@ import os
 from pathlib import Path
 import subprocess
 import sys
-import tempfile
+import shutil
+import uuid
 import unittest
 from unittest.mock import Mock, patch
 
@@ -168,10 +169,25 @@ class PhaseBTests(unittest.TestCase):
             return Path(out[0]), Path(out[1])
 
         self.assertEqual(paths(None), (ROOT / "results", ROOT / "figures"))
-        with tempfile.TemporaryDirectory() as tmp:
-            run = Path(tmp) / "run_1"
+        # Keep subprocess writes within the workspace on restricted Windows setups.
+        temp_root = ROOT / "runs"
+        temp_root.mkdir(exist_ok=True)
+        # Python 3.13 mkdtemp(mode=0o700) can create an ACL inaccessible to
+        # restricted subprocesses on Windows. An ordinary workspace directory
+        # tests the same routing behavior without relying on that private ACL.
+        tmp = temp_root / ("test_routes_" + uuid.uuid4().hex)
+        tmp.mkdir()
+        try:
+            run = tmp / "run_1"
             self.assertEqual(paths(run), (run, run / "figures"))
             self.assertTrue(run.is_dir())
+            relative = tmp.relative_to(ROOT) / "relative_run"
+            expected = ROOT / relative
+            self.assertEqual(paths(relative), (expected, expected / "figures"))
+        finally:
+            if not tmp.resolve().is_relative_to(temp_root.resolve()):
+                raise ValueError("Temporary test path escaped workspace")
+            shutil.rmtree(tmp)
 
     def test_perturbations_clip_coordinates_and_preserve_identity(self):
         module = script("10_prompt_perturbations")

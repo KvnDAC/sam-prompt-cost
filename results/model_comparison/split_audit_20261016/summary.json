@@ -1,0 +1,15 @@
+{
+  "splits": {
+    "train400": 400,
+    "dev": 100
+  },
+  "test_evaluated": false,
+  "id_overlap": [],
+  "duplicate_file_groups": [],
+  "duplicate_decoded_groups": [],
+  "exact_cross_split_groups": [],
+  "phash_cross_split_candidates": [],
+  "phash": "63 low-frequency DCT bits excluding DC, median threshold, Hamming <=4; heuristic only",
+  "interpretation": "Candidates require manual review; no confirmed patient/video independence. No split altered.",
+  "source_sha256": "d0a657bb03d2b809a73544aa40812816637c4ea9cb2e34602e3779dcfa901880"
+}

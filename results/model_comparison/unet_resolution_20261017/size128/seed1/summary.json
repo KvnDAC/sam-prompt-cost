@@ -1,0 +1,153 @@
+{
+  "model": "unet",
+  "seed": 1,
+  "n_train": 400,
+  "n_dev": 100,
+  "test_evaluated": false,
+  "parameters": 487289,
+  "best_epoch": 13,
+  "epochs_run": 15,
+  "stopped_early": false,
+  "best_dev_dice": 0.8423421606560838,
+  "mean_iou": 0.7545364412799402,
+  "training_and_dev_seconds": 134.81407890000992,
+  "process_rss_peak_sampled_bytes": 783667200,
+  "checkpoint_reproduced_per_image": true,
+  "latency": {
+    "median_ms": 13.300399998115608,
+    "p95_ms": 26.574289999553006,
+    "samples_ms": [
+      31.81810000387486,
+      26.298299999325536,
+      21.123599995917175,
+      14.263699995353818,
+      13.34359999600565,
+      12.118600003304891,
+      12.894900006358512,
+      12.998699996387586,
+      13.257200000225566,
+      14.065300005313475,
+      18.539100005000364,
+      18.2862000001478,
+      15.016999997897074,
+      13.122299998940434,
+      13.51299999805633,
+      12.496699993789662,
+      12.405900000885595,
+      13.079199998173863,
+      12.332999998761807,
+      12.56209999701241
+    ],
+    "warmup": 5,
+    "repeats": 20,
+    "includes": "RGB preprocessing + complete RGB model + original-size resize + threshold; excludes disk decode, metrics",
+    "scope": "CPU batch1; do not compare with SAM decoder-only timings"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.4510046255588531,
+      "dev_dice": 0.8079798589551629,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 8.941674399997282
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.4202480581402779,
+      "dev_dice": 0.7708401863542051,
+      "dev_empty_rate": 0.01,
+      "elapsed_seconds": 17.658178300000145
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.4248583650588989,
+      "dev_dice": 0.8149930572259365,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 26.636775999999372
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.43661234885454175,
+      "dev_dice": 0.7861018200534821,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 35.50443219999579
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.4235921350121498,
+      "dev_dice": 0.8277119206800427,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 44.375415199996496
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.36391830176115036,
+      "dev_dice": 0.8213085971647147,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 53.63312469999801
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.3803407117724419,
+      "dev_dice": 0.8155112071084218,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 62.574567900002876
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.3783232980966568,
+      "dev_dice": 0.8225380613943343,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 71.3238943000033
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.34292063444852827,
+      "dev_dice": 0.7834358379760501,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 79.9707006000026
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.3673067769408226,
+      "dev_dice": 0.8054991756150355,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 88.21944080000685
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.37086487948894503,
+      "dev_dice": 0.8155710079374957,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 97.34587780000584
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.3745340546965599,
+      "dev_dice": 0.7946719821415397,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 107.76656300000468
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.35910426199436185,
+      "dev_dice": 0.8423421606560838,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 116.79781020000519
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.33080085963010786,
+      "dev_dice": 0.8045530404831688,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 126.16182230000413
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.34281504958868025,
+      "dev_dice": 0.8041149821019943,
+      "dev_empty_rate": 0.0,
+      "elapsed_seconds": 134.81407890000992
+    }
+  ]
+}

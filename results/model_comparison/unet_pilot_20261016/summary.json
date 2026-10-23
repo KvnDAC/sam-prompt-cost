@@ -1,0 +1,37 @@
+{
+ "model": "UNet_padded",
+ "base_channels": 16,
+ "image_size": 256,
+ "n_parameters": 1941105,
+ "seed": 0,
+ "n_train": 32,
+ "n_dev": 16,
+ "pilot": true,
+ "epochs": 3,
+ "initial_dev_dice": 0.0,
+ "best_dev_dice": 0.0,
+ "best_epoch": 0,
+ "test_evaluated": false,
+ "checkpoint_reproduced": true,
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 1.4729744344949722,
+   "dev_dice": 0.0,
+   "elapsed_seconds": 17.444681000000855
+  },
+  {
+   "epoch": 2,
+   "train_loss": 1.4186580926179886,
+   "dev_dice": 0.0,
+   "elapsed_seconds": 34.82735700000194
+  },
+  {
+   "epoch": 3,
+   "train_loss": 1.394544467329979,
+   "dev_dice": 0.0,
+   "elapsed_seconds": 51.16664170000149
+  }
+ ],
+ "note": "Development only. A limited run is a technical pilot, not a comparative benchmark. No optimizer state saved for exact resume."
+}

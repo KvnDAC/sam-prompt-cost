@@ -1,0 +1,2328 @@
+{
+  "train_ids": [
+    "cju0qoxqj9q6s0835b43399p4",
+    "cju0roawvklrq0799vmjorwfv",
+    "cju0rx1idathl0835detmsp84",
+    "cju0s2a9ekvms080138tjjpxr",
+    "cju171py4qiha0835u8sl59ds",
+    "cju17otoe119u0799nqcbl8n1",
+    "cju17v6ih0u7808783zcbg1jy",
+    "cju17z0qongpa0993de4boim4",
+    "cju1871y11d6r0799k6cw4yze",
+    "cju18849rrsgr0988p90hkygb",
+    "cju18gzrq18zw0878wbf4ftw6",
+    "cju18kevfrojc0835bn90f1in",
+    "cju1ats0y372e08011yazcsxm",
+    "cju1b0y2e396p08558ois175d",
+    "cju1b3zgj3d8e0801kpolea6c",
+    "cju1b75x63ddl0799sdp0i2j3",
+    "cju1bhnfitmge0835ynls0l6b",
+    "cju1c0qb4tzi308355wtsnp0y",
+    "cju1c8ffau5770835g0g343o8",
+    "cju1cdxvz48hw0801i0fjwcnk",
+    "cju1cfhyg48bb0799cl5pr2jh",
+    "cju1cj3f0qi5n0993ut8f49rj",
+    "cju1cnnziug1l0835yh4ropyg",
+    "cju1cqc7n4gpy0855jt246k68",
+    "cju1csmlc4ht10799b8ymmghg",
+    "cju1cu1u2474n0878tt7v4tdr",
+    "cju1cvkfwqrec0993wbp1jlzm",
+    "cju1d50a94qf50855wsowacrc",
+    "cju1dnz61vfp40988e78bkjga",
+    "cju1dq3x1vgx109889c7wyirg",
+    "cju1ejj7dvqfa0835ra184v5m",
+    "cju1erep75us208553i4ofwwe",
+    "cju1euuc65wm00799m4sjdnnn",
+    "cju1f320ewfyu0988ndz6blh5",
+    "cju1f5x1164xv08555654c24r",
+    "cju1f79yhsb5w0993txub59ol",
+    "cju1fb9236a110801yvg0fwju",
+    "cju1ffnjn6ctm08015perkg37",
+    "cju1fj6axwfp30835ukhuzhw9",
+    "cju1fm3id6gl50801r3fok20c",
+    "cju1fr4etsmrr09933u4t4aql",
+    "cju1fyb1d69et0878muzdak9u",
+    "cju1g20bdwq6u0835e16xugcd",
+    "cju1gkndf6yi10801o1qnje19",
+    "cju1h5w4wxajx0835mc954kxy",
+    "cju1haab178i70799tk9z8y8x",
+    "cju1hirfi7ekp0855q0vgm9qq",
+    "cju1hmff8tkp809931jps6fbr",
+    "cju1hp9i2xu8e0988u2dazk7m",
+    "cju2hdr06v2bq0799mbm3bks1",
+    "cju2hfqnmhisa0993gpleeldd",
+    "cju2hgsptlfam0835o3b59h1o",
+    "cju2hqt33lmra0988fr5ijv8j",
+    "cju2htabevq9108015qjei0x7",
+    "cju2i3hzclw3o0988rrgh911i",
+    "cju2i6acqvo6l0799u20fift8",
+    "cju2iatlki5u309930zmgkv6h",
+    "cju2igw4gvxds0878808qj398",
+    "cju2ij9uiic2l09933ljiv6gm",
+    "cju2lberzkdzm09938cl40pog",
+    "cju2lcyfgkf5809932fn9gucn",
+    "cju2lejzcy4pc0878c9rlonot",
+    "cju2lyynuymli0855g7fxgbhe",
+    "cju2lz8vqktne0993fuym6drw",
+    "cju2nbdpmlmcj0993s1cht0dz",
+    "cju2nd7l7z98o0799gfjvyfmw",
+    "cju2nfnvxzdkd0878399axlco",
+    "cju2nnqrqzp580855z8mhzgd6",
+    "cju2np2k9zi3v079992ypxqkn",
+    "cju2ntxtdzlvu0799xl3j9pan",
+    "cju2oi8sq0i2y0801mektzvw8",
+    "cju2oo0wh0bqy0878biujeyhe",
+    "cju2oq5570avm079959o20op1",
+    "cju2ouil2mssu0993hvxsed6d",
+    "cju2p0eveqtdc0835gpi3p93i",
+    "cju2p4ddkmzxj0993p94o62av",
+    "cju2pjb9v0ywn0878j5g5n69j",
+    "cju2pkwt3r8b90988v2ywq1px",
+    "cju2pmhtr17a00855cvpelzb0",
+    "cju2qfie4rvz508357kad9z5o",
+    "cju2qu37qobl50993aw7ghcfq",
+    "cju2qvuj1s9ok0835tp2k4ozh",
+    "cju2qz06823a40878ojcz9ccx",
+    "cju2r11x7sdgx0988o8ule0wl",
+    "cju2r2obh2bjm08553kng0rh7",
+    "cju2rga4psq9n09881z519xx0",
+    "cju2rlqdnoz9k0993cpjae3x0",
+    "cju2ro5jqsy680988pi6qsujw",
+    "cju2rpa30t07b0835im0erql0",
+    "cju2rxm8rpbaf0993o3qr2oph",
+    "cju2s16zp317h0799gr67jqc2",
+    "cju2s2527pfyr0993l3h1149a",
+    "cju2saez63gxl08559ucjq3kt",
+    "cju2sevf53lkx08558h5bpaig",
+    "cju2srvy5440s0801y1ba9akr",
+    "cju2sszfq3uye0878sucelzk2",
+    "cju2suk42469908015ngmq6f2",
+    "cju2sxf3iqbpv09937iksn8ep",
+    "cju2syxa93yw40799x2iuwabz",
+    "cju2t3ibkuecr0835o7si16zv",
+    "cju2trtjf4qjd0878a2zle9v9",
+    "cju2tvrvm53ws0801a0jfjdxg",
+    "cju2txjfzv60w098839dcimys",
+    "cju2u4pymvc720988wsxrmi84",
+    "cju2u73dj53oz0878486k8k4b",
+    "cju2ueb6j5ado0878vf5md13o",
+    "cju2upu4evw7g08358guwozxv",
+    "cju2uy8ox62jo0801g88hh42z",
+    "cju2uzabhs6er0993x3aaf87p",
+    "cju2wtwj87kys0855kx6mddzw",
+    "cju2wx0gh7fpz0878wwyd9ep8",
+    "cju2xa3i4y0160988i679zsqd",
+    "cju2xd75m82720801q4s4ik3n",
+    "cju2xlcqxy9c60988vjacdznb",
+    "cju2xs6na81t20878pt6nkfip",
+    "cju2xwm1s84l50799i60mq0pu",
+    "cju2y26c588bo07993ksd8eoz",
+    "cju2y8s56ymqr083541ggdsml",
+    "cju2yg5ht8i4p087800js8hp4",
+    "cju2yi9tz8vky0801yqip0xyl",
+    "cju2ysg748ru80878sp6j0gm0",
+    "cju2yv4imv6cz099314jveiib",
+    "cju2z1nxlzaj40835wj81s1iy",
+    "cju2z2x3nvd3c099350zgty7w",
+    "cju2z6ez69g4u0801qwt088lw",
+    "cju2z9vlp9j0w0801oag91sy9",
+    "cju2zblxw9848087853csbrx1",
+    "cju2zdhsczmn50988z64qwg2q",
+    "cju2zdvjn9h7r08553cp4eed5",
+    "cju2zgbj9zmrw0835nnlzxj4c",
+    "cju2zkpdl9h7t0799ix60teqg",
+    "cju2zwg05a0oy0801yr73ig7g",
+    "cju2zxja9w1eh09933609ho9z",
+    "cju2zy1e49pqk0878t6ncqn12",
+    "cju300m3s04fg0988uzupuf7z",
+    "cju303j5r062k098835zxfds5",
+    "cju30df2j09dd08351ayx2t6w",
+    "cju30ia8da2bq0799klnehml2",
+    "cju30k2z40ds308353kdew70n",
+    "cju30lncba3ny0878jwnous8n",
+    "cju30mm25a53s0799qa5wiqe8",
+    "cju30nyxe0gfb0835p256yoju",
+    "cju30qbm1ad3x0855znuhpz9u",
+    "cju31rb7vb6110801p9rhacuw",
+    "cju31ugmfb3dz0855xtqshki6",
+    "cju324q101fhe08350wae9cif",
+    "cju326h4v1gxw08352px40p7r",
+    "cju3280wv1ir009882jze27tc",
+    "cju32csyfblyh080170aa3x5p",
+    "cju32l161bi1v07990vm376in",
+    "cju32phw2bv130801yj7bkouq",
+    "cju32pzh9bpw10855q4vaxfhe",
+    "cju33za6l2qy70988jhrlp2ev",
+    "cju34c1xfyz920993itxkkfad",
+    "cju34ds2531520988qjpqt6e3",
+    "cju34fojcctcf0799ebolbvkn",
+    "cju34i3qvcyog0855qiejxx5w",
+    "cju34o6dbd2lo0855aqlcy1hs",
+    "cju3518w2d838079939fqztbc",
+    "cju3521y5d5mq0878t3ezsu4p",
+    "cju35740hzm0g0993zl5ic246",
+    "cju35atpxdjot0855q46aqrd0",
+    "cju35c4wzdhow0799h6eq4sgs",
+    "cju35eg0tdmjt085525sb4bua",
+    "cju35i2e63uxr0835h7zgkg9k",
+    "cju35k2fr3vc50988c85qkrwg",
+    "cju35oyvd3y850988km12hdz1",
+    "cju3tx1qyg0c907552fglumhc",
+    "cju3u1c8tfyqx08503iedc3mx",
+    "cju3uhb79gcgr0871orbrbi3x",
+    "cju3umoh1geet0817cmpef5am",
+    "cju3v0fl3gwce0755qkjhzmd4",
+    "cju3v11mrgwwb0755u242ygye",
+    "cju3v664kh0px0818y4y7wolf",
+    "cju3x2s11ibzi0817kk284k0j",
+    "cju3x7xsaijq80818f0psavav",
+    "cju3xga12iixg0817dijbvjxw",
+    "cju3xl264ingx0850rcf0rshj",
+    "cju3xtufwiv9c0818djsc4cqd",
+    "cju3xuj20ivgp0818mij8bjrd",
+    "cju3xwpgviwlx0871rwm15q7v",
+    "cju3xzvnzj0hd0755xprz39nj",
+    "cju3y21quj0ir0818kgjagr15",
+    "cju3y54kwj3nr0801biidlb4e",
+    "cju3y79ofj3va0871uqfb1mzo",
+    "cju3y9difj6th0801kd1rqm3w",
+    "cju3yb47cj1xq0817zfotbni4",
+    "cju3yht87j83m08507yk1u1fg",
+    "cju3ykamdj9u208503pygyuc8",
+    "cju40poe4kt9s0755f9cnm3h5",
+    "cju40r6jrksyk0871wg98zgho",
+    "cju40taxlkrho0987smigg0x0",
+    "cju40wto5kxwi0755it190f2k",
+    "cju414lf2l1lt0801rl3hjllj",
+    "cju418rckl3ur08012psrx1r1",
+    "cju41kd7yl4nm0850gil5qqwh",
+    "cju41lojblbs307555jdci937",
+    "cju41p90plcsx08018cnzpndc",
+    "cju41r6v2lcww0871ps8k8pf5",
+    "cju41s6nbleqy0755e2mslg0b",
+    "cju424hy5lckr085073fva1ok",
+    "cju426tomlhll0818fc0i7nvh",
+    "cju428k5fldt108177s6g6f45",
+    "cju42dwedlmk60871jbgu4ehi",
+    "cju42g865lorv07552ytz6xxa",
+    "cju42m60jlpcm08186kqppzqv",
+    "cju42romflni20817etb9a0fl",
+    "cju430pm2lz0y0755jkhcc3d1",
+    "cju439oazm2fu0871ma0vvrft",
+    "cju43eigtm6ev0801mv0m96t1",
+    "cju43in5fm22c08175rxziqrk",
+    "cju43lcnum9y10755bjs7z87f",
+    "cju45lbgznahl08180xz1h7u6",
+    "cju45n0oxn5vu08500yfrt9jn",
+    "cju45t5ddnbio0987qtqzx762",
+    "cju45ty6zn9oz0850qy4qnck1",
+    "cju5bbtwsa8cl0987wgfsqpao",
+    "cju5bdwa3aatx0818b79i18zf",
+    "cju5bj926aiec07559rshy4wa",
+    "cju5buy2bal250818ipl6fqwv",
+    "cju5bwhapakm90987c1v4z46a",
+    "cju5bycdkalkb09875f7bfrvx",
+    "cju5c7oijaqmq09878qwgqv8n",
+    "cju5ccpvqash50850kb4bs22k",
+    "cju5cjh3xattc0817j2vbulzi",
+    "cju5clr68b48r0755cmuvponm",
+    "cju5cu8qkb84x08186jwo8yin",
+    "cju5eftctcdbj08712gdp989f",
+    "cju5enq1tcn1i0755hnkon787",
+    "cju5f26ebcuai0818xlwh6116",
+    "cju5fs6j6d8350801vglraq4u",
+    "cju5ft6mcd5q40987rhjgbrr6",
+    "cju5fu081d8gc0818l3yylujk",
+    "cju5g163vd6mt0817uccuga6u",
+    "cju5gucasds9d0801019axylx",
+    "cju5hi52odyf90817prvcwg45",
+    "cju5hjxaae3i40850h5z2laf5",
+    "cju5hl8nee8a40755fm8qjj0o",
+    "cju5ht88gedbu0755xrcuddcx",
+    "cju5hwonqedw10801vsd3w6kk",
+    "cju5i39mreass0817au8p22zy",
+    "cju5i5oh2efg60987ez6cpf72",
+    "cju5k7r0yf98c09878csbxb4d",
+    "cju5nxkujgscq0817l9gss626",
+    "cju5nyu31gv8e0871zpk74a2n",
+    "cju5o1vu9gz8a0818eyy92bns",
+    "cju5u6wf0kh1t0755bg1ssixv",
+    "cju5uget8krjy0818kvywd0zu",
+    "cju5uhrdwkmsu0817ervv91l8",
+    "cju5vbo6jldrt0871jf6f1700",
+    "cju5vutu7ll8w0871dfp92n9p",
+    "cju5vwbr4lhqn0987a1pji0ux",
+    "cju5w7xn0lrkq0801f9k0htgx",
+    "cju5wcc90lu020850mjrxppv6",
+    "cju5wj0faly5008187n6530af",
+    "cju5wqonpm0e60801z88ewmy1",
+    "cju5wrapcm2290818jsh26ppb",
+    "cju5wtdu4m0im0871mix0yvc0",
+    "cju5x00l6m5j608503k78ptee",
+    "cju5x15djm7ae0755h8czf6nt",
+    "cju5x28nzm7t907558ocq4bt7",
+    "cju5xneamme2p0801qdf7fdwv",
+    "cju5xopi0md7q0871r1sjc1av",
+    "cju5yeqiwmkgl0801fzv2douc",
+    "cju5yimthmlv80850zhoc90c2",
+    "cju5ymyd8mmdc0801ry3by1xr",
+    "cju6ur9l9v9jq0755paud9uka",
+    "cju6ut4l8va6y0755tyw3vfqq",
+    "cju6v1m1xv07w09870ah3njy1",
+    "cju6v3bb2v7xo085090blubyw",
+    "cju6v5ilsv8hk0850rb5sgh6o",
+    "cju6v6g6kvdw007552x6mb0po",
+    "cju6vgdmivcvb08018fra5lnv",
+    "cju6vifjlv55z0987un6y4zdo",
+    "cju6vqarjv7yo0987q4b1btk1",
+    "cju6vrs1ov8cr098788h8gs6j",
+    "cju6vucxvvlda0755j7msqnya",
+    "cju6wjm81vgsc0987enk9n3pr",
+    "cju6x4t13vyw60755gtcf9ndu",
+    "cju6x97w4vwua0850x0997r0a",
+    "cju6ywm40wdbo0987pbftsvtg",
+    "cju6yxyt0wh080871sqpepu47",
+    "cju6z1bzbwfq50817b2alatvr",
+    "cju6z2616wqbk07555bvnuyr1",
+    "cju6z7e4bwgdd0987ogkzq9kt",
+    "cju6z9a9kwsl007552s49rx6i",
+    "cju76erapykj30871x5eaxh4q",
+    "cju77196iyshb0850ycbto50a",
+    "cju773hsyyosz0817pk1e7sjq",
+    "cju77bvg0yv4r0987yh60xmjo",
+    "cju77g99iyxc00817zqi2ppor",
+    "cju77j66ez52p08019xygi0co",
+    "cju77re6fz5bb0817vp9redjg",
+    "cju783tmkzkqu081803g7q5vk",
+    "cju784jpdzeae0987q5ypq883",
+    "cju7ahtkb1jr90801jck4kbds",
+    "cju7aifyo1p3n07552nxjx51f",
+    "cju7aklv31h4309871m29l4e7",
+    "cju7amjna1ly40871ugiokehb",
+    "cju7apr0c1qqm0755s7msqot4",
+    "cju7atnm31if40817pqclnjer",
+    "cju7awzmu1ncs0871hziy65zx",
+    "cju7b1ygu1msd0801hywhy0mc",
+    "cju7b2l561oas0871decgslaf",
+    "cju7b3f5h1sm40755i572jden",
+    "cju7b4mtw1n9n080186209f3d",
+    "cju7b9vcs1luz0987ta60j1dy",
+    "cju7bb3ss1uoo0755pmhyco7t",
+    "cju7bc95p1mdm0817yqj5jc6j",
+    "cju7bduyq1rjf08719giru9ho",
+    "cju7bf1lp1shi081835vs84lc",
+    "cju7bgnvb1sf808717qa799ir",
+    "cju7cq6su27qv075574dir0r3",
+    "cju7crgxa28550755wbsgqkel",
+    "cju7cufm7298k0755j09uf3of",
+    "cju7d2q1k27nf08715zshsckt",
+    "cju7d6ux323ze0987xos3srkx",
+    "cju7d7tly27h408016fyp5nr7",
+    "cju7d8m3b2e210755l8fj1yph",
+    "cju7d9seq29zd0871nzl2uu5m",
+    "cju7dbppn28nx085097654msi",
+    "cju7dda8w2br20818zhsuz8s7",
+    "cju7dff9529h208503w60lbil",
+    "cju7dhpsc2dnn0818025m6857",
+    "cju7dlk532dsh0871zvr6qz0r",
+    "cju7do8c72dbo0801vxfzxdc4",
+    "cju7ejm2l2ncl0801wq6y84nw",
+    "cju7el6xv2k520817qxx9wdr5",
+    "cju7emdni2py40871ivhxjtut",
+    "cju7epwj82koz098713apjnzo",
+    "cju7es23b2vcp0755gpbm9s7v",
+    "cju7et17a2vjk0755e743npl1",
+    "cju7etr3y2p4t0801cdzjj8ab",
+    "cju7evxt12m730987rxivne3x",
+    "cju7ezs7g2mxm098787atbran",
+    "cju7f0ec32txj08184asb8w5f",
+    "cju7f5ghb2r5s0801chwkxxh9",
+    "cju7f6cqy2ur20818t1saazbm",
+    "cju7f900s2o0k08175gl1giid",
+    "cju7fazv92ywx0755xov2erga",
+    "cju7fbndk2sl608015ravktum",
+    "cju7fcgbe2z3p07550vaflqdb",
+    "cju7fd6yt2p740987wkr8exo1",
+    "cju7fen322ou10817ziqkob4k",
+    "cju7flevb2wii08188otgs9p2",
+    "cju7fmvpk2q170987v6i3ola8",
+    "cju7fq7mm2pw508176uk5ugtx",
+    "cju83k8fyjsxr0817d6nxs6r4",
+    "cju83mki1jv5w0817kubxm31r",
+    "cju83nwu1jxte0987h1krpfmv",
+    "cju83u9ftk3ni0987qnhlcinv",
+    "cju83wwn1k55e0850kw6i2d81",
+    "cju8402x1kcy70801t6kz6bdi",
+    "cju843yjskhq30818qre4rwm2",
+    "cju847pxykriq0755268ktrk2",
+    "cju849c23kgnk0817cgv2hw1e",
+    "cju84aoa3ktwn0755pfl4gfwd",
+    "cju84ih17kp5l09876bkooocl",
+    "cju84jdl9kv0i0871eog9b3i9",
+    "cju85c2d4ln1b0755zz1z3onx",
+    "cju85ia1slh220987y7c20sm2",
+    "cju887ftknop008177nnjt46y",
+    "cju888fr7nveu0818r9uwtiit",
+    "cju88itqbny720987hxizbj5y",
+    "cju88k75inzyb0850ccv5x3vk",
+    "cju88msmoo3470817m441j4sg",
+    "cju88rl5eo94l0850kf5wtrm1",
+    "cju88t4fvokxf07558ymyh281",
+    "cju88z8bson4h0871nnd7fdxo",
+    "cju8914beokbf0850isxpocrk",
+    "cju892fesoq2g0801n0e0jyia",
+    "cju893jmdompz0817xn3g1w4h",
+    "cju89y9h0puti0818i5yw29e6",
+    "cju8a1jtvpt9m081712iwkca7",
+    "cju8a84g0q76m0818hwiggkod",
+    "cju8abobpqbir08189u01huru",
+    "cju8aeei7q8k308173n9y4klv",
+    "cju8aj01yqeqm0850lhdz3xdw",
+    "cju8alhigqn2h0801zksudldd",
+    "cju8ando2qqdo0818ck7i1be1",
+    "cju8apjewqrk00801k5d71gky",
+    "cju8aqq8uqmoq0987hphto9gg",
+    "cju8arof2qpf20850ifr1bnqj",
+    "cju8ashhnquqr0801rwduzt7d",
+    "cju8at3s1qqqx0850hcq8nmnq",
+    "cju8axq24r4an0755yhv9d4ly",
+    "cju8azmhcr66e0755t61atz72",
+    "cju8b3ka8r64u0801fh18hk7l",
+    "cju8b6rp0r5st0850184f79xt",
+    "cju8b8yair65w09878pyqtr96",
+    "cju8bafgqrf4x0818twisk3ea",
+    "cju8bbznkrf5g0871jncffynk",
+    "cju8bgdmqrksy0801tozdmraa",
+    "cju8bi8q7rlmn0871abc5ch8k",
+    "cju8bn7m2rmm70817hgxpb1uq",
+    "cju8c1a0ws7o208181c6lbsom",
+    "cju8c2rqzs5t80850d0zky5dy",
+    "cju8c5mxls96t0850wvkvsity",
+    "cju8c5zcbsdfz0801o5t6jag1",
+    "cju8cbsyssiqj0871gr4jedjp"
+  ],
+  "dev_ids": [
+    "cju17bz250pgd0799u1hqkj5u",
+    "cju1c3218411b08014g9f6gig",
+    "cju1d31sp4d4k0878r3fr02ul",
+    "cju1dhfok4mhe0878jlgrag0h",
+    "cju1egh885m1l0855ci1lt37c",
+    "cju1expq45zst0855rjqwwj4m",
+    "cju1f15k3w4ct0835cmde6ypo",
+    "cju1ftaji6isw0855108yqcse",
+    "cju1gghyjwxt80835vx0wgxw0",
+    "cju1gi7jlwyld0835cdf6g6qz",
+    "cju2hlm19vjjf0801o69qnber",
+    "cju2m71z2ywwv080131bcrsd3",
+    "cju2ma647l0nj0993ot4deq2q",
+    "cju2nyc5f02m40801ojqbtiea",
+    "cju2okvco06xc0799kxe5n1qh",
+    "cju2omjpeqj5a0988pjdlb8l1",
+    "cju2qh5le1ock0878oahaql7d",
+    "cju2qqn5ys4uo0988ewrt2ip2",
+    "cju2rqo702wpx0855fn7d5cxh",
+    "cju2tpfa5uyx408359datxqqj",
+    "cju2tzypl4wss0799ow05oxb9",
+    "cju2urqpwvxw70835rvndvtsi",
+    "cju2xf8e5y2wm08359vcgk09b",
+    "cju2xyd9vyi7m098831qcucse",
+    "cju2zjcvj9qma0801dk71hhi0",
+    "cju30bmab08bi0835mvlr6e0r",
+    "cju30ov1oah920801mi8thuyg",
+    "cju30u1hbakn808019g15nb8b",
+    "cju320gyvbch60801v2amdi2g",
+    "cju3ua8u0g9rg0801uayhdxhu",
+    "cju3v72v5h1qz0818fggilwtq",
+    "cju3x5u2tiihx0818914gzxy1",
+    "cju3xhpvvimda0987ygrpzni2",
+    "cju3xiic0ilzp0850lusrb42j",
+    "cju3y0pjrj1c30755nxekxccj",
+    "cju3ya7goj6at0818v2l5ay7f",
+    "cju40sdwukv3k0755y99ug1k8",
+    "cju40u30gkuzc0871rq7t666d",
+    "cju43c92lm5cj0755lorsorfg",
+    "cju43o6n7m9nk087191ijwqq9",
+    "cju45jpvfn6c809873pv1i34s",
+    "cju45qbf3n9sa0987oonbkly9",
+    "cju5bmhdcafs909878qfzrqzi",
+    "cju5cky5xb0ay0801oxet697t",
+    "cju5es375cnzy0801nkq35ffs",
+    "cju5ew4h9cqaf0818rrczkmqh",
+    "cju5fi0yxd3ei0801v7u0yudn",
+    "cju5huurrecm70801y680y13m",
+    "cju5klveuff6w0871wbibgh3m",
+    "cju5ktjwofed70817eg58ef7u",
+    "cju5tenjojp1j0755ms4949h2",
+    "cju5u4pywk81x0817vn9pe14z",
+    "cju5udcufki0s09874ll1dbr5",
+    "cju5v8pgplg6k0755rvi2t63h",
+    "cju5vi4nxlc530817uoqm2m7a",
+    "cju5wrrs0m2af0818vmnajbtw",
+    "cju5x7iskmad90818frchyfwd",
+    "cju5xjn5mm78b09871spyqhhr",
+    "cju5y84q3mdv50817eyp82xf3",
+    "cju5yclrymlgj0818k426ud6z",
+    "cju6uzxk0v83p0801rcwnexdu",
+    "cju6wll7wvo3y08502pagos8m",
+    "cju6wn57mvooj0850rp78hhy7",
+    "cju6x0yqbvxqt0755dhxislgb",
+    "cju6xlygpw7bs0818n691jsq4",
+    "cju6xmqd9w0250817l5kxfnsk",
+    "cju6z600qwh4z081700qimgl9",
+    "cju77idwfz36d0871tzfzz51i",
+    "cju77k828z46w0871r0avuoo9",
+    "cju787jnjzjuj0871p94nck9g",
+    "cju7aez2x1jtj0871ztezs3oi",
+    "cju7ajnbo1gvm098749rdouk0",
+    "cju7aqkue1i2k09879uzcpt8r",
+    "cju7arvfe1ldu0850erdmphgj",
+    "cju7bd1qu1mx409877xjxibox",
+    "cju7ctvqn25dy08186g442m1r",
+    "cju7cue9b232j0801qdzk1ykj",
+    "cju7da88w2eod0755wejzynvt",
+    "cju7dmlgf2ebw0871ieqas5fh",
+    "cju7efffp2ivf0817etg3jehl",
+    "cju7ekbo32pft0871fv7kzwb9",
+    "cju7ev2b12owa08500bpfpwyw",
+    "cju7ez7r22qbc08015xfoz2wb",
+    "cju7fnfv02tt90801djnix9m8",
+    "cju7fob3x301u0755x985pmmq",
+    "cju7fpfzq2wyf0818xxd1oziv",
+    "cju7g7ba42z310987bqzbi2bq",
+    "cju83h9ysjwe808716nt35oah",
+    "cju83yddek68q0850d2x7zfkm",
+    "cju846ec0kj7z08012o10klrb",
+    "cju84hibuktj80871u519o71q",
+    "cju85citjlnfm0755i4rk5tqj",
+    "cju85fc11ljr40818edpb0inh",
+    "cju88y1mwoln50871emyfny1g",
+    "cju8a3nhbpwnb0850d37fo2na",
+    "cju8aw9n1qyg10801jkjlmors",
+    "cju8b7aqtr4a00987coba14b7",
+    "cju8bljw9rqk20801kr54akrl",
+    "cju8brv16rx7f0818uf5n89pv",
+    "cju8c82iosagu0817l74s4m5g"
+  ],
+  "test_evaluated": false,
+  "threads": 4,
+  "prior_box_normalized": [
+    0.32042345276872963,
+    0.246094145265416,
+    0.7699952693223713,
+    0.78838934438538
+  ],
+  "prior_point_normalized": [
+    0.5655355249204665,
+    0.5231783811651487
+  ],
+  "rule": "coordinatewise median train400 GT whole-mask bbox and deepest interior point, normalized by width/height minus one",
+  "modes": [
+    "fixed_point",
+    "fixed_box",
+    "fixed_boxpoint"
+  ],
+  "selection": "single output token0, fixed logit0, one query per image; no evaluated GT enters prompt generation",
+  "source_sha256": "241cb96aebe0a9cc6cdcbe376c74d2a7c144023bd46ae6ea3f1992ed14e40fd7",
+  "cache_meta": {
+    "cju17bz250pgd0799u1hqkj5u": {
+      "original_size": [
+        547,
+        626
+      ],
+      "input_size": [
+        895,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "dbc6fd256c4b3188943b4520a3885ec7dce1a0ba03dabf0c39daf906fcea4499",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju1c3218411b08014g9f6gig": {
+      "original_size": [
+        546,
+        626
+      ],
+      "input_size": [
+        893,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "ce0917bde1b63af35b8b83476e4ffb05bb3173459bceb18779b6a5cf0d0b8461",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju1d31sp4d4k0878r3fr02ul": {
+      "original_size": [
+        529,
+        622
+      ],
+      "input_size": [
+        871,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "c173362ba5b981f6fda04fa4e4df0656a175e11d8b7006cd9c3144446ce936ab",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju1dhfok4mhe0878jlgrag0h": {
+      "original_size": [
+        546,
+        626
+      ],
+      "input_size": [
+        893,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "058a1739bab2fabf8386ffb6a498534c54829ec1ad4afb5c96ea4a5515bcce3b",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju1egh885m1l0855ci1lt37c": {
+      "original_size": [
+        531,
+        566
+      ],
+      "input_size": [
+        961,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "a9d82d6d9bb2ad78d9b218e6b5cc41e93eade4f33c5eedeb823d479158852c5a",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju1expq45zst0855rjqwwj4m": {
+      "original_size": [
+        529,
+        622
+      ],
+      "input_size": [
+        871,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "27e8438b037e111a68082019dd68ccfe10fcc5f2857ad4bce85972692ee25f73",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju1f15k3w4ct0835cmde6ypo": {
+      "original_size": [
+        547,
+        572
+      ],
+      "input_size": [
+        979,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "5dfd6aebe29e3f15b89a4ee1f30e2fc70e91e9237062492f26f0d778b9f848a9",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju1ftaji6isw0855108yqcse": {
+      "original_size": [
+        502,
+        562
+      ],
+      "input_size": [
+        915,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "5e5d8e58e66fff94d040724a323562e1fccd3fcfb21c7690559061166d0655ce",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju1gghyjwxt80835vx0wgxw0": {
+      "original_size": [
+        529,
+        621
+      ],
+      "input_size": [
+        872,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "5c0850903a6a89f24f7e1beb9a83a2f8d64f4f58a670d0b165c9f53564eea99e",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju1gi7jlwyld0835cdf6g6qz": {
+      "original_size": [
+        529,
+        611
+      ],
+      "input_size": [
+        887,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "2ef775c13a6f7424149c678a6d1a4ec99464f13b96efd63f935e12486ed65a2a",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2hlm19vjjf0801o69qnber": {
+      "original_size": [
+        530,
+        570
+      ],
+      "input_size": [
+        952,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "99e5838ac2dcd11ce35e01073ea69f38aa629b0f5afbdec5dbd8322e836cf600",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2m71z2ywwv080131bcrsd3": {
+      "original_size": [
+        531,
+        570
+      ],
+      "input_size": [
+        954,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "da47ab9c8531f664183bcfe3ded5623f9decaa0cf3539c249ff3f3a00d83af98",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2ma647l0nj0993ot4deq2q": {
+      "original_size": [
+        547,
+        621
+      ],
+      "input_size": [
+        902,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "86a7b4778d613d72a8c59e91643f1362a279ec81bd6de0d3d4040f5fa862d41f",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2nyc5f02m40801ojqbtiea": {
+      "original_size": [
+        531,
+        622
+      ],
+      "input_size": [
+        874,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "adba85334a642e56c022144a8c04cb028ae7fcd417980f55be6b9fe964327bab",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2okvco06xc0799kxe5n1qh": {
+      "original_size": [
+        530,
+        577
+      ],
+      "input_size": [
+        941,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "131e6551123c36f86b8ffdeba7330dddcfd43675624c599695d3cb5fcece8827",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2omjpeqj5a0988pjdlb8l1": {
+      "original_size": [
+        530,
+        566
+      ],
+      "input_size": [
+        959,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "2aa7a76f4c647704a28b46e3fb718c4c0184ada77403374750f2a1b5d1c8d82c",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2qh5le1ock0878oahaql7d": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "e2400cf376099541600219f4085b0e17cd30f0284025eecde69f821af7c1cf55",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2qqn5ys4uo0988ewrt2ip2": {
+      "original_size": [
+        546,
+        626
+      ],
+      "input_size": [
+        893,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "40b22f9c456dd448abfa85375dc15ad9aa8bb318b509753274e6d0299c0ba609",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2rqo702wpx0855fn7d5cxh": {
+      "original_size": [
+        529,
+        621
+      ],
+      "input_size": [
+        872,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "89f7c3346cc5a27e1f24a07de2206168ca59eb05242df1151528b0e935aac731",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2tpfa5uyx408359datxqqj": {
+      "original_size": [
+        528,
+        622
+      ],
+      "input_size": [
+        869,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "9c529bd258c6d36462755844475f94564e6e94c99e2c216290c70d4d6ce2f0ed",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2tzypl4wss0799ow05oxb9": {
+      "original_size": [
+        531,
+        622
+      ],
+      "input_size": [
+        874,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "9687388bc281cea4121fdd957cc5829514b326f334b50e776c9fde3a56ae2111",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2urqpwvxw70835rvndvtsi": {
+      "original_size": [
+        474,
+        626
+      ],
+      "input_size": [
+        775,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "78526752c3e945a00246928676e9a7e6756687bb94a1759f348691839113d176",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2xf8e5y2wm08359vcgk09b": {
+      "original_size": [
+        530,
+        571
+      ],
+      "input_size": [
+        950,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "3b3eeb2e775fe46244cff578ce4ad479d017521a33e71b14ff8d59a0b7f63151",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2xyd9vyi7m098831qcucse": {
+      "original_size": [
+        528,
+        622
+      ],
+      "input_size": [
+        869,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "44f4c527ca07acefe15a8a0ea891dab33edbc165b63a66ebc8b7a8fc9519d0a4",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju2zjcvj9qma0801dk71hhi0": {
+      "original_size": [
+        528,
+        622
+      ],
+      "input_size": [
+        869,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "7a9763c859a64714c2ff07fbf868c27d3e24063c189fe15a0e300e2d90f61f9a",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju30bmab08bi0835mvlr6e0r": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "72c56578d9f22a56baa0f7c2422565985b29ba1a6210bbbcc91d906e42ff84f3",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju30ov1oah920801mi8thuyg": {
+      "original_size": [
+        530,
+        571
+      ],
+      "input_size": [
+        950,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "715976e9096a2f88d5012cd319dc6c8a6d6ca18d466bdaeac21ea78e87c64d95",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju30u1hbakn808019g15nb8b": {
+      "original_size": [
+        528,
+        510
+      ],
+      "input_size": [
+        1024,
+        989
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "de99118f4c038311957903e84c5afa5fcb33118288aaeaf92775b310e754e87c",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju320gyvbch60801v2amdi2g": {
+      "original_size": [
+        503,
+        616
+      ],
+      "input_size": [
+        836,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "791f96482cc560780876cdf314c2424d11ebc62ac67471db8a0fb9ee241d119b",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju3ua8u0g9rg0801uayhdxhu": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "947275f1eef803a4c8073577cd242b467771de70b4b11a4990efe867904ead6b",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju3v72v5h1qz0818fggilwtq": {
+      "original_size": [
+        529,
+        622
+      ],
+      "input_size": [
+        871,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "25e29d7627f49d31ccbb6ebcc4b59a7721eb39a787ed18c91cc7a0f13d45b1b4",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju3x5u2tiihx0818914gzxy1": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "4464be91b559cd104235cfb3c18fefb70af52cb467f0df4b4c73c17c7c85e29c",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju3xhpvvimda0987ygrpzni2": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "ea2584e85bf8619fc0b4ba978c0baed4d4e6eec3a9690a2a529e0735bee9a482",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju3xiic0ilzp0850lusrb42j": {
+      "original_size": [
+        530,
+        571
+      ],
+      "input_size": [
+        950,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "1ca0c697b62a356a9d111fe5e8872cfb8f1bc42ac588c19914715aa31127cd77",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju3y0pjrj1c30755nxekxccj": {
+      "original_size": [
+        531,
+        570
+      ],
+      "input_size": [
+        954,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "6f485aaee0287632f0e468900e6b2ce4aa8f0552382fed84526cbfb88b21c2a1",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju3ya7goj6at0818v2l5ay7f": {
+      "original_size": [
+        547,
+        626
+      ],
+      "input_size": [
+        895,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "f50bf1093a84296a9d26c974ce4850596b6ebdf5c5e7cbba2ece7e2dbdc0406a",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju40sdwukv3k0755y99ug1k8": {
+      "original_size": [
+        528,
+        615
+      ],
+      "input_size": [
+        879,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "45e13489876d1eb2573c2037c1cc09a51eabeb05286bd3f993079e6a4db457b7",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju40u30gkuzc0871rq7t666d": {
+      "original_size": [
+        546,
+        626
+      ],
+      "input_size": [
+        893,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "5d74a3afeb18ade6791ff5803598eac0f7636cce7e0187d10742f01d2b91611a",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju43c92lm5cj0755lorsorfg": {
+      "original_size": [
+        529,
+        591
+      ],
+      "input_size": [
+        917,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "c2681f47039f6357e1466735884161423799dade85b066d23109e0efe4dae85b",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju43o6n7m9nk087191ijwqq9": {
+      "original_size": [
+        530,
+        618
+      ],
+      "input_size": [
+        878,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "fdcf072909d3e0d4182baee70a7f379e0d0902781463cdc5e528cdc43902b2a1",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju45jpvfn6c809873pv1i34s": {
+      "original_size": [
+        530,
+        593
+      ],
+      "input_size": [
+        915,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "d5f219ea0c49abaf77c60bd3908e6c526ef73cc3d90b7fe387a4d5b96bb1d86c",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju45qbf3n9sa0987oonbkly9": {
+      "original_size": [
+        531,
+        621
+      ],
+      "input_size": [
+        876,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "56630b9e56835df076c8e9fafd18720eb8d154a0ad33c99e1b6f6b0747aef73e",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5bmhdcafs909878qfzrqzi": {
+      "original_size": [
+        528,
+        561
+      ],
+      "input_size": [
+        964,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "c159c55fd0e3f37ae5922fb1d0d75c384403cc6b140a0949c72763a6fd7d9d9f",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5cky5xb0ay0801oxet697t": {
+      "original_size": [
+        528,
+        622
+      ],
+      "input_size": [
+        869,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "79bef385a285eb61c8fad9a584e8b1c8d3c02b749e2a1993d1b9b68ce5d8e26e",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5es375cnzy0801nkq35ffs": {
+      "original_size": [
+        528,
+        621
+      ],
+      "input_size": [
+        871,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "9e5f19b671fa285440ca4c18f6abd18ea3a2c62f1be7c02a4d5901e3a6204912",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5ew4h9cqaf0818rrczkmqh": {
+      "original_size": [
+        530,
+        570
+      ],
+      "input_size": [
+        952,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "56145731bc01124b1662cbc3c0871350ecee837af57fdb979da3215092ea3fd6",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5fi0yxd3ei0801v7u0yudn": {
+      "original_size": [
+        547,
+        626
+      ],
+      "input_size": [
+        895,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "aaaa6a498bbda50e1b09407b2fada78c1a7f56064eb34e102c98cc7c451db32c",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5huurrecm70801y680y13m": {
+      "original_size": [
+        520,
+        603
+      ],
+      "input_size": [
+        883,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "7f779215f9cc6cd6a67c7cb7f6a492c65150053fc2cc9320ad45c19263aba859",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5klveuff6w0871wbibgh3m": {
+      "original_size": [
+        530,
+        574
+      ],
+      "input_size": [
+        946,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "5298e09520aa3bb341468607a9a2429d7cb9abd891eea2d85fae26e6576bd9b6",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5ktjwofed70817eg58ef7u": {
+      "original_size": [
+        547,
+        625
+      ],
+      "input_size": [
+        896,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "b6001d8567ee635828e196e8234b7140807b317a2e5a393713b265f691a16e9d",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5tenjojp1j0755ms4949h2": {
+      "original_size": [
+        531,
+        570
+      ],
+      "input_size": [
+        954,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "4038497e4850ede4c3214ba721988fc5e04330b797b24187adda85af65eab994",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5u4pywk81x0817vn9pe14z": {
+      "original_size": [
+        531,
+        570
+      ],
+      "input_size": [
+        954,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "36e474635ff42e91cdf9e12cf2953502fc12b849b2320bef3c5622b9942e6dd8",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5udcufki0s09874ll1dbr5": {
+      "original_size": [
+        531,
+        570
+      ],
+      "input_size": [
+        954,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "7845e4a7495f1ddf5643cadd96f43b70fea9697bf996d76c7fe214f7706bae1f",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5v8pgplg6k0755rvi2t63h": {
+      "original_size": [
+        530,
+        570
+      ],
+      "input_size": [
+        952,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "75da0d436ec01838a1e1827046d0c15819649fd0dac3660a681e0b6c30eca12d",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5vi4nxlc530817uoqm2m7a": {
+      "original_size": [
+        530,
+        619
+      ],
+      "input_size": [
+        877,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "dc635546f203e637396538f287c606bab2a08fa95acc8a1a4e84c896c0a64bb2",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5wrrs0m2af0818vmnajbtw": {
+      "original_size": [
+        547,
+        626
+      ],
+      "input_size": [
+        895,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "04163fbad1d63acc8f0bd2d1d3aa92deb9ede1253bcd0110046eeb965a540cb8",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5x7iskmad90818frchyfwd": {
+      "original_size": [
+        483,
+        522
+      ],
+      "input_size": [
+        947,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "75f26fe99ed7cbf77258c61da15889d0ca4eaa2ae13e3423e823249bf7956014",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5xjn5mm78b09871spyqhhr": {
+      "original_size": [
+        528,
+        622
+      ],
+      "input_size": [
+        869,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "e04df558abc902c7994045ad38d2a0caac5dba3f7cc28d29667a873f0a8d1f17",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5y84q3mdv50817eyp82xf3": {
+      "original_size": [
+        530,
+        611
+      ],
+      "input_size": [
+        888,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "9e7b85705297ae6afddc34036743514e54ffb1a391d24f0c499d5c137c195a39",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju5yclrymlgj0818k426ud6z": {
+      "original_size": [
+        529,
+        622
+      ],
+      "input_size": [
+        871,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "04b182fdaf1db7c5b1f401781c51d92c8534444e701480e430d90da0b6feb620",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju6uzxk0v83p0801rcwnexdu": {
+      "original_size": [
+        547,
+        626
+      ],
+      "input_size": [
+        895,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "e9fa4770b9a885dc6674a37d07a17bb7016a899e43813505e990f84bcdb038c7",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju6wll7wvo3y08502pagos8m": {
+      "original_size": [
+        497,
+        568
+      ],
+      "input_size": [
+        896,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "80448701cf48014c17e694df1b59c3f9c7d48b24d7e05dc1dc7039c9e95b6b91",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju6wn57mvooj0850rp78hhy7": {
+      "original_size": [
+        531,
+        622
+      ],
+      "input_size": [
+        874,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "26e56874a20ca2cb1a276594b958abf59c54f5731f95c14730278394fb6a69f8",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju6x0yqbvxqt0755dhxislgb": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "fa9db6e5e3d71027597b66c4824a7c545c23d77ef39481a942cb41c8df05c2f9",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju6xlygpw7bs0818n691jsq4": {
+      "original_size": [
+        531,
+        570
+      ],
+      "input_size": [
+        954,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "0ceb417cc5ccfd1eab67f462a681b8ecb600346e6a79e4385ff065286c705f1c",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju6xmqd9w0250817l5kxfnsk": {
+      "original_size": [
+        530,
+        494
+      ],
+      "input_size": [
+        1024,
+        954
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "7d51d858166685bf9cc5a011660234a3b9b222e921278031a8678d1d60e5e21d",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju6z600qwh4z081700qimgl9": {
+      "original_size": [
+        530,
+        612
+      ],
+      "input_size": [
+        887,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "8c7d7e299f2dd2890d6c422715fa602b33842bf7738b9be1090640b75ada24ae",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju77idwfz36d0871tzfzz51i": {
+      "original_size": [
+        528,
+        605
+      ],
+      "input_size": [
+        894,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "34385139f1c724bb868c1633b8cf759f0897d3c4897031c2132df2c0613bb975",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju77k828z46w0871r0avuoo9": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "38adb5ce2eeb6631f192d4849c93067d542ab59901babe3c19529e1f8b3c2bb5",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju787jnjzjuj0871p94nck9g": {
+      "original_size": [
+        546,
+        626
+      ],
+      "input_size": [
+        893,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "d611e2094f835abff377dbab0a2d1708334545ff6e1c8ee3da0818550b3e5dfc",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7aez2x1jtj0871ztezs3oi": {
+      "original_size": [
+        510,
+        621
+      ],
+      "input_size": [
+        841,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "3a4bf552bed79ed016af9696f06fb0419d0686e8fac2edcfafc5395ef7ce46e6",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7ajnbo1gvm098749rdouk0": {
+      "original_size": [
+        546,
+        626
+      ],
+      "input_size": [
+        893,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "671daf4f2e2924b413fd4cdb51ee1c7c2a2358a3e02370d7792b946243b7ea78",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7aqkue1i2k09879uzcpt8r": {
+      "original_size": [
+        530,
+        621
+      ],
+      "input_size": [
+        874,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "3d0116c0a989b7ded22baeb23dfda798ab208811a3afaec0bbb927a9d1cfad1f",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7arvfe1ldu0850erdmphgj": {
+      "original_size": [
+        529,
+        622
+      ],
+      "input_size": [
+        871,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "e76b04e092e7b5c07bb3f18e91113e300bf77a07dabaeaab3d348c8dfb73f787",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7bd1qu1mx409877xjxibox": {
+      "original_size": [
+        530,
+        570
+      ],
+      "input_size": [
+        952,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "6494ff9e38a48732658acc6296083b354e8af6138955eade551fdbad299d58a1",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7ctvqn25dy08186g442m1r": {
+      "original_size": [
+        531,
+        622
+      ],
+      "input_size": [
+        874,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "32bee49ed323ee27c564347e3e1e5ab28c2221f264a17ded71c64f570dddcbc5",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7cue9b232j0801qdzk1ykj": {
+      "original_size": [
+        528,
+        613
+      ],
+      "input_size": [
+        882,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "8399e9dafd2050ddee9e83c23c70dba3353a58f6ed0ccfaeec2dab970ad87e06",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7da88w2eod0755wejzynvt": {
+      "original_size": [
+        484,
+        622
+      ],
+      "input_size": [
+        797,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "70d015c722c4a7ff7614de484ca660e062c910a6580ce378c3b559fca711b857",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7dmlgf2ebw0871ieqas5fh": {
+      "original_size": [
+        529,
+        608
+      ],
+      "input_size": [
+        891,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "8acef2bc8584980a9b92d5ac1b1cf0b9ffd5c38c7966474b2050249f13640184",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7efffp2ivf0817etg3jehl": {
+      "original_size": [
+        546,
+        626
+      ],
+      "input_size": [
+        893,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "fb4f1ec2a52255206faf6f72c4daaddebe7207c55c18817ccbfbd2350fccc2b5",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7ekbo32pft0871fv7kzwb9": {
+      "original_size": [
+        521,
+        571
+      ],
+      "input_size": [
+        934,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "878ef0cbf6db7e001676333abf6ce48b9d8ecc43c88867c89b95cc287af8697d",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7ev2b12owa08500bpfpwyw": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "241b4d446dd7f2d53dcf55be9dfc3ef8eae2e6f9272c6f7101cb0476bac3d064",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7ez7r22qbc08015xfoz2wb": {
+      "original_size": [
+        530,
+        612
+      ],
+      "input_size": [
+        887,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "0ff330a0746f3a45b45e6c3f657a0de40d850cf110d8465152401b9076009466",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7fnfv02tt90801djnix9m8": {
+      "original_size": [
+        528,
+        622
+      ],
+      "input_size": [
+        869,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "691dc91a24eb530d40c02c4912502510d9a41db22002a10ac2d86da04ed32e1e",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7fob3x301u0755x985pmmq": {
+      "original_size": [
+        528,
+        577
+      ],
+      "input_size": [
+        937,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "1b4cfe512fc5ab602cf41a0955308cd6dbff59a62d9da5995f53563909c2139d",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7fpfzq2wyf0818xxd1oziv": {
+      "original_size": [
+        530,
+        570
+      ],
+      "input_size": [
+        952,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "15dcd73f313bb86362d368038b50ecab045a449aa5f0f6140750aea997b1f9a1",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju7g7ba42z310987bqzbi2bq": {
+      "original_size": [
+        530,
+        588
+      ],
+      "input_size": [
+        923,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "2ba78d66447ddc5586ed735512fb7e12dedded3f058a0e4e5b791f31c1c87d0f",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju83h9ysjwe808716nt35oah": {
+      "original_size": [
+        531,
+        571
+      ],
+      "input_size": [
+        952,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "a59dc209af73e499ebc6a20940c037cb6716701ff48bc4acc45004f68f927349",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju83yddek68q0850d2x7zfkm": {
+      "original_size": [
+        529,
+        622
+      ],
+      "input_size": [
+        871,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "dc48bf090ce3d283cd3c8ce512ffb39bd60f68088d600726c24ce63743e662f3",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju846ec0kj7z08012o10klrb": {
+      "original_size": [
+        530,
+        616
+      ],
+      "input_size": [
+        881,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "53929ecaf44d5c43f417aefc2c6ca427a1c99624780a01b6347e354c00d87e4d",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju84hibuktj80871u519o71q": {
+      "original_size": [
+        529,
+        622
+      ],
+      "input_size": [
+        871,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "4e75b482061a4b8420f853878b14cfb1619e365ca4731549d1ff104887a7852d",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju85citjlnfm0755i4rk5tqj": {
+      "original_size": [
+        547,
+        623
+      ],
+      "input_size": [
+        899,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "e659942661cc8fa2f789f6b4c1b60b8a521631cf607990838817d206cf8a5cc4",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju85fc11ljr40818edpb0inh": {
+      "original_size": [
+        528,
+        607
+      ],
+      "input_size": [
+        891,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "b02a7b0f43fcb2d6b708ac1e1f2522ef247ffa834c5d3bab472692319e95c503",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju88y1mwoln50871emyfny1g": {
+      "original_size": [
+        529,
+        621
+      ],
+      "input_size": [
+        872,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "42b152781b64ee5e66989d88b0f552d31e289f9bd416efe76eaeaa8fd1800beb",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju8a3nhbpwnb0850d37fo2na": {
+      "original_size": [
+        528,
+        622
+      ],
+      "input_size": [
+        869,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "007ed6cfae736ea152bfc5b9418614590e7e2ae59a1a08a313ae4765ddec18c4",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju8aw9n1qyg10801jkjlmors": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "1b292066666fe1dc81c237328167de77d7a039b40f90b9fc7cac69e4dafe6ffa",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju8b7aqtr4a00987coba14b7": {
+      "original_size": [
+        530,
+        622
+      ],
+      "input_size": [
+        873,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "d125d55e8058e5b51651e1f0201f1ba877f9a6781662f46eac399dcaab03fb38",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju8bljw9rqk20801kr54akrl": {
+      "original_size": [
+        529,
+        621
+      ],
+      "input_size": [
+        872,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "9cf5a9b86c3cd1c4ae725741ca32c7254c2025336a7c988c5fd3cb9d3c431838",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju8brv16rx7f0818uf5n89pv": {
+      "original_size": [
+        529,
+        622
+      ],
+      "input_size": [
+        871,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "57a9513405ab28ec47278a1d76f277551cff6503416283b8a810307e2160626e",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    },
+    "cju8c82iosagu0817l74s4m5g": {
+      "original_size": [
+        547,
+        626
+      ],
+      "input_size": [
+        895,
+        1024
+      ],
+      "split": "dev",
+      "precision": "fp32",
+      "storage": "fp32",
+      "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+      "encoder_source_sha256": "bce61823f10e32d0943a2e7eabe7a08f2094db38d4e9b247fa598496b67fdb30",
+      "image_sha256": "d0c657e745fedaff947ccc9309bbc6575b51cb0b08ef1b05da52c3e9416b1502",
+      "torch_version": "2.7.1+cpu",
+      "device": "cpu"
+    }
+  }
+}
