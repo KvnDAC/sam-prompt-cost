@@ -23,23 +23,29 @@ def main():
     fig,axes=plt.subplots(1,4,figsize=(13.2,3.15),constrained_layout=True)
 
     # A. Controlled prompt conditions on the fixed development set.
-    rows=phase['table']; names=['No prompt','Static\ntokens','Conditioned\ntokens','Linear\nprobe','Auto SAM','GT box']
+    rows=phase['table']; names=['No prompt','Static tok.','Cond. tok.','Probe','Auto SAM','GT box']
     source=['Sin prompt','Tokens estáticos','Tokens condicionados','Probe lineal','Probe → caja + punto → SAM','Caja GT']
     vals=[pick(rows,'method',x)['dice_mean'] for x in source]
     lo=[pick(rows,'method',x)['ci95_low'] for x in source];hi=[pick(rows,'method',x)['ci95_high'] for x in source]
     cs=[colors['weak'],colors['weak'],colors['weak'],colors['probe'],colors['sam'],colors['oracle']]
     x=np.arange(len(vals));axes[0].bar(x,vals,color=cs,width=.72)
     axes[0].errorbar(x,vals,yerr=[np.array(vals)-lo,np.array(hi)-vals],fmt='none',ecolor='#222',capsize=2,lw=.8)
-    axes[0].set_xticks(x,names,rotation=35,ha='right');axes[0].set_ylim(0,1);axes[0].set_ylabel('Dice')
+    axes[0].set_xticks(x,names,rotation=40,ha='right',rotation_mode='anchor');axes[0].set_ylim(0,1);axes[0].set_ylabel('Dice')
     axes[0].set_title('A  Prompt dependence',loc='left',fontweight='bold')
 
-    # B. Label efficiency under fixed update counts.
+    # B. Label efficiency under fixed update counts; small x offsets keep intervals apart on the log axis.
     budgets=[25,100,400]
-    for method,label_name,color,marker in [('probe','Probe','probe','o'),('sam_auto','Auto SAM','sam','s'),('unet_endpoint','U-Net','unet','^')]:
-        ys=[pick([r for r in label['table'] if r['method']==method],'budget',b)['mean'] for b in budgets]
-        axes[1].plot(budgets,ys,label=label_name,color=colors[color],marker=marker,lw=2,ms=5)
-    axes[1].set_xscale('log');axes[1].set_xticks(budgets,[str(x) for x in budgets]);axes[1].set_ylim(.45,.86)
-    axes[1].set_xlabel('Training masks');axes[1].set_ylabel('Development Dice');axes[1].legend(frameon=False,fontsize=8)
+    for method,label_name,color,marker,shift in [('probe','Probe','probe','o',.94),('sam_auto','Auto SAM','sam','s',1.),('unet_endpoint','U-Net, 1,500 updates','unet','^',1.06)]:
+        cells=[pick([r for r in label['table'] if r['method']==method],'budget',b) for b in budgets]
+        xs=[b*shift for b in budgets];ys=np.array([c['mean'] for c in cells])
+        err=[ys-[c['ci95'][0] for c in cells],[c['ci95'][1] for c in cells]-ys]
+        axes[1].errorbar(xs,ys,yerr=err,label=label_name,color=colors[color],marker=marker,lw=2,ms=5,capsize=2,elinewidth=.8)
+    # Same 400 masks and architecture, longer two-stage recipe (128 px, then 256 px): the 400-mask gap is budget-driven.
+    mature=pick(resolution['table'],'method','256_endpoint')
+    axes[1].errorbar([400*1.12],[mature['mean']],yerr=[[mature['mean']-mature['ci95'][0]],[mature['ci95'][1]-mature['mean']]],
+        color=colors['unet'],marker='^',mfc='white',ms=6,ls='none',capsize=2,elinewidth=.8,label='U-Net, longer recipe')
+    axes[1].set_xscale('log');axes[1].set_xticks(budgets,[str(x) for x in budgets]);axes[1].minorticks_off();axes[1].set_ylim(.45,.88)
+    axes[1].set_xlabel('Training masks');axes[1].set_ylabel('Development Dice');axes[1].legend(frameon=False,fontsize=7,loc='lower right')
     axes[1].set_title('B  Label efficiency',loc='left',fontweight='bold')
 
     # C. Frozen positive-domain transfer.
@@ -63,7 +69,7 @@ def main():
 
     for ax in axes:
         ax.spines[['top','right']].set_visible(False);ax.grid(axis='y',alpha=.18,lw=.6);ax.tick_params(labelsize=8)
-    fig.suptitle('Controlled evidence across prompts, supervision, and domain shift',fontsize=12,fontweight='bold')
+    # No suptitle: the abstract caption carries it and the two-page limit needs the height.
     fig.savefig(OUT/'figure_experimental_summary.png',dpi=300,bbox_inches='tight')
     fig.savefig(OUT/'figure_experimental_summary.pdf',bbox_inches='tight')
     provenance={'phase_b':'results/phase_b/full_dev_20261012/summary.json',

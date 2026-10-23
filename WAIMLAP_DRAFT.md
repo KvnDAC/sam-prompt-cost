@@ -1,6 +1,6 @@
 # The Informational Cost of Spatial Prompts in SAM: A Controlled Study on Polyp Segmentation
 
-**Document status:** complete scientific draft for internal review, 18 October 2026. It is not a submitted manuscript. Author names, order, affiliations, and corresponding author remain pending formal confirmation.
+**Document status:** complete scientific draft for internal review, 18 October 2026; revised 22 October 2026 (label-efficiency budget, negative-control post-processing, references). It is not a submitted manuscript. Author names, order, affiliations, and corresponding author remain pending formal confirmation.
 
 ## Extended abstract
 
@@ -8,11 +8,11 @@ Segment Anything (SAM) is often described as a general segmentation model, yet i
 
 Using fixed Kvasir-SEG development images, frozen SAM ViT-B nearly collapses with an empty spatial input (Dice 0.0089), whereas oracle points and boxes reach 0.6831 and 0.9352. Static learned tokens recover 0.3633 and image-conditioned tokens 0.5013, but a context-permutation control shows that only a small part of the conditioned gain depends on correctly paired image context. A linear probe over frozen SAM features reaches 0.7489; converting its largest component into a box and interior point for SAM raises Dice to 0.8179. A train-derived fixed spatial prior reaches only 0.3582, showing that image-specific localization, rather than the mere presence of a prompt, explains most of the recovery.
 
-The best automatic SAM pipeline does not dominate a mature direct segmenter on the same development set: U-Net at 256 pixels reaches 0.8267 and the paired SAM−U-Net difference is −0.0088 (95% CI −0.0472 to 0.0281). SAM is also roughly 309 times slower in the measured CPU prototype (8.37 s versus 27.08 ms). Its value appears in regimes where pretraining matters. Under fixed update counts, automatic SAM exceeds U-Net trained from scratch by 0.2718, 0.1863, and 0.1226 Dice with 25, 100, and 400 masks. Under frozen transfer to CVC-ClinicDB, SAM reaches 0.4587 versus 0.3405 for U-Net, a sequence-clustered difference of 0.1182 (0.0672 to 0.1684), although both scores are too low to support clinical adequacy.
+The best automatic SAM pipeline does not dominate a mature direct segmenter on the same development set: U-Net at 256 pixels reaches 0.8267 and the paired SAM−U-Net difference is −0.0088 (95% CI −0.0472 to 0.0281). SAM is also roughly 309 times slower in the measured CPU prototype (8.37 s versus 27.08 ms). Its value appears in regimes where pretraining matters. Under fixed update counts, automatic SAM exceeds U-Net trained from scratch by 0.2718, 0.1863, and 0.1226 Dice with 25, 100, and 400 masks; the 400-mask gap reflects that short budget, because the longer U-Net recipe reaches 0.8267 with the same masks. Under frozen transfer to CVC-ClinicDB, SAM reaches 0.4587 versus 0.3405 for U-Net, a sequence-clustered difference of 0.1182 (0.0672 to 0.1684), although both scores are too low to support clinical adequacy.
 
-The external negative control changes the interpretation. On all 1,009 HyperKvasir cecum-class images, automatic SAM marks a mean 5.21% of image area as polyp, compared with 17.33% for U-Net; the paired difference is −12.12 percentage points (−12.67 to −11.59). Nevertheless, SAM produces a non-empty mask in every image and U-Net in 99.83%. Thus, SAM is more conservative under domain shift but neither system reliably represents target absence. The most defensible contribution is a controlled diagnosis of prompt dependence, candidate availability, selection, label efficiency, transfer, specificity proxy, and end-to-end cost—not a new prompting architecture or a state-of-the-art claim. The results motivate an explicit presence or abstention gate before automatic prompt generation.
+The external negative control changes the interpretation. On all 1,009 HyperKvasir cecum-class images, automatic SAM marks a mean 5.21% of image area as polyp, compared with 17.33% for U-Net; the paired difference is −12.12 percentage points (−12.67 to −11.59). Nevertheless, SAM produces a non-empty mask in every image and U-Net in 99.83%. Thus, the SAM pipeline marks less false area on these out-of-class frames, but neither system reliably represents target absence: the probe fires on every image, so the always-prompt pipeline always emits a mask. The most defensible contribution is a controlled diagnosis of prompt dependence, candidate availability, selection, label efficiency, transfer, specificity proxy, and end-to-end cost—not a new prompting architecture or a state-of-the-art claim. The results motivate an explicit presence or abstention gate before automatic prompt generation.
 
-![Experimental summary. Error bars are 95% bootstrap intervals. HyperKvasir annotations report the percentage of images with at least 1% false area.](results/paper_20261018/figure_experimental_summary.png)
+![Experimental summary. Error bars are 95% bootstrap intervals. In the label-efficiency panel, U-Net uses the fixed 1,500-update budget and the open marker is the longer recipe with the same 400 masks. HyperKvasir annotations report the percentage of images with at least 1% false area.](results/paper_20261018/figure_experimental_summary.png)
 
 ## 1. Research question and scope
 
@@ -46,7 +46,7 @@ Frozen models and thresholds selected on Kvasir-SEG are evaluated without adapta
 
 The negative control uses all 1,009 images in the official HyperKvasir `lower-gi-tract/anatomical-landmarks/cecum` folder. Every file is downloaded from OSF and verified against its published SHA-256. The audit finds 1,009 decodable files and 1,009 unique pixel arrays.
 
-The class is a negative proxy at image level: it is an anatomical-landmark label rather than a pixel-by-pixel confirmation that no polyp-like region exists. Public patient and video identifiers are unavailable for these labeled still images. Consequently, bootstrap intervals resample images and must not be interpreted as patient-level clinical specificity.
+The class is a negative proxy at image level: it is an anatomical-landmark label rather than a pixel-by-pixel confirmation that no polyp-like region exists. Public patient and video identifiers are unavailable for these labeled still images. Consequently, bootstrap intervals resample images and must not be interpreted as patient-level clinical specificity. HyperKvasir and Kvasir-SEG were both collected at Vestre Viken Health Trust (Norway), so this control tests out-of-class frames rather than a new acquisition domain, and patient overlap with the Kvasir-SEG training images cannot be excluded.
 
 ## 3. Model conditions
 
@@ -126,7 +126,7 @@ Prompt perturbations further show that location precision matters. A point shift
 | Mature U-Net endpoint, RGB 256 | **0.8267** | 487,289 | **27.08 ms** |
 | Probe → box+point → SAM | 0.8179 | 257 plus frozen SAM | **8.37 s** |
 
-SAM minus mature U-Net is −0.0088 [−0.0472, 0.0281]. This interval demonstrates neither superiority nor equivalence. Input resolution, pretraining, and training recipes differ, so this is a practical system comparison rather than an isolated causal architecture comparison. The measured SAM pipeline has 93,735,729 total unique parameters including the probe, and its image encoder dominates latency.
+The mature U-Net trains 30 epochs at 128 pixels and 15 more at 256 pixels (2,250 updates). SAM minus mature U-Net is −0.0088 [−0.0472, 0.0281]. This interval demonstrates neither superiority nor equivalence. Input resolution, pretraining, and training recipes differ, so this is a practical system comparison rather than an isolated causal architecture comparison. The measured SAM pipeline has 93,735,729 total unique parameters including the probe, and its image encoder dominates latency.
 
 ### 5.4 Label efficiency
 
@@ -139,6 +139,8 @@ All budgets use nested training subsets and fixed update counts: 300 for the pro
 | U-Net 256, fixed endpoint | 0.5103 | 0.6198 | 0.6964 |
 
 Automatic SAM exceeds U-Net by 0.2718 [0.2185, 0.3243], 0.1863 [0.1333, 0.2390], and 0.1226 [0.0757, 0.1692]. The decreasing gap shows that the direct model benefits more from additional local labels, while the frozen representation provides a strong low-label starting point. This fixed-compute study does not claim final convergence or universal label efficiency.
+
+The fixed budget matters at 400 masks. With the same 400 masks and architecture, the two-stage recipe of Section 5.3 (2,250 updates, 128 then 256 pixels) reaches 0.8267 and closes the 0.1226 gap. The curve therefore shows that SAM gives a stronger start when labels or optimization are limited, not a higher ceiling; whether longer U-Net training also narrows the 25- and 100-mask gaps remains untested.
 
 ### 5.5 Frozen positive-domain transfer
 
@@ -158,7 +160,7 @@ SAM exceeds U-Net by 0.1182 [0.0672, 0.1684] and the probe by 0.0344 [0.0110, 0.
 | Probe → box+point → SAM | **5.21%** | **[4.88%, 5.54%]** | **79.42%** | 100.00% |
 | Mature U-Net 256 | 17.33% | [16.90%, 17.76%] | 99.31% | 99.83% |
 
-Automatic SAM reduces mean false area relative to U-Net by 12.12 percentage points [11.59, 12.67] and the ≥1% rate by 19.89 points [17.67, 22.17]. It also reduces average false area and ≥1% rate relative to the probe. However, its 95th percentile largest component is 16.28% of the image, and no SAM seed reliably emits an empty output. The decoder is more conservative on average but can consolidate a false proposal into a large connected mask.
+Automatic SAM reduces mean false area relative to U-Net by 12.12 percentage points [11.59, 12.67] and the ≥1% rate by 19.89 points [17.67, 22.17]. It also reduces average false area and ≥1% rate relative to the probe, but that reduction comes from prompting only the probe's largest component, not from the decoder. In a post hoc check ([`scripts/34_negative_postprocessing_check.py`](scripts/34_negative_postprocessing_check.py)), the decoder enlarges that component by 1.36 percentage points [1.23, 1.50] and grows it in 83.6% of image–seed pairs. The advantage over U-Net survives the same single-component rule: U-Net's largest component alone covers 15.58% of the image, 10.37 points [9.85, 10.90] more than SAM. SAM's 95th-percentile largest component is 16.28% of the image, and because the probe fires on every image, the always-prompt pipeline never emits an empty output.
 
 ## 6. Scientific contribution
 
@@ -171,7 +173,7 @@ The contribution is the combined controlled evidence:
 5. **Utility beyond one development score.** Label budgets, frozen positive transfer, a negative proxy, and full RGB latency reveal when pretraining helps and when computational cost dominates.
 6. **Reproducible execution.** Plans, split IDs, hashes, checkpoints, per-image outputs, resumable state, and paired uncertainty are preserved. The current suite passes 31 tests and 2 subtests.
 
-Automatic prompt generation itself is not claimed as novel. Self-prompting, AutoSAM, learned prompt embeddings, and prompt perturbation have prior art. The defensible novelty candidate is the integrated diagnostic and utility evaluation under shared IDs and frozen external transfer.
+Automatic prompt generation itself is not claimed as novel. Self-prompting, AutoSAM, learned prompt embeddings, and prompt perturbation (PP-SAM, Stable-SAM) have prior art, and Mazurowski et al. already report the gap between SAM's chosen mask and the best of its three candidates on medical data. The defensible novelty candidate is the integrated diagnostic and utility evaluation under shared IDs and frozen external transfer.
 
 ## 7. Limitations
 
@@ -181,6 +183,7 @@ Automatic prompt generation itself is not claimed as novel. Self-prompting, Auto
 - CVC-ClinicDB contains correlated frames; sequence bootstrap reduces but does not remove all clinical dependence concerns.
 - SAM and U-Net differ in pretraining, input size, compute, and recipe. The comparison evaluates systems, not a single isolated architecture variable.
 - U-Net training has not established a universal convergence ceiling, and no specialist modern polyp model or SAM2 model has yet been executed locally.
+- Label-efficiency budgets are short (1,500 U-Net updates); the 400-mask gap disappears under the longer recipe, so low-label gaps may also be partly budget-driven.
 - CPU latency is implementation- and hardware-specific; it is not a GPU, energy, or deployment benchmark.
 - The project does not measure annotator time, reader variability, calibration, sensitivity at a fixed false-positive rate, or patient-level outcomes.
 
@@ -215,6 +218,9 @@ Primary endpoints should include sensitivity, frame-level false-positive rate, a
 6. O. Ronneberger, P. Fischer, and T. Brox. “U-Net: Convolutional Networks for Biomedical Image Segmentation.” *MICCAI*, 2015.
 7. J. Bernal et al. “WM-DOVA Maps for Accurate Polyp Highlighting in Colonoscopy.” *Computerized Medical Imaging and Graphics*, 2015.
 8. H. Borgli et al. “HyperKvasir, a Comprehensive Multi-Class Image and Video Dataset for Gastrointestinal Endoscopy.” *Scientific Data*, 2020.
+9. M. A. Mazurowski et al. “Segment Anything Model for Medical Image Analysis: An Experimental Study.” *Medical Image Analysis*, 102918, 2023.
+10. M. M. Rahman et al. “PP-SAM: Perturbed Prompts for Robust Adaptation of Segment Anything Model for Polyp Segmentation.” *CVPR Workshops*, 2024.
+11. Q. Fan et al. “Stable Segment Anything Model.” arXiv:2311.15776, 2023.
 
 ## Submission fields still required
 
