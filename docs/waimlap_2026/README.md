@@ -1,5 +1,21 @@
 # Borrador de resumen extendido WAIMLAp 2026
 
+**Revisión del 22 de octubre (vigente):** [texto](revision_20261022_review/abstract_draft.md). Corrige sobre la del 18:
+
+- La ventaja de SAM con 400 máscaras en eficiencia de etiquetas se atribuye al presupuesto fijo de 1.500 actualizaciones. Con las mismas 400 máscaras, la receta larga de U-Net llega a 0,8267, y la figura 1B ahora lo muestra.
+- "U-Net matches" pasa a "comparable (difference unresolved)", coherente con el IC.
+- La ausencia de máscaras vacías en SAM se explica por diseño: el probe se activa siempre. El decoder agranda el componente que recibe ([control post hoc](../../results/model_comparison/negative_postprocessing_20261022/summary.json)).
+- Referencias completas, con Mazurowski, PP-SAM y Stable-SAM como trabajos previos.
+- El generador ya no duplica cabecera ni pie en la página 2, y `--flow` evita el salto forzado antes de Results.
+
+El Word y el PDF de esta revisión aún no se han generado. Requieren `python-docx` y `pywin32`; después hay que comprobar que siguen siendo dos páginas:
+
+```powershell
+python docs/waimlap_2026/generar_borrador.py --source docs/waimlap_2026/revision_20261022_review/abstract_draft.md --output_dir docs/waimlap_2026/revision_20261022_review --flow --raster_header docs/waimlap_2026/revision_20261018_complete/header_strip.png --pdf
+```
+
+La entrega oficial (consultada el 22 de octubre en <https://waimlap.org/registration/>) vence el **23 de octubre de 2026**. Se envía un único ZIP de hasta 10 MB con `Abstract_TitleOfWork.pdf` y `Poster_TitleOfWork.pdf` (A0 vertical, plantilla oficial).
+
 **Borrador integrado final (18 de octubre):** reúne dependencia del prompt, diagnóstico de candidatas/selección, U-Net madura, eficiencia de etiquetas, transferencia CVC-ClinicDB, negativos HyperKvasir, latencia y una figura de cuatro paneles. [Texto de dos páginas](revision_20261018_complete/abstract_draft.md), [Word basado en la plantilla](revision_20261018_complete/Abstract_TheInformationalCostOfSpatialPromptsInSAM.docx) y [PDF verificado de dos páginas](revision_20261018_complete/Abstract_TheInformationalCostOfSpatialPromptsInSAM.pdf). El manuscrito maestro detallado está en [`WAIMLAP_DRAFT.md`](../../WAIMLAP_DRAFT.md). Autoría y afiliaciones continúan pendientes; no se ha enviado.
 
 **Revisión con control negativo (18 de octubre):** incorpora las 1.009 imágenes `cecum` de HyperKvasir y el hallazgo de que SAM automático produce menos área falsa que U-Net, aunque ambos generan máscaras en más del 99,8 % de las imágenes. [Texto](revision_20261018_specificity/abstract_draft.md), [Word](revision_20261018_specificity/Abstract_TheInformationalCostOfSpatialPromptsInSAM.docx) y [PDF verificado de dos páginas](revision_20261018_specificity/Abstract_TheInformationalCostOfSpatialPromptsInSAM.pdf). La autoría continúa pendiente y el documento no ha sido enviado.

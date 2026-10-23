@@ -1,0 +1,54 @@
+{
+  "source": "results/model_comparison/negative_specificity_20261017/per_image.csv",
+  "n_images": 1009,
+  "post_hoc": true,
+  "unit_of_resampling": "image after seed averaging (patient/video IDs unavailable)",
+  "means": {
+    "probe_largest_component": {
+      "mean": 0.038454099696589,
+      "ci95": [
+        0.036005772796451056,
+        0.040972318498674394
+      ]
+    },
+    "sam_auto_area": {
+      "mean": 0.052050559512766575,
+      "ci95": [
+        0.048802124646782595,
+        0.05544804992997732
+      ]
+    },
+    "unet_area": {
+      "mean": 0.17328790016967294,
+      "ci95": [
+        0.1689952815333263,
+        0.17762741973316967
+      ]
+    },
+    "unet_largest_component": {
+      "mean": 0.1557818141570696,
+      "ci95": [
+        0.15150537145279044,
+        0.16013850286766887
+      ]
+    }
+  },
+  "paired_differences": {
+    "sam_auto_area_minus_probe_largest": {
+      "mean": 0.013596459816177586,
+      "ci95": [
+        0.012272551091957547,
+        0.015001004441692183
+      ]
+    },
+    "sam_auto_area_minus_unet_largest": {
+      "mean": -0.10373125464430302,
+      "ci95": [
+        -0.10898677672626572,
+        -0.0985473716768649
+      ]
+    }
+  },
+  "image_seed_rate_sam_larger_than_probe_component": 0.8364717542120912,
+  "interpretation": "Exploratory post-hoc control; not part of the frozen negative-control protocol."
+}

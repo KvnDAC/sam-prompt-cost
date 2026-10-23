@@ -35,7 +35,7 @@ def paragraph(doc, text, *, size=11, bold=False, before=0, after=4):
     return p
 
 
-def build(source=HERE / 'abstract_draft.md', output_dir=HERE, page_break=False):
+def build(source=HERE / 'abstract_draft.md', output_dir=HERE, page_break=False, flow=False):
     source, output_dir = source.resolve(), output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
     original_hash = hashlib.sha256(TEMPLATE.read_bytes()).hexdigest()
@@ -55,7 +55,7 @@ def build(source=HERE / 'abstract_draft.md', output_dir=HERE, page_break=False):
             paragraph(doc, text, size=8.5, after=6)
         elif text.startswith('## '):
             is_results = text.startswith('## 3.')
-            if is_results:
+            if is_results and not flow:
                 if not page_break:
                     # Start results in a linked section. This works for dense
                     # page-1 drafts; --page_break avoids a Word floating-header
@@ -64,7 +64,7 @@ def build(source=HERE / 'abstract_draft.md', output_dir=HERE, page_break=False):
                     section.header.is_linked_to_previous = True
                     section.footer.is_linked_to_previous = True
             p = paragraph(doc, text[3:], bold=True, before=5, after=3)
-            if is_results and page_break:
+            if is_results and page_break and not flow:
                 p.paragraph_format.page_break_before = True
             p.paragraph_format.keep_with_next = True
         elif text.startswith('|'):
@@ -144,22 +144,8 @@ def replace_headers_with_strip(path, strip, verification):
         p.paragraph_format.space_after = Pt(0)
         p.alignment = 1
         p.add_run().add_picture(str(strip), width=Inches(6.85))
-    if len(doc.sections) == 1:
-        results = next(p for p in doc.paragraphs if p.text.startswith('3. RESULTS'))
-        results.paragraph_format.page_break_before = False
-        repeated = doc.add_paragraph()
-        repeated.paragraph_format.page_break_before = True
-        repeated.paragraph_format.space_before = Pt(0)
-        repeated.paragraph_format.space_after = Pt(6)
-        repeated.alignment = 1
-        repeated.add_run().add_picture(str(strip), width=Inches(6.85))
-        results._p.addprevious(repeated._p)
-        footer = doc.add_paragraph()
-        footer.paragraph_format.space_before = Pt(55)
-        footer.paragraph_format.space_after = Pt(0)
-        footer.alignment = 1
-        run = footer.add_run('WAIMLAp 2026  |  November 18–20, 2026  |  Lima, Peru  |  waimlap.org')
-        run.font.name = 'Calibri'; run.font.size = Pt(8); run.font.color.rgb = None
+    # The template has a single default header/footer that Word repeats on every
+    # page; adding a second strip and footer to the body duplicated both on page 2.
     doc.save(path)
     verification['header_rendering'] = 'stable inline strip rendered from the supplied template; visually inspected'
     verification['preserved_parts_before_header_stabilization'] = verification.pop('preserved_parts')
@@ -211,10 +197,11 @@ if __name__ == '__main__':
     parser.add_argument('--source', type=Path, default=HERE / 'abstract_draft.md')
     parser.add_argument('--output_dir', type=Path, default=HERE)
     parser.add_argument('--page_break', action='store_true')
+    parser.add_argument('--flow', action='store_true', help='no break before Results; page 1 fills before page 2')
     parser.add_argument('--duplicate_headers', action='store_true')
     parser.add_argument('--raster_header', type=Path)
     args = parser.parse_args()
-    path, verification = build(args.source, args.output_dir, args.page_break)
+    path, verification = build(args.source, args.output_dir, args.page_break, args.flow)
     if args.raster_header:
         replace_headers_with_strip(path, args.raster_header.resolve(), verification)
     if args.pdf:
