@@ -1,0 +1,16 @@
+{
+  "case": "cju40sdwukv3k0755y99ug1k8",
+  "split": "dev",
+  "dice": {
+    "noprompt_0": 0.0,
+    "point_0": 0.012123405410295848,
+    "box_1": 0.9577077472579575
+  },
+  "sources": [
+    "results/phase_b/full_dev_20261012/spatial_cases/predictions.png",
+    "results/phase_b/full_dev_20261012/spatial_cases/predictions.npz",
+    "results/phase_b/full_dev_20261012/spatial_cases/metrics.csv"
+  ],
+  "selection": "post hoc extreme case (largest GT-box minus GT-point Dice); illustrative only",
+  "reconstruction": "RGB recovered from the case figure by inpainting the GT contour; GT mask = filled contour"
+}
