@@ -1,0 +1,17 @@
+{
+  "sources": {
+    "phase_b": "results/phase_b/full_dev_20261012/summary.json",
+    "fixed_prior": "results/model_comparison/fixed_prior_20261016/summary.json",
+    "output_selection": "results/phase_b/full_dev_20261012/output_selection/summary.json",
+    "label_efficiency": "results/model_comparison/label_efficiency_20261017/summary.json",
+    "resolution": "results/model_comparison/unet_resolution_20261017/summary.json",
+    "external_positive": "results/model_comparison/external_clinicdb_20261017/summary.json",
+    "external_negative": "results/model_comparison/negative_specificity_20261017/summary.json"
+  },
+  "slot_inches": [
+    6.875,
+    4.21875
+  ],
+  "dpi": 300,
+  "note": "Development results are exploratory; CVC-ClinicDB and HyperKvasir use the frozen external protocols."
+}
