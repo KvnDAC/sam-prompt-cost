@@ -3,7 +3,7 @@
 Uses a local Chromium browser (Edge or Chrome) in headless mode so text renders with
 the system Arial, as in the poster. The SVG stays the editable source.
 """
-import argparse,re,shutil,subprocess,tempfile
+import argparse,base64,re,shutil,subprocess,tempfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -19,11 +19,13 @@ def browser(explicit):
 def main():
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--scale',type=int,default=3);ap.add_argument('--browser')
     a=ap.parse_args();svg=SVG.read_text(encoding='utf-8')
+    # Inline the raster panels next to the SVG (from script 37) so the temporary page can load them.
+    svg=re.sub(r'href="([^"#:]+\.png)"',lambda m:'href="data:image/png;base64,'+base64.b64encode((SVG.parent/m.group(1)).read_bytes()).decode()+'"',svg)
     w,h=(int(v) for v in re.search(r'viewBox="0 0 (\d+) (\d+)"',svg).groups())
     out=SVG.with_suffix('.png')
     with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:  # Edge's crash handler may still hold the profile
         page=Path(tmp)/'diagram.html'
-        page.write_text(f'<!doctype html><html><body style="margin:0;background:transparent">{svg}</body></html>',encoding='utf-8')
+        page.write_text(f'<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;background:transparent">{svg}</body></html>',encoding='utf-8')
         # A throwaway profile keeps an already-open browser from absorbing the headless call.
         subprocess.run([browser(a.browser),'--headless',f'--user-data-dir={Path(tmp)/"profile"}','--no-first-run',
           '--disable-gpu','--hide-scrollbars','--default-background-color=00000000',

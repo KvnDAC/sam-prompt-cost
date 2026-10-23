@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1355 994" width="1355" height="994" font-family="Arial, Helvetica, sans-serif">
-  <!-- Hand-drawn methodology diagram for the WAIMLAp 2026 poster. One user unit = one Canva px (96 px/in) at the slot size. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1355 1360" width="1355" height="1360" font-family="Arial, Helvetica, sans-serif">
+  <!-- Hand-drawn methodology diagram for the WAIMLAp 2026 poster. One user unit = one Canva px (96 px/in) at the slot size.
+       Raster images are produced by scripts/37_make_poster_examples.py from a saved Phase B case; the renderer inlines them. -->
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0L10 5L0 10Z" fill="#28282D"/>
@@ -7,14 +8,18 @@
     <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0L10 5L0 10Z" fill="#238B8E"/>
     </marker>
+    <clipPath id="clip-input"><rect x="40" y="42" width="150" height="129" rx="10"/></clipPath>
+    <clipPath id="clip-t1"><rect x="10" y="1052" width="312" height="268" rx="12"/></clipPath>
+    <clipPath id="clip-t2"><rect x="351" y="1052" width="312" height="268" rx="12"/></clipPath>
+    <clipPath id="clip-t3"><rect x="692" y="1052" width="312" height="268" rx="12"/></clipPath>
+    <clipPath id="clip-t4"><rect x="1033" y="1052" width="312" height="268" rx="12"/></clipPath>
   </defs>
 
   <!-- Row 1: frozen SAM pipeline -->
   <g>
     <rect x="10" y="30" width="210" height="180" rx="22" fill="#FFFFFF" stroke="#4B2A82" stroke-width="3"/>
-    <rect x="45" y="55" width="140" height="95" rx="12" fill="#F2D5CB"/>
-    <ellipse cx="128" cy="98" rx="30" ry="24" fill="#E76F51" opacity="0.85"/>
-    <text x="115" y="188" text-anchor="middle" font-size="26" font-weight="bold" fill="#28282D">RGB image</text>
+    <image href="method_input.png" x="40" y="42" width="150" height="129" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-input)"/>
+    <text x="115" y="200" text-anchor="middle" font-size="26" font-weight="bold" fill="#28282D">RGB image</text>
 
     <line x1="222" y1="120" x2="286" y2="120" stroke="#28282D" stroke-width="4" marker-end="url(#arrow)"/>
 
@@ -89,5 +94,28 @@
     <rect x="910" y="895" width="435" height="92" rx="18" fill="#F5F3F9" stroke="#E6E1F0" stroke-width="2"/>
     <text x="1127" y="933" text-anchor="middle" font-size="24" font-weight="bold" fill="#28282D">HyperKvasir cecum · 1,009</text>
     <text x="1127" y="969" text-anchor="middle" font-size="22" fill="#64646E">false area, polyp-free</text>
+  </g>
+
+  <!-- Row 5: one real development frame through the same frozen SAM with different prompts -->
+  <g>
+    <text x="10" y="1037" font-size="26" font-weight="bold" fill="#4B2A82">Real dev example (selected case): same frozen SAM, different prompt</text>
+    <g transform="translate(-14 0)">
+      <line x1="1010" y1="1028" x2="1040" y2="1028" stroke="#00E5FF" stroke-width="7"/>
+      <text x="1048" y="1036" font-size="22" fill="#28282D">GT</text>
+      <rect x="1092" y="1017" width="26" height="22" fill="#E817E8"/>
+      <text x="1126" y="1036" font-size="22" fill="#28282D">SAM output</text>
+      <path d="M1262 1015L1266 1024L1276 1025L1269 1031L1271 1041L1262 1036L1253 1041L1255 1031L1248 1025L1258 1024Z" fill="#FFD600" stroke="#28282D" stroke-width="1.2"/>
+      <text x="1282" y="1036" font-size="22" fill="#28282D">prompt</text>
+    </g>
+
+    <image href="example_input.png" x="10" y="1052" width="312" height="268" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-t1)"/>
+    <image href="example_noprompt.png" x="351" y="1052" width="312" height="268" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-t2)"/>
+    <image href="example_point.png" x="692" y="1052" width="312" height="268" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-t3)"/>
+    <image href="example_box.png" x="1033" y="1052" width="312" height="268" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip-t4)"/>
+
+    <text x="166" y="1352" text-anchor="middle" font-size="24" fill="#28282D"><tspan font-weight="bold">Input</tspan> + GT</text>
+    <text x="507" y="1352" text-anchor="middle" font-size="24" fill="#28282D"><tspan font-weight="bold">No prompt</tspan> · Dice 0.00</text>
+    <text x="848" y="1352" text-anchor="middle" font-size="24" fill="#28282D"><tspan font-weight="bold">GT point</tspan> · Dice 0.01</text>
+    <text x="1189" y="1352" text-anchor="middle" font-size="24" fill="#28282D"><tspan font-weight="bold">GT box</tspan> · Dice 0.96</text>
   </g>
 </svg>
